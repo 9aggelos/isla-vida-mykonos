@@ -98,6 +98,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@IslaVidaMykonos" },
+      { property: "og:title", content: "Isla Vida Mykonos — Private Transfers & Chauffeur Services" },
+      { name: "twitter:title", content: "Isla Vida Mykonos — Private Transfers & Chauffeur Services" },
+      { name: "description", content: "Isla Vida Mykonos offers private chauffeur and transfer services on the island of Mykonos." },
+      { property: "og:description", content: "Isla Vida Mykonos offers private chauffeur and transfer services on the island of Mykonos." },
+      { name: "twitter:description", content: "Isla Vida Mykonos offers private chauffeur and transfer services on the island of Mykonos." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/657a3926-bfaf-41f0-9e50-ba2086185217/id-preview-1b20ed40--5dc79361-d8f8-47e8-a147-b4e951790c10.lovable.app-1783006920353.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/657a3926-bfaf-41f0-9e50-ba2086185217/id-preview-1b20ed40--5dc79361-d8f8-47e8-a147-b4e951790c10.lovable.app-1783006920353.png" },
     ],
     links: [
       {
