@@ -2,10 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import contactImage from "../assets/hero-van.jpg";
 import { Phone, Mail, MapPin, Instagram, Clock, Send } from "lucide-react";
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
-import { Textarea } from "../components/ui/textarea";
-import { Label } from "../components/ui/label";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
