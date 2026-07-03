@@ -121,7 +121,7 @@ function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-muted-foreground">Phone / WhatsApp</p>
-                    <p className="text-lg font-medium text-foreground">+30 694 000 0000</p>
+                    <a href="tel:+306948041931" className="text-lg font-medium text-foreground hover:text-navy">+30 694 804 1931</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
