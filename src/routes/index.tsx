@@ -184,6 +184,37 @@ function Index() {
         </div>
       </section>
 
+      {/* Reviews */}
+      <section className="section-padding bg-navy-muted/30">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-navy-accent">
+            Guest reviews
+          </p>
+          <h2 className="mt-3 font-display text-4xl font-bold text-foreground sm:text-5xl">
+            Rated 5.0 on Google
+          </h2>
+          <div className="mt-6 flex items-center justify-center gap-1 text-navy-accent">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <Star key={i} className="h-6 w-6 fill-current" />
+            ))}
+          </div>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Based on 22 verified reviews from travelers across Mykonos.
+          </p>
+          <div className="mt-8">
+            <a
+              href="https://www.google.com/search?q=ISLA+VIDA+MYKONOS+-+Private+Transfers+%26+Chauffeur+Services#lrd=0x0:0x130f5a1a2fbe9f23,1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-md bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-light"
+            >
+              Read reviews on Google
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA band */}
       <section className="bg-navy py-16">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
