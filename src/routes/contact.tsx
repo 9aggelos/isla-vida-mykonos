@@ -44,61 +44,32 @@ function ContactPage() {
       <section className="section-padding bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
-            {/* Contact form */}
+            {/* Setmore booking */}
             <div className="rounded-lg border border-border bg-card p-8 shadow-sm">
               <h2 className="font-display text-3xl font-bold text-card-foreground">
-                Request a booking
+                Book your transfer
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Fill in the details below and we will get back to you within minutes.
+                Reserve your ride online in minutes — pick a date and time that suits
+                you and confirm instantly.
               </p>
-              <form className="mt-8 space-y-6">
-                <div className="grid gap-6 sm:grid-cols-2">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Full name</Label>
-                    <Input id="name" placeholder="Your name" required />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="you@example.com" required />
-                  </div>
-                </div>
-                <div className="grid gap-6 sm:grid-cols-2">
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone / WhatsApp</Label>
-                    <Input id="phone" placeholder="+30 694 804 1931" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="service">Service type</Label>
-                    <Input id="service" placeholder="Airport transfer, tour, chauffeur..." />
-                  </div>
-                </div>
-                <div className="grid gap-6 sm:grid-cols-2">
-                  <div className="space-y-2">
-                    <Label htmlFor="pickup">Pickup location</Label>
-                    <Input id="pickup" placeholder="Airport, port, hotel, villa..." />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="dropoff">Drop-off location</Label>
-                    <Input id="dropoff" placeholder="Destination in Mykonos" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell us about your dates, group size, flight or ferry details, and any special requests."
-                    rows={5}
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  className="w-full gap-2 bg-navy text-white hover:bg-navy-light"
-                >
-                  <Send className="h-4 w-4" />
-                  Send request
-                </Button>
-              </form>
+              <a
+                href="https://islavida.setmore.com/islavida"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-light"
+              >
+                <Send className="h-4 w-4" />
+                Book on Setmore
+              </a>
+              <div className="mt-6 overflow-hidden rounded-md border border-border">
+                <iframe
+                  src="https://islavida.setmore.com/islavida"
+                  title="Book Isla Vida Mykonos on Setmore"
+                  className="h-[600px] w-full"
+                  loading="lazy"
+                />
+              </div>
             </div>
 
             {/* Contact info */}
