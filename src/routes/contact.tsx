@@ -66,7 +66,7 @@ function ContactPage() {
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone / WhatsApp</Label>
-                    <Input id="phone" placeholder="+30 694 000 0000" />
+                    <Input id="phone" placeholder="+30 694 804 1931" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="service">Service type</Label>
