@@ -36,14 +36,14 @@ const vehicles = [
     features: ["Leather interior", "Climate control", "Bottled water", "Charging ports"],
   },
   {
-    name: "Private Swim Escape",
-    capacity: "Small groups",
-    ideal: "A discreet chauffeured trip to a secluded beach for a quick swim & unwind",
+    name: "Premium Van",
+    capacity: "Up to 7 passengers",
+    ideal: "Families, groups, or travelers with lots of luggage who want extra space without sacrificing style",
     features: [
-      "Door-to-shore transfer",
-      "Fresh towels & bottled water",
-      "Flexible waiting time",
-      "Handpicked hidden coves",
+      "Spacious leather interior",
+      "Large luggage capacity",
+      "Individual climate control",
+      "Bottled water & charging ports",
     ],
   },
 ];
