@@ -30,28 +30,21 @@ export const Route = createFileRoute("/fleet")({
 
 const vehicles = [
   {
-    name: "Luxury Sedan",
-    capacity: "1-3 passengers",
-    ideal: "Couples, solo travelers, business transfers",
+    name: "Premium SUV",
+    capacity: "1-4 passengers",
+    ideal: "Couples, families, business transfers & luggage-heavy trips",
     features: ["Leather interior", "Climate control", "Bottled water", "Charging ports"],
   },
   {
-    name: "Premium SUV",
-    capacity: "1-4 passengers",
-    ideal: "Families, small groups, luggage-heavy trips",
-    features: ["Spacious cabin", "Premium sound", "Full A/C", "Privacy glass"],
-  },
-  {
-    name: "Mercedes V-Class",
-    capacity: "Up to 7 passengers",
-    ideal: "Families, VIP groups, luxury airport transfers",
-    features: ["Executive seating", "Panoramic roof", "WiFi", "Refrigerated drinks"],
-  },
-  {
-    name: "Minibus / Sprinter",
-    capacity: "Up to 20 passengers",
-    ideal: "Weddings, corporate events, large groups",
-    features: ["Air conditioning", "Ample luggage space", "Group seating", "On-board PA"],
+    name: "Private Swim Escape",
+    capacity: "Small groups",
+    ideal: "A discreet chauffeured trip to a secluded beach for a quick swim & unwind",
+    features: [
+      "Door-to-shore transfer",
+      "Fresh towels & bottled water",
+      "Flexible waiting time",
+      "Handpicked hidden coves",
+    ],
   },
 ];
 
@@ -89,7 +82,7 @@ function FleetPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto grid max-w-4xl gap-8 sm:grid-cols-2">
             {vehicles.map((vehicle) => (
               <div
                 key={vehicle.name}
