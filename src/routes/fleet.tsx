@@ -82,7 +82,7 @@ function FleetPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto grid max-w-4xl gap-8 sm:grid-cols-2">
             {vehicles.map((vehicle) => (
               <div
                 key={vehicle.name}
