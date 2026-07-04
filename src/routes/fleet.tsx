@@ -33,7 +33,7 @@ const vehicles = [
     name: "Premium SUV",
     capacity: "1-4 passengers",
     ideal: "Couples, families, business transfers & luggage-heavy trips",
-    features: ["Leather interior", "Climate control", "Bottled water", "Charging ports"],
+    features: ["Leather interior", "Climate control", "Premium sound system", "Charging ports"],
   },
   {
     name: "Premium Van",
@@ -43,7 +43,7 @@ const vehicles = [
       "Spacious leather interior",
       "Large luggage capacity",
       "Individual climate control",
-      "Bottled water & charging ports",
+      "Premium sound system & charging ports",
     ],
   },
 ];
