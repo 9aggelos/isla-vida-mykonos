@@ -52,8 +52,13 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-navy-muted">
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+306948041931" className="hover:text-white transition-colors">
-                  +30 694 804 1931
+                <a
+                  href="https://wa.me/306948041931"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  WhatsApp
                 </a>
               </li>
               <li className="flex items-center gap-2">

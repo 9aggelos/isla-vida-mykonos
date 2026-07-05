@@ -18,9 +18,11 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-display text-2xl font-semibold tracking-tight text-navy">
-            ISLA VIDA
-          </span>
+          <img
+            src="/logo-isla-vida.jpg"
+            alt="Isla Vida Mykonos logo"
+            className="h-12 w-auto rounded-sm object-contain"
+          />
           <span className="hidden text-sm font-medium uppercase tracking-widest text-muted-foreground sm:inline">
             Mykonos
           </span>
