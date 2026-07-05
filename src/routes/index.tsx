@@ -91,7 +91,7 @@ function Index() {
           <img
             src="/logo-isla-vida.jpg"
             alt="Isla Vida Mykonos logo"
-            className="mb-6 h-auto w-32 rounded-xl bg-white/90 p-2 shadow-lg sm:w-40"
+            className="mb-6 h-auto w-36 sm:w-44"
           />
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
               Private Transfers & Chauffeur Services
