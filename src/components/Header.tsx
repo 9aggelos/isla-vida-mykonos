@@ -21,7 +21,7 @@ export function Header() {
           <img
             src="/logo-isla-vida.jpg"
             alt="Isla Vida Mykonos logo"
-            className="h-12 w-auto rounded-sm object-contain"
+            className="h-14 w-auto rounded-sm object-contain"
           />
           <span className="hidden text-sm font-medium uppercase tracking-widest text-muted-foreground sm:inline">
             Mykonos
