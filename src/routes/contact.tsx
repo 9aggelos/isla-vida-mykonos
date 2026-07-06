@@ -105,7 +105,7 @@ function ContactPage() {
                   <div>
                     <p className="text-sm font-semibold text-muted-foreground">Email</p>
                     <a
-                      href="mailto:info@islavida-mykonos.com"
+                      href="mailto:info@islavidajmk.com"
                       className="text-lg font-medium text-foreground hover:text-navy"
                     >
                       info@islavidajmk.com
