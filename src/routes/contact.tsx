@@ -94,7 +94,7 @@ function ContactPage() {
                       rel="noopener noreferrer"
                       className="text-lg font-medium text-foreground hover:text-navy"
                     >
-                      WhatsApp
+                      WhatsApp +30 694 804 1931
                     </a>
                   </div>
                 </li>
@@ -104,7 +104,12 @@ function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-muted-foreground">Email</p>
-                    <p className="text-lg font-medium text-foreground">info@islavida-mykonos.com</p>
+                    <a
+                      href="mailto:info@islavida-mykonos.com"
+                      className="text-lg font-medium text-foreground hover:text-navy"
+                    >
+                      info@islavida-mykonos.com
+                    </a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -131,7 +136,14 @@ function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-muted-foreground">Instagram</p>
-                    <p className="text-lg font-medium text-foreground">@islavida_mykonos</p>
+                    <a
+                      href="https://www.instagram.com/islavida_mykonos/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lg font-medium text-foreground hover:text-navy"
+                    >
+                      @islavida_mykonos
+                    </a>
                   </div>
                 </li>
               </ul>

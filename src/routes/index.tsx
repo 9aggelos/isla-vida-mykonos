@@ -88,11 +88,6 @@ function Index() {
         </div>
         <div className="relative mx-auto grid min-h-[70vh] max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <div className="max-w-2xl">
-          <img
-            src="/logo-isla-vida-transparent.png"
-            alt="Isla Vida Mykonos logo"
-            className="mb-6 h-auto w-36 drop-shadow-lg sm:w-44"
-          />
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
               Private Transfers & Chauffeur Services
             </p>
