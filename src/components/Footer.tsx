@@ -64,7 +64,7 @@ export function Footer() {
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
                 <a
-                  href="mailto:info@islavida-mykonos.com"
+                  href="mailto:info@islavidajmk.com"
                   className="hover:text-white transition-colors"
                 >
                   info@islavidajmk.com
