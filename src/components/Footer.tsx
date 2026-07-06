@@ -58,12 +58,17 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  WhatsApp
+                  WhatsApp +30 694 804 1931
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>info@islavida-mykonos.com</span>
+                <a
+                  href="mailto:info@islavida-mykonos.com"
+                  className="hover:text-white transition-colors"
+                >
+                  info@islavida-mykonos.com
+                </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 shrink-0" />
@@ -71,7 +76,14 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Instagram className="h-4 w-4" />
-                <span>@islavida_mykonos</span>
+                <a
+                  href="https://www.instagram.com/islavida_mykonos/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  @islavida_mykonos
+                </a>
               </li>
             </ul>
           </div>
