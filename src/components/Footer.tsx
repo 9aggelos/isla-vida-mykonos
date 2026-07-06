@@ -67,7 +67,7 @@ export function Footer() {
                   href="mailto:info@islavida-mykonos.com"
                   className="hover:text-white transition-colors"
                 >
-                  info@islavida-mykonos.com
+                  info@islavidajmk.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
