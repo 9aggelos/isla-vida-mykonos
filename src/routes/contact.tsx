@@ -108,7 +108,7 @@ function ContactPage() {
                       href="mailto:info@islavida-mykonos.com"
                       className="text-lg font-medium text-foreground hover:text-navy"
                     >
-                      info@islavida-mykonos.com
+                      info@islavidajmk.com
                     </a>
                   </div>
                 </li>
