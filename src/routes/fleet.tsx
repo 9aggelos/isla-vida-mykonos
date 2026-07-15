@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
-import fleetImage from "../assets/chauffeur-service.jpg";
+import fleetAsset from "../assets/van-yacht.jpg.asset.json";
+const fleetImage = fleetAsset.url;
 import { Shield, Wifi, Snowflake, Luggage, Baby, Music } from "lucide-react";
 
 export const Route = createFileRoute("/fleet")({

@@ -1,12 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Clock, Shield, Star, Users } from "lucide-react";
-import heroVan from "../assets/hero-van.jpg";
+import heroVanAsset from "../assets/van-yacht.jpg.asset.json";
 import airportTransfer from "../assets/airport-transfer.jpg";
 import portTransfer from "../assets/port-transfer.jpg";
-import chauffeurService from "../assets/chauffeur-service.jpg";
-import islandTours from "../assets/island-tours.jpg";
+import chauffeurAsset from "../assets/helicopter-mykonos.jpg.asset.json";
+import islandToursAsset from "../assets/mykonos-pool-view.jpg.asset.json";
 import groupTransport from "../assets/group-transport.jpg";
 import { ServiceCard } from "../components/ServiceCard";
+
+const heroVan = heroVanAsset.url;
+const chauffeurService = chauffeurAsset.url;
+const islandTours = islandToursAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -49,16 +53,16 @@ const services = [
     to: "/services",
   },
   {
-    title: "Chauffeur Services",
+    title: "VIP & Helicopter Coordination",
     description:
-      "Private chauffeur at your disposal for beach clubs, restaurants, nightlife, and events. Discreet, professional, and always on time.",
+      "Seamless ground coordination for helicopter arrivals, yacht guests, and VIP itineraries. Discreet, punctual, tailored to your schedule.",
     image: chauffeurService,
     to: "/services",
   },
   {
-    title: "Private Island Tours",
+    title: "Villa & Resort Transfers",
     description:
-      "Curated Mykonos tours to hidden beaches, windmills, Little Venice, and the island's finest viewpoints at your own pace.",
+      "Direct transfers to Mykonos' finest villas, boutique resorts, and beach clubs. Arrive relaxed and ready for the view.",
     image: islandTours,
     to: "/services",
   },

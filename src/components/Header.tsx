@@ -45,12 +45,14 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            to="/contact"
+          <a
+            href="https://wa.me/306948041931"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Book Now
-          </Link>
+          </a>
         </nav>
 
         <button
@@ -77,13 +79,15 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/contact"
+            <a
+              href="https://wa.me/306948041931"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
             >
               Book Now
-            </Link>
+            </a>
           </nav>
         </div>
       )}
