@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Clock, Shield, Star, Users } from "lucide-react";
-import heroVan from "../assets/hero-van.jpg";
+import heroVan from "../assets/van-yacht.jpg.asset.json";
 import airportTransfer from "../assets/airport-transfer.jpg";
 import portTransfer from "../assets/port-transfer.jpg";
-import chauffeurService from "../assets/chauffeur-service.jpg";
-import islandTours from "../assets/island-tours.jpg";
+import chauffeurService from "../assets/helicopter-mykonos.jpg.asset.json";
+import islandTours from "../assets/mykonos-pool-view.jpg.asset.json";
 import groupTransport from "../assets/group-transport.jpg";
 import { ServiceCard } from "../components/ServiceCard";
 
