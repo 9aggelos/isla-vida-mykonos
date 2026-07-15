@@ -1,12 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Clock, Shield, Star, Users } from "lucide-react";
-import heroVan from "../assets/van-yacht.jpg.asset.json";
+import heroVanAsset from "../assets/van-yacht.jpg.asset.json";
 import airportTransfer from "../assets/airport-transfer.jpg";
 import portTransfer from "../assets/port-transfer.jpg";
-import chauffeurService from "../assets/helicopter-mykonos.jpg.asset.json";
-import islandTours from "../assets/mykonos-pool-view.jpg.asset.json";
+import chauffeurAsset from "../assets/helicopter-mykonos.jpg.asset.json";
+import islandToursAsset from "../assets/mykonos-pool-view.jpg.asset.json";
 import groupTransport from "../assets/group-transport.jpg";
 import { ServiceCard } from "../components/ServiceCard";
+
+const heroVan = heroVanAsset.url;
+const chauffeurService = chauffeurAsset.url;
+const islandTours = islandToursAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
