@@ -53,16 +53,16 @@ const services = [
     to: "/services",
   },
   {
-    title: "Chauffeur Services",
+    title: "VIP & Helicopter Coordination",
     description:
-      "Private chauffeur at your disposal for beach clubs, restaurants, nightlife, and events. Discreet, professional, and always on time.",
+      "Seamless ground coordination for helicopter arrivals, yacht guests, and VIP itineraries. Discreet, punctual, tailored to your schedule.",
     image: chauffeurService,
     to: "/services",
   },
   {
-    title: "Private Island Tours",
+    title: "Villa & Resort Transfers",
     description:
-      "Curated Mykonos tours to hidden beaches, windmills, Little Venice, and the island's finest viewpoints at your own pace.",
+      "Direct transfers to Mykonos' finest villas, boutique resorts, and beach clubs. Arrive relaxed and ready for the view.",
     image: islandTours,
     to: "/services",
   },
