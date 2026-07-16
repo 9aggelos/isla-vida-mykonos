@@ -5,7 +5,7 @@ import airportTransfer from "../assets/airport-transfer.jpg";
 import portTransfer from "../assets/port-transfer.jpg";
 import chauffeurService from "../assets/helicopter-mykonos.jpg";
 import islandTours from "../assets/mykonos-pool-view.jpg";
-import yacht from "../assets/group-transport.jpg";
+import yacht from "../assets/yacht.avif";
 import { ServiceCard } from "../components/ServiceCard";
 
 export const Route = createFileRoute("/")({
