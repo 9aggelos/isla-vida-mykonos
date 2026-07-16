@@ -5,7 +5,7 @@ import airportTransfer from "../assets/airport-transfer.jpg";
 import portTransfer from "../assets/port-transfer.jpg";
 import chauffeurService from "../assets/helicopter-mykonos.jpg";
 import islandTours from "../assets/mykonos-pool-view.jpg";
-import groupTransport from "../assets/group-transport.jpg";
+import yacht from "../assets/group-transport.jpg";
 import { ServiceCard } from "../components/ServiceCard";
 
 export const Route = createFileRoute("/")({
@@ -54,10 +54,10 @@ const services = [
     to: "/services",
   },
   {
-    title: "Group Transportation",
+    title: "Yacht & Catamaran Chartering",
     description:
-      "Spacious luxury vans and minibuses for families, weddings, corporate groups, and events. Comfort for up to 20 passengers.",
-    image: groupTransport,
+      "Bespoke yacht and catamaran charters in Mykonos and all over the Greek islands. From private daily cruises to Delos and Rhenia, sunset tours, and half-day trips, to seamless boat taxi transfers to the island's premier beach venues.",
+    image: yacht,
     to: "/services",
   },
 ];
