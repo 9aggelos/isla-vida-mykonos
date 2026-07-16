@@ -40,9 +40,9 @@ const services = [
     to: "/services",
   },
   {
-    title: "VIP & Helicopter Coordination",
+    title: "Helicopter Chartering",
     description:
-      "Seamless ground coordination for helicopter arrivals, yacht guests, and VIP itineraries. Discreet, punctual, tailored to your schedule.",
+      "Seamless luxury ground transportation, private helicopter chartering all over Greece, and VIP concierge services and bespoke itineraries. Discreet, punctual, and tailored to your schedule.",
     image: chauffeurService,
     to: "/services",
   },
