@@ -11,24 +11,15 @@ import { ServiceCard } from "../components/ServiceCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Isla Vida Mykonos — Private Transfers & Chauffeur Services" },
-      {
-        name: "description",
-        content:
-          "Private transfers, airport & port transfers, and luxury chauffeur services in Mykonos. Professional drivers, 24/7 availability.",
-      },
-      {
-        property: "og:title",
-        content: "Isla Vida Mykonos — Private Transfers & Chauffeur Services",
-      },
-      {
-        property: "og:description",
-        content:
-          "Premium private transfers and chauffeur services in Mykonos. Available 24/7.",
-      },
+      { title: "Mykonos Private Transfers & Chauffeur Service | Isla Vida" },
+      { name: "description", content: "Private transfers in Mykonos: airport (JMK), port, villa & VIP chauffeur services. Professional drivers, luxury vans & SUVs, 24/7 availability. Book now." },
+      { name: "keywords", content: "Mykonos transfers, Mykonos airport transfer, JMK transfer, Mykonos port transfer, Mykonos chauffeur, private driver Mykonos, luxury van Mykonos, VIP transfer Mykonos" },
+      { property: "og:title", content: "Mykonos Private Transfers & Chauffeur Service | Isla Vida" },
+      { property: "og:description", content: "Private transfers, airport & port pickups, villa and VIP chauffeur services in Mykonos. 24/7." },
+      { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/" }],
   }),
   component: Index,
 });

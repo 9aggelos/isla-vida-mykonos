@@ -11,24 +11,15 @@ import { Check, Plane, Ship, UserCheck, Compass, Users } from "lucide-react";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Our Services — Isla Vida Mykonos" },
-      {
-        name: "description",
-        content:
-          "Airport transfers, port transfers, chauffeur services, private island tours, and group transportation in Mykonos. Premium service, 24/7.",
-      },
-      {
-        property: "og:title",
-        content: "Our Services — Isla Vida Mykonos",
-      },
-      {
-        property: "og:description",
-        content:
-          "Airport transfers, port transfers, chauffeur services, private island tours, and group transportation in Mykonos.",
-      },
+      { title: "Mykonos Transfer Services: Airport, Port, VIP & Groups" },
+      { name: "description", content: "Mykonos airport (JMK) transfers, port pickups, VIP & helicopter coordination, villa transfers and group transportation. Premium chauffeur service, 24/7." },
+      { name: "keywords", content: "Mykonos airport transfer, JMK airport taxi, Mykonos port transfer, VIP transfer Mykonos, helicopter transfer Mykonos, villa transfer Mykonos, group transport Mykonos" },
+      { property: "og:title", content: "Mykonos Transfer Services: Airport, Port, VIP & Groups" },
+      { property: "og:description", content: "Airport, port, VIP, villa and group transfers in Mykonos. Premium chauffeur service, 24/7." },
+      { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/services" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/services" }],
   }),
   component: ServicesPage,
 });

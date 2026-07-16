@@ -6,24 +6,15 @@ import { Shield, Wifi, Snowflake, Luggage, Baby, Music } from "lucide-react";
 export const Route = createFileRoute("/fleet")({
   head: () => ({
     meta: [
-      { title: "Our Fleet — Isla Vida Mykonos" },
-      {
-        name: "description",
-        content:
-          "Luxury vehicles for private transfers and chauffeur services in Mykonos. Mercedes V-Class, SUVs, sedans, and minibuses with premium amenities.",
-      },
-      {
-        property: "og:title",
-        content: "Our Fleet — Isla Vida Mykonos",
-      },
-      {
-        property: "og:description",
-        content:
-          "Premium vehicles for Mykonos transfers. Mercedes V-Class, sedans, SUVs, and minibuses.",
-      },
+      { title: "Luxury Fleet in Mykonos: Premium SUV & Van | Isla Vida" },
+      { name: "description", content: "Our Mykonos fleet: premium SUV for 1–4 passengers and luxury van for up to 7. Leather interiors, climate control, WiFi and child seats on request." },
+      { name: "keywords", content: "Mykonos luxury van, Mykonos premium SUV, Mercedes transfer Mykonos, chauffeur fleet Mykonos" },
+      { property: "og:title", content: "Luxury Fleet in Mykonos: Premium SUV & Van | Isla Vida" },
+      { property: "og:description", content: "Premium SUV (1–4 pax) and luxury Van (up to 7 pax) for private transfers across Mykonos." },
+      { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/fleet" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "/fleet" }],
+    links: [{ rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/fleet" }],
   }),
   component: FleetPage,
 });
