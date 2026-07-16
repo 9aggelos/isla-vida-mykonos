@@ -6,24 +6,14 @@ import { Clock, MapPin, Shield, Heart } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Isla Vida Mykonos" },
-      {
-        name: "description",
-        content:
-          "Isla Vida Mykonos is a locally based private transfer and chauffeur service. Reliable, discreet, and dedicated to premium travel experiences.",
-      },
-      {
-        property: "og:title",
-        content: "About Us — Isla Vida Mykonos",
-      },
-      {
-        property: "og:description",
-        content:
-          "Locally based private transfer and chauffeur service in Mykonos. Reliable, discreet, premium.",
-      },
+      { title: "About Isla Vida — Local Mykonos Chauffeur Company" },
+      { name: "description", content: "Isla Vida is a locally based Mykonos transfer & chauffeur company. Punctual, discreet drivers with deep island knowledge — trusted by villas, yachts and VIP guests." },
+      { property: "og:title", content: "About Isla Vida — Local Mykonos Chauffeur Company" },
+      { property: "og:description", content: "Locally based private transfer and chauffeur service in Mykonos. Reliable, discreet, premium." },
+      { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/about" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/about" }],
   }),
   component: AboutPage,
 });
