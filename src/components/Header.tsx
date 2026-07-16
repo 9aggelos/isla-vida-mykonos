@@ -24,8 +24,8 @@ export function Header() {
             className="h-10 w-auto drop-shadow-sm"
           />
           <div className="flex flex-col">
-            <span className="font-display text-2xl font-semibold tracking-tight text-navy">
-              ISLA VIDA
+            <span className="font-display text-3xl font-semibold tracking-tight text-navy">
+              I S L A  V I D A
             </span>
             <span className="hidden text-xs font-medium uppercase tracking-widest text-muted-foreground sm:inline">
               Mykonos
