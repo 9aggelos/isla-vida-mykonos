@@ -47,9 +47,9 @@ const services = [
     to: "/services",
   },
   {
-    title: "Villa & Resort Transfers",
+    title: "Luxury Villa & Hotel Reservations",
     description:
-      "Direct transfers to Mykonos' finest villas, boutique resorts, and beach clubs. Arrive relaxed and ready for the view.",
+      "Bespoke luxury villa rentals and five-star hotel reservations in Mykonos. Offering exclusive access to the island’s most prestigious accommodations, tailored to your exact desires.",
     image: islandTours,
     to: "/services",
   },
