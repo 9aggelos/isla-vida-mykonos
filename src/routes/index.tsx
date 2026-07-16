@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Clock, Shield, Star, Users } from "lucide-react";
 import heroVan from "../assets/van-yacht.jpg";
 import airportTransfer from "../assets/airport-transfer.jpg";
 import portTransfer from "../assets/port-transfer.jpg";
