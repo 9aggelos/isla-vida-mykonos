@@ -80,10 +80,10 @@ function Index() {
         <div className="relative mx-auto grid min-h-[70vh] max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <div className="max-w-2xl">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
-              Private Transfers & Chauffeur Services
+              Discover Mykonos in timeless elegance and style
             </p>
             <h1 className="font-display text-5xl font-bold leading-[1.1] text-white sm:text-6xl lg:text-7xl">
-              Arrive in Mykonos with elegance
+             Luxury Private Transfers & Exclusive Lifestyle Services
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/80 sm:text-xl">
               Isla Vida Mykonos offers premium private transfers, airport and port
