@@ -83,7 +83,7 @@ function Index() {
               Discover Mykonos in timeless elegance and style
             </p>
             <h1 className="font-display text-5xl font-bold leading-[1.1] text-white sm:text-6xl lg:text-7xl">
-             Luxury Private Transfers & Exclusive Lifestyle Services
+             Luxury Private Transfers & Lifestyle Services
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/80 sm:text-xl">
               Isla Vida Mykonos offers premium private transfers, airport and port
