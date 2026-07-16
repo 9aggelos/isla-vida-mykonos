@@ -158,10 +158,10 @@ function Index() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-navy-accent">
-              What we offer
+              Your local touch in Mykonos
             </p>
             <h2 className="mt-3 font-display text-4xl font-bold text-foreground sm:text-5xl">
-              Premium transportation in Mykonos
+              Premium luxury services in Mykonos
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
               From airport arrivals to island tours, we deliver seamless, discreet,
