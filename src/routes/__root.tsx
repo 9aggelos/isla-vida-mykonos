@@ -79,38 +79,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Isla Vida Mykonos — Private Transfers & Chauffeur Services" },
-      {
-        name: "description",
-        content:
-          "Isla Vida Mykonos provides private transfers, airport & port transfers, and luxury chauffeur services across Mykonos. Professional drivers, 24/7 availability.",
-      },
       { name: "author", content: "Isla Vida Mykonos" },
-      {
-        property: "og:title",
-        content: "Isla Vida Mykonos — Private Transfers & Chauffeur Services",
-      },
-      {
-        property: "og:description",
-        content:
-          "Premium private transfers, airport & port transfers, and chauffeur services in Mykonos. Professional drivers, 24/7.",
-      },
+      { name: "robots", content: "index, follow" },
+      { property: "og:site_name", content: "Isla Vida Mykonos" },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@IslaVidaMykonos" },
-      { property: "og:title", content: "Isla Vida Mykonos — Private Transfers & Chauffeur Services" },
-      { name: "twitter:title", content: "Isla Vida Mykonos — Private Transfers & Chauffeur Services" },
-      { name: "description", content: "Isla Vida Mykonos offers private chauffeur and transfer services on the island of Mykonos." },
-      { property: "og:description", content: "Isla Vida Mykonos offers private chauffeur and transfer services on the island of Mykonos." },
-      { name: "twitter:description", content: "Isla Vida Mykonos offers private chauffeur and transfer services on the island of Mykonos." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/657a3926-bfaf-41f0-9e50-ba2086185217/id-preview-1b20ed40--5dc79361-d8f8-47e8-a147-b4e951790c10.lovable.app-1783006920353.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/657a3926-bfaf-41f0-9e50-ba2086185217/id-preview-1b20ed40--5dc79361-d8f8-47e8-a147-b4e951790c10.lovable.app-1783006920353.png" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -118,6 +98,42 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Karla:wght@300;400;500;600;700&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://isla-vida-mykonos.lovable.app/#business",
+          name: "Isla Vida Mykonos",
+          description:
+            "Private transfers and chauffeur services in Mykonos — airport & port transfers, VIP and helicopter coordination, villa transfers, and group transportation.",
+          url: "https://isla-vida-mykonos.lovable.app",
+          telephone: "+306948041931",
+          image: "https://isla-vida-mykonos.lovable.app/logo-isla-vida-transparent.png",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Mykonos",
+            addressRegion: "Cyclades",
+            addressCountry: "GR",
+          },
+          areaServed: [
+            { "@type": "Place", name: "Mykonos" },
+            { "@type": "Place", name: "Mykonos Airport (JMK)" },
+            { "@type": "Place", name: "Mykonos New Port" },
+          ],
+          openingHoursSpecification: [{
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            opens: "00:00",
+            closes: "23:59",
+          }],
+          priceRange: "€€€",
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "22" },
+          sameAs: ["https://www.instagram.com/islavida_mykonos/"],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
