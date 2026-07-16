@@ -96,7 +96,7 @@ function Index() {
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/80 sm:text-xl">
               Isla Vida Mykonos offers premium private transfers, airport and port
-              services, and dedicated chauffeur experiences across the island — 24/7.
+              services, curated lifestyle services and luxury  experiences across the island — 24/7.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
