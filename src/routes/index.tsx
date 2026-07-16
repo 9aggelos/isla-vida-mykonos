@@ -39,6 +39,13 @@ const services = [
     image: chauffeurService,
     to: "/services",
   },
+   {
+    title: "Yacht & Catamaran Chartering",
+    description:
+      "Bespoke yacht and catamaran charters in Mykonos and all over the Greek islands. From private daily cruises to Delos and Rhenia, sunset tours, and half-day trips, to seamless boat taxi transfers to the island's premier beach venues.",
+    image: yacht,
+    to: "/services",
+  },
   {
     title: "Airport Transfers",
     description:
@@ -53,13 +60,7 @@ const services = [
     image: portTransfer,
     to: "/services",
   },
-  {
-    title: "Yacht & Catamaran Chartering",
-    description:
-      "Bespoke yacht and catamaran charters in Mykonos and all over the Greek islands. From private daily cruises to Delos and Rhenia, sunset tours, and half-day trips, to seamless boat taxi transfers to the island's premier beach venues.",
-    image: yacht,
-    to: "/services",
-  },
+ 
 ];
 
 function Index() {
