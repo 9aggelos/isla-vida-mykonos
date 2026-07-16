@@ -26,6 +26,20 @@ export const Route = createFileRoute("/")({
 
 const services = [
   {
+    title: "Luxury Villa & Hotel Reservations",
+    description:
+      "Bespoke luxury villa rentals and five-star hotel reservations in Mykonos. Offering exclusive access to the island’s most prestigious accommodations, tailored to your exact desires.",
+    image: islandTours,
+    to: "/services",
+  },
+    {
+    title: "Helicopter Chartering",
+    description:
+      "Seamless luxury ground transportation, private helicopter chartering all over Greece, and VIP concierge services and bespoke itineraries. Discreet, punctual, and tailored to your schedule.",
+    image: chauffeurService,
+    to: "/services",
+  },
+  {
     title: "Airport Transfers",
     description:
       "Seamless arrivals and departures from Mykonos Airport (JMK). Meet-and-greet, luggage assistance, and direct transfers to your hotel or villa.",
@@ -37,20 +51,6 @@ const services = [
     description:
       "Reliable ferry and yacht connections from Mykonos New Port. Timely pickups and drop-offs, even when schedules change.",
     image: portTransfer,
-    to: "/services",
-  },
-  {
-    title: "Helicopter Chartering",
-    description:
-      "Seamless luxury ground transportation, private helicopter chartering all over Greece, and VIP concierge services and bespoke itineraries. Discreet, punctual, and tailored to your schedule.",
-    image: chauffeurService,
-    to: "/services",
-  },
-  {
-    title: "Luxury Villa & Hotel Reservations",
-    description:
-      "Bespoke luxury villa rentals and five-star hotel reservations in Mykonos. Offering exclusive access to the island’s most prestigious accommodations, tailored to your exact desires.",
-    image: islandTours,
     to: "/services",
   },
   {
