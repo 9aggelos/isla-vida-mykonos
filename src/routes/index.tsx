@@ -7,6 +7,7 @@ import chauffeurService from "../assets/helicopter-mykonos.jpg";
 import islandTours from "../assets/mykonos-pool-view.jpg";
 import yacht from "../assets/yacht.avif";
 import { ServiceCard } from "../components/ServiceCard";
+import { ArrowRight, Clock, Shield, Star, Users, MessageCircle } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -228,6 +229,16 @@ function Index() {
           </div>
         </div>
       </section>
+      {/* Floating Action Button (WhatsApp / Contact) */}
+      <a
+        href="https://wa.me/3069XXXXXXXX" // Αντικατάστησε το 3069XXXXXXXX με το τηλέφωνό σου
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#20ba5a] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2"
+        aria-label="Contact us on WhatsApp"
+      >
+        <MessageCircle className="h-7 w-7 fill-current" />
+      </a>
     </div>
   );
 }
