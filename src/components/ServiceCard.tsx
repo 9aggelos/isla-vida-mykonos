@@ -37,7 +37,7 @@ export function ServiceCard({ title, description, image, to, icon }: ServiceCard
           {description}
         </p>
         <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-navy-accent transition-colors group-hover:text-navy">
-          Learn more
+          Learn about {title}
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </span>
       </div>
