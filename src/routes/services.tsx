@@ -12,10 +12,22 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Mykonos Transfer Services: Airport, Port, VIP & Groups" },
-      { name: "description", content: "Mykonos airport (JMK) transfers, port pickups, VIP & helicopter coordination, villa transfers and group transportation. Premium chauffeur service, 24/7." },
-      { name: "keywords", content: "Mykonos airport transfer, JMK airport taxi, Mykonos port transfer, VIP transfer Mykonos, helicopter transfer Mykonos, villa transfer Mykonos, group transport Mykonos" },
+      {
+        name: "description",
+        content:
+          "Mykonos airport (JMK) transfers, port pickups, VIP & helicopter coordination, villa transfers and group transportation. Premium chauffeur service, 24/7.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Mykonos airport transfer, JMK airport taxi, Mykonos port transfer, VIP transfer Mykonos, helicopter transfer Mykonos, villa transfer Mykonos, group transport Mykonos",
+      },
       { property: "og:title", content: "Mykonos Transfer Services: Airport, Port, VIP & Groups" },
-      { property: "og:description", content: "Airport, port, VIP, villa and group transfers in Mykonos. Premium chauffeur service, 24/7." },
+      {
+        property: "og:description",
+        content:
+          "Airport, port, VIP, villa and group transfers in Mykonos. Premium chauffeur service, 24/7.",
+      },
       { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/services" },
       { property: "og:type", content: "website" },
     ],

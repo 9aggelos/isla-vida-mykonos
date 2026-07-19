@@ -29,13 +29,9 @@ export function ServiceCard({ title, description, image, to, icon }: ServiceCard
       <div className="flex flex-1 flex-col p-6">
         <div className="mb-3 flex items-center gap-2">
           {icon && <span className="text-navy-accent">{icon}</span>}
-          <h3 className="font-display text-xl font-semibold text-card-foreground">
-            {title}
-          </h3>
+          <h3 className="font-display text-xl font-semibold text-card-foreground">{title}</h3>
         </div>
-        <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
-          {description}
-        </p>
+        <p className="flex-1 text-sm leading-relaxed text-muted-foreground">{description}</p>
         <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-navy-accent transition-colors group-hover:text-navy">
           Learn about {title}
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -86,8 +87,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@IslaVidaMykonos" },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/657a3926-bfaf-41f0-9e50-ba2086185217/id-preview-1b20ed40--5dc79361-d8f8-47e8-a147-b4e951790c10.lovable.app-1783006920353.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/657a3926-bfaf-41f0-9e50-ba2086185217/id-preview-1b20ed40--5dc79361-d8f8-47e8-a147-b4e951790c10.lovable.app-1783006920353.png" },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/657a3926-bfaf-41f0-9e50-ba2086185217/id-preview-1b20ed40--5dc79361-d8f8-47e8-a147-b4e951790c10.lovable.app-1783006920353.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/657a3926-bfaf-41f0-9e50-ba2086185217/id-preview-1b20ed40--5dc79361-d8f8-47e8-a147-b4e951790c10.lovable.app-1783006920353.png",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -123,12 +132,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             { "@type": "Place", name: "Mykonos Airport (JMK)" },
             { "@type": "Place", name: "Mykonos New Port" },
           ],
-          openingHoursSpecification: [{
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-            opens: "00:00",
-            closes: "23:59",
-          }],
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ],
+              opens: "00:00",
+              closes: "23:59",
+            },
+          ],
           priceRange: "€€€",
           aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "22" },
           sameAs: ["https://www.instagram.com/islavida_mykonos/"],
@@ -151,6 +170,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <Analytics />
       </body>
     </html>
   );
