@@ -7,9 +7,17 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Isla Vida — Local Mykonos Chauffeur Company" },
-      { name: "description", content: "Isla Vida is a locally based Mykonos transfer & chauffeur company. Punctual, discreet drivers with deep island knowledge — trusted by villas, yachts and VIP guests." },
+      {
+        name: "description",
+        content:
+          "Isla Vida is a locally based Mykonos transfer & chauffeur company. Punctual, discreet drivers with deep island knowledge — trusted by villas, yachts and VIP guests.",
+      },
       { property: "og:title", content: "About Isla Vida — Local Mykonos Chauffeur Company" },
-      { property: "og:description", content: "Locally based private transfer and chauffeur service in Mykonos. Reliable, discreet, premium." },
+      {
+        property: "og:description",
+        content:
+          "Locally based private transfer and chauffeur service in Mykonos. Reliable, discreet, premium.",
+      },
       { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/about" },
       { property: "og:type", content: "website" },
     ],
@@ -22,22 +30,26 @@ const values = [
   {
     icon: <Clock className="h-6 w-6" />,
     title: "Punctuality",
-    description: "We respect your time. Every pickup is planned, monitored, and executed with precision.",
+    description:
+      "We respect your time. Every pickup is planned, monitored, and executed with precision.",
   },
   {
     icon: <Shield className="h-6 w-6" />,
     title: "Discretion",
-    description: "Privacy is part of our service. Our drivers are trained to be professional and unobtrusive.",
+    description:
+      "Privacy is part of our service. Our drivers are trained to be professional and unobtrusive.",
   },
   {
     icon: <Heart className="h-6 w-6" />,
     title: "Hospitality",
-    description: "We treat guests like family. From bottled water to local tips, we make every ride feel welcome.",
+    description:
+      "We treat guests like family. From bottled water to local tips, we make every ride feel welcome.",
   },
   {
     icon: <MapPin className="h-6 w-6" />,
     title: "Local Knowledge",
-    description: "Born and raised on Mykonos, we know the best routes, hidden beaches, and finest tables.",
+    description:
+      "Born and raised on Mykonos, we know the best routes, hidden beaches, and finest tables.",
   },
 ];
 
@@ -63,10 +75,9 @@ function AboutPage() {
               </h2>
               <div className="mt-6 space-y-4 text-muted-foreground">
                 <p>
-                  Isla Vida Mykonos was founded on a simple belief: getting around the island
-                  should be as beautiful and effortless as the island itself. We specialize in
-                  private transfers, airport and port pickups, chauffeur services, and custom
-                  island tours.
+                  Isla Vida Mykonos was founded on a simple belief: getting around the island should
+                  be as beautiful and effortless as the island itself. We specialize in private
+                  transfers, airport and port pickups, chauffeur services, and custom island tours.
                 </p>
                 <p>
                   Our team is made up of local professionals who know Mykonos inside and out. We

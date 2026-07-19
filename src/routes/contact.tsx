@@ -7,9 +7,17 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Book a Mykonos Transfer — Contact Isla Vida 24/7" },
-      { name: "description", content: "Book your Mykonos private transfer or chauffeur service. Contact Isla Vida by WhatsApp, phone or email — 24/7 availability, instant quotes." },
+      {
+        name: "description",
+        content:
+          "Book your Mykonos private transfer or chauffeur service. Contact Isla Vida by WhatsApp, phone or email — 24/7 availability, instant quotes.",
+      },
       { property: "og:title", content: "Book a Mykonos Transfer — Contact Isla Vida 24/7" },
-      { property: "og:description", content: "Book private transfers and chauffeur services in Mykonos. WhatsApp, phone, email — 24/7." },
+      {
+        property: "og:description",
+        content:
+          "Book private transfers and chauffeur services in Mykonos. WhatsApp, phone, email — 24/7.",
+      },
       { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/contact" },
       { property: "og:type", content: "website" },
     ],
@@ -36,8 +44,8 @@ function ContactPage() {
                 Book your transfer
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Reserve your ride online in minutes — pick a date and time that suits
-                you and confirm instantly.
+                Reserve your ride online in minutes — pick a date and time that suits you and
+                confirm instantly.
               </p>
               <a
                 href="https://islavida.setmore.com/islavida"

@@ -11,8 +11,8 @@ export function Footer() {
               ISLA VIDA MYKONOS
             </h3>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-navy-muted">
-              Private transfers, chauffeur services, and premium island transportation
-              across Mykonos. Available 24/7.
+              Private transfers, chauffeur services, and premium island transportation across
+              Mykonos. Available 24/7.
             </p>
           </div>
 

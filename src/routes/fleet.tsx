@@ -7,10 +7,22 @@ export const Route = createFileRoute("/fleet")({
   head: () => ({
     meta: [
       { title: "Luxury Fleet in Mykonos: Premium SUV & Van | Isla Vida" },
-      { name: "description", content: "Our Mykonos fleet: premium SUV for 1–4 passengers and luxury van for up to 7. Leather interiors, climate control, WiFi and child seats on request." },
-      { name: "keywords", content: "Mykonos luxury van, Mykonos premium SUV, Mercedes transfer Mykonos, chauffeur fleet Mykonos" },
+      {
+        name: "description",
+        content:
+          "Our Mykonos fleet: premium SUV for 1–4 passengers and luxury van for up to 7. Leather interiors, climate control, WiFi and child seats on request.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Mykonos luxury van, Mykonos premium SUV, Mercedes transfer Mykonos, chauffeur fleet Mykonos",
+      },
       { property: "og:title", content: "Luxury Fleet in Mykonos: Premium SUV & Van | Isla Vida" },
-      { property: "og:description", content: "Premium SUV (1–4 pax) and luxury Van (up to 7 pax) for private transfers across Mykonos." },
+      {
+        property: "og:description",
+        content:
+          "Premium SUV (1–4 pax) and luxury Van (up to 7 pax) for private transfers across Mykonos.",
+      },
       { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/fleet" },
       { property: "og:type", content: "website" },
     ],
@@ -29,7 +41,8 @@ const vehicles = [
   {
     name: "Premium Van",
     capacity: "Up to 7 passengers",
-    ideal: "Families, groups, or travelers with lots of luggage who want extra space without sacrificing style",
+    ideal:
+      "Families, groups, or travelers with lots of luggage who want extra space without sacrificing style",
     features: [
       "Spacious leather interior",
       "Large luggage capacity",
@@ -68,8 +81,8 @@ function FleetPage() {
               Choose your ride
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              All vehicles are maintained to the highest standards, fully licensed, and
-              equipped for the Mykonos climate and roads.
+              All vehicles are maintained to the highest standards, fully licensed, and equipped for
+              the Mykonos climate and roads.
             </p>
           </div>
 

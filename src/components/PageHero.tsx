@@ -28,9 +28,7 @@ export function PageHero({ title, subtitle, image, cta, children }: PageHeroProp
           <h1 className="font-display text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
             {title}
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-white/80 sm:text-xl">
-            {subtitle}
-          </p>
+          <p className="mt-6 text-lg leading-relaxed text-white/80 sm:text-xl">{subtitle}</p>
           {cta && (
             <div className="mt-8">
               <Link

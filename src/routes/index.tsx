@@ -12,10 +12,25 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Mykonos Private Transfers & Chauffeur Service | Isla Vida" },
-      { name: "description", content: "Private transfers in Mykonos: airport (JMK), port, villa & VIP chauffeur services. Professional drivers, luxury vans & SUVs, 24/7 availability. Book now." },
-      { name: "keywords", content: "Mykonos transfers, Mykonos airport transfer, JMK transfer, Mykonos port transfer, Mykonos chauffeur, private driver Mykonos, luxury van Mykonos, VIP transfer Mykonos" },
-      { property: "og:title", content: "Mykonos Private Transfers & Chauffeur Service | Isla Vida" },
-      { property: "og:description", content: "Private transfers, airport & port pickups, villa and VIP chauffeur services in Mykonos. 24/7." },
+      {
+        name: "description",
+        content:
+          "Private transfers in Mykonos: airport (JMK), port, villa & VIP chauffeur services. Professional drivers, luxury vans & SUVs, 24/7 availability. Book now.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Mykonos transfers, Mykonos airport transfer, JMK transfer, Mykonos port transfer, Mykonos chauffeur, private driver Mykonos, luxury van Mykonos, VIP transfer Mykonos",
+      },
+      {
+        property: "og:title",
+        content: "Mykonos Private Transfers & Chauffeur Service | Isla Vida",
+      },
+      {
+        property: "og:description",
+        content:
+          "Private transfers, airport & port pickups, villa and VIP chauffeur services in Mykonos. 24/7.",
+      },
       { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/" },
       { property: "og:type", content: "website" },
     ],
@@ -32,14 +47,14 @@ const services = [
     image: islandTours,
     to: "/services",
   },
-    {
+  {
     title: "Helicopter Chartering",
     description:
       "Seamless luxury ground transportation, private helicopter chartering all over Greece, and VIP concierge services and bespoke itineraries. Discreet, punctual, and tailored to your schedule.",
     image: chauffeurService,
     to: "/services",
   },
-   {
+  {
     title: "Yacht & Catamaran Chartering",
     description:
       "Bespoke yacht and catamaran charters in Mykonos and all over the Greek islands. From private daily cruises to Delos and Rhenia, sunset tours, and half-day trips, to seamless boat taxi transfers to the island's premier beach venues.",
@@ -60,7 +75,6 @@ const services = [
     image: portTransfer,
     to: "/services",
   },
- 
 ];
 
 function Index() {
@@ -80,15 +94,15 @@ function Index() {
         </div>
         <div className="relative mx-auto grid min-h-[70vh] max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <div className="max-w-2xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
               Discover Mykonos in timeless elegance and style
             </p>
             <h1 className="font-display text-5xl font-bold leading-[1.1] text-white sm:text-6xl lg:text-7xl">
-             Luxury Private Transfers & Lifestyle Services
+              Luxury Private Transfers & Lifestyle Services
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/80 sm:text-xl">
-              Isla Vida Mykonos offers premium private transfers, airport and port
-              services, curated lifestyle services and luxury  experiences across the island — 24/7.
+              Isla Vida Mykonos offers premium private transfers, airport and port services, curated
+              lifestyle services and luxury experiences across the island — 24/7.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
@@ -164,8 +178,8 @@ function Index() {
               Premium luxury services in Mykonos
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              From airport arrivals to island tours, we deliver seamless, discreet,
-              and comfortable travel experiences.
+              From airport arrivals to island tours, we deliver seamless, discreet, and comfortable
+              travel experiences.
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -214,8 +228,8 @@ function Index() {
             Ready to experience Mykonos?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-navy-muted">
-            Book your private transfer or chauffeur service today and travel the island
-            with confidence and style.
+            Book your private transfer or chauffeur service today and travel the island with
+            confidence and style.
           </p>
           <div className="mt-8">
             <Link
