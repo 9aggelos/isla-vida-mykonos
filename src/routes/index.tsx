@@ -205,7 +205,7 @@ function Index() {
             ))}
           </div>
           <p className="mt-4 text-lg text-muted-foreground">
-            Based on 22 verified reviews from travelers across Mykonos.
+            Based on 37 verified reviews from travelers across Mykonos.
           </p>
           <div className="mt-8">
             <a
