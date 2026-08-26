@@ -36,6 +36,14 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "preload",
+        as: "image",
+        href: heroVan,
+        type: "image/webp",
+      },
     ],
   }),
   component: Index,
@@ -87,12 +95,12 @@ function Index() {
         <div className="absolute inset-0">
           <img
             src={heroVan}
-            alt="Luxury white van on a Mykonos coastal road with white Cycladic buildings and blue sea"
+            alt="Luxury private transfer in Mykonos"
             width={1920}
-            height={1440}
+            height={1080}
             loading="eager"
             fetchPriority="high"
-            decoding="async"
+            decoding="sync"
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40" />
@@ -247,6 +255,7 @@ function Index() {
           </div>
         </div>
       </section>
+
       {/* Floating Action Button (WhatsApp / Contact) */}
       <a
         href="https://wa.me/306948041931"
