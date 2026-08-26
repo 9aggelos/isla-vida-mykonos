@@ -86,7 +86,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "width=device-width, initial-scale=1",
       },
     ],
-   links: [
+    links: [
+      {
+        rel: "preload",
+        as: "style",
+        href: appCss,
+      },
       {
         rel: "stylesheet",
         href: appCss,
