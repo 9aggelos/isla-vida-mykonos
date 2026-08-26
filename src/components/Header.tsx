@@ -20,7 +20,7 @@ export function Header() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3">
           <img
-            src="/logo-isla-vida-transparent.png"
+            src="/logo-isla-vida-transparent.webp"
             alt="Isla Vida Mykonos logo"
             width={160}
             height={160}
