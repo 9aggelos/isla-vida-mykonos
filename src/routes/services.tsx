@@ -143,6 +143,7 @@ function ServicesPage() {
                     width={1200}
                     height={800}
                     loading="lazy"
+                    decoding="async"
                     className="h-64 w-full object-cover lg:h-full"
                   />
                 </div>

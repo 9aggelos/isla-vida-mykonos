@@ -99,6 +99,7 @@ function AboutPage() {
                 width={1200}
                 height={800}
                 loading="lazy"
+                decoding="async"
                 className="rounded-lg object-cover shadow-lg"
               />
             </div>
