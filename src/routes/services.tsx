@@ -31,7 +31,10 @@ export const Route = createFileRoute("/services")({
       { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/services" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/services" }],
+    links: [
+      { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/services" },
+      { rel: "preload", as: "image", href: airportTransfer, fetchpriority: "high" },
+    ],
   }),
   component: ServicesPage,
 });

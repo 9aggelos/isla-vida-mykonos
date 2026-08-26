@@ -26,7 +26,10 @@ export const Route = createFileRoute("/fleet")({
       { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/fleet" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/fleet" }],
+    links: [
+      { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/fleet" },
+      { rel: "preload", as: "image", href: fleetImage, fetchpriority: "high" },
+    ],
   }),
   component: FleetPage,
 });

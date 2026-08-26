@@ -21,7 +21,10 @@ export const Route = createFileRoute("/contact")({
       { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/contact" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/contact" }],
+    links: [
+      { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/contact" },
+      { rel: "preload", as: "image", href: contactImage, fetchpriority: "high" },
+    ],
   }),
   component: ContactPage,
 });
