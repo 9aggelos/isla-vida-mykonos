@@ -6,13 +6,17 @@ import { Phone, Mail, MapPin, Instagram, Clock, Send } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Book a Mykonos Transfer — Contact Isla Vida 24/7" },
+      { title: "Book a Mykonos Transfer — Contact Isla Vida 24/7 | Isla Vida" },
       {
         name: "description",
         content:
           "Book your Mykonos private transfer or chauffeur service. Contact Isla Vida by WhatsApp, phone or email — 24/7 availability, instant quotes.",
       },
-      { property: "og:title", content: "Book a Mykonos Transfer — Contact Isla Vida 24/7" },
+      {
+        property: "og:site_name",
+        content: "Isla Vida Mykonos",
+      },
+      { property: "og:title", content: "Book a Mykonos Transfer — Contact Isla Vida 24/7 | Isla Vida" },
       {
         property: "og:description",
         content:
@@ -27,6 +31,7 @@ export const Route = createFileRoute("/contact")({
   }),
   component: ContactPage,
 });
+
 
 function ContactPage() {
   return (
