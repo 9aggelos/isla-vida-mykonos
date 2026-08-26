@@ -18,11 +18,11 @@ export const Route = createFileRoute("/contact")({
         content:
           "Book private transfers and chauffeur services in Mykonos. WhatsApp, phone, email — 24/7.",
       },
-      { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/contact" },
+      { property: "og:url", content: "https://www.islavidajmk.com/contact" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/contact" },
+      { rel: "canonical", href: "https://www.islavidajmk.com/contact" },
     ],
   }),
   component: ContactPage,
