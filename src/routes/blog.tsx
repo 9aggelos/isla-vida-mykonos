@@ -49,7 +49,7 @@ function BlogPage() {
     <div className="min-h-screen bg-background py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h1 className="font-display text-4xl font-semibold tracking-tight text-foreground">
-          Isla Vida Journal
+          The Isla Vida Mykonos Guide
         </h1>
         <p className="mt-4 max-w-2xl text-muted-foreground">
           Travel tips, Mykonos guides, and updates from the island's private transfer & chauffeur team.
