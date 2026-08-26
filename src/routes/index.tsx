@@ -23,6 +23,10 @@ export const Route = createFileRoute("/")({
           "Mykonos transfers, Mykonos airport transfer, JMK transfer, Mykonos port transfer, Mykonos chauffeur, private driver Mykonos, luxury van Mykonos, VIP transfer Mykonos",
       },
       {
+        property: "og:site_name",
+        content: "Isla Vida Mykonos",
+      },
+      {
         property: "og:title",
         content: "Mykonos Private Transfers & Chauffeur Service | Isla Vida",
       },
@@ -36,8 +40,6 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://www.islavidajmk.com/" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "preload",
         as: "image",
