@@ -18,11 +18,11 @@ export const Route = createFileRoute("/about")({
         content:
           "Locally based private transfer and chauffeur service in Mykonos. Reliable, discreet, premium.",
       },
-      { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/about" },
+      { property: "og:url", content: "https://www.islavidajmk.com/about" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/about" },
+      { rel: "canonical", href: "https://www.islavidajmk.com/about" },
     ],
   }),
   component: AboutPage,
