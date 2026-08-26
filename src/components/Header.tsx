@@ -22,6 +22,10 @@ export function Header() {
           <img
             src="/logo-isla-vida-transparent.png"
             alt="Isla Vida Mykonos logo"
+            width={160}
+            height={160}
+            decoding="async"
+            fetchPriority="high"
             className="h-10 w-auto drop-shadow-sm"
           />
           <div className="flex flex-col">
