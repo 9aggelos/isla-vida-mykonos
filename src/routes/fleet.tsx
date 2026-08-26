@@ -17,6 +17,10 @@ export const Route = createFileRoute("/fleet")({
         content:
           "Mykonos luxury van, Mykonos premium SUV, Mercedes transfer Mykonos, chauffeur fleet Mykonos",
       },
+      {
+        property: "og:site_name",
+        content: "Isla Vida Mykonos",
+      },
       { property: "og:title", content: "Luxury Fleet in Mykonos: Premium SUV & Van | Isla Vida" },
       {
         property: "og:description",
