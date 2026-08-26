@@ -34,13 +34,27 @@ function BlogPage() {
     const container = containerRef.current;
     if (!container) return;
 
-    const script = document.createElement("script");
-    script.src = "https://app.trysoro.com/api/embed/80663ee7-416f-42ea-919d-80bf23aa9701";
-    script.defer = true;
-    script.id = "soro-blog-embed";
-    container.appendChild(script);
+    const inject = () => {
+      if (!containerRef.current) return;
+      const script = document.createElement("script");
+      script.src = "https://app.trysoro.com/api/embed/80663ee7-416f-42ea-919d-80bf23aa9701";
+      script.defer = true;
+      script.id = "soro-blog-embed";
+      containerRef.current.appendChild(script);
+    };
 
+    // Load the third-party embed strictly after the page has finished loading
+    if (document.readyState === "complete") {
+      const id = window.setTimeout(inject, 0);
+      return () => {
+        window.clearTimeout(id);
+        container.innerHTML = "";
+      };
+    }
+
+    window.addEventListener("load", inject, { once: true });
     return () => {
+      window.removeEventListener("load", inject);
       container.innerHTML = "";
     };
   }, []);
