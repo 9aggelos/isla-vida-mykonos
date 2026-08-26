@@ -6,13 +6,17 @@ import { Clock, MapPin, Shield, Heart } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Isla Vida — Local Mykonos Chauffeur Company" },
+      { title: "About Isla Vida — Local Mykonos Chauffeur Company | Isla Vida" },
       {
         name: "description",
         content:
           "Isla Vida is a locally based Mykonos transfer & chauffeur company. Punctual, discreet drivers with deep island knowledge — trusted by villas, yachts and VIP guests.",
       },
-      { property: "og:title", content: "About Isla Vida — Local Mykonos Chauffeur Company" },
+      {
+        property: "og:site_name",
+        content: "Isla Vida Mykonos",
+      },
+      { property: "og:title", content: "About Isla Vida — Local Mykonos Chauffeur Company | Isla Vida" },
       {
         property: "og:description",
         content:
