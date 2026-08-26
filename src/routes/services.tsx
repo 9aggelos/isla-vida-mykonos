@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import { ServiceCard } from "../components/ServiceCard";
-import airportTransfer from "../assets/airport-transfer.jpg";
-import portTransfer from "../assets/port-transfer.jpg";
-import chauffeurService from "../assets/chauffeur-service.jpg";
-import islandTours from "../assets/island-tours.jpg";
-import groupTransport from "../assets/group-transport.jpg";
+import airportTransfer from "../assets/airport-transfer.webp";
+import portTransfer from "../assets/port-transfer.webp";
+import chauffeurService from "../assets/chauffeur-service.webp";
+import islandTours from "../assets/island-tours.webp";
+import groupTransport from "../assets/group-transport.webp";
 import { Check, Plane, Ship, UserCheck, Compass, Users } from "lucide-react";
 
 export const Route = createFileRoute("/services")({

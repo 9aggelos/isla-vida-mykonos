@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroVan from "../assets/van-yacht.jpg";
-import airportTransfer from "../assets/airport-transfer.jpg";
-import portTransfer from "../assets/port-transfer.jpg";
-import chauffeurService from "../assets/helicopter-mykonos.jpg";
-import islandTours from "../assets/mykonos-pool-view.jpg";
+import heroVan from "../assets/van-yacht.webp";
+import airportTransfer from "../assets/airport-transfer.webp";
+import portTransfer from "../assets/port-transfer.webp";
+import chauffeurService from "../assets/helicopter-mykonos.webp";
+import islandTours from "../assets/mykonos-pool-view.webp";
 import yacht from "../assets/yacht.avif";
 import { ServiceCard } from "../components/ServiceCard";
 import { ArrowRight, Clock, Shield, Star, Users, MessageCircle } from "lucide-react";
