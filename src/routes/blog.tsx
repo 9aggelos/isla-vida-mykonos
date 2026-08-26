@@ -16,12 +16,12 @@ export const Route = createFileRoute("/blog")({
         content:
           "Read the Isla Vida Mykonos journal for Mykonos travel tips, luxury transfer guides, insider itineraries, and service updates.",
       },
-      { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/blog" },
+      { property: "og:url", content: "https://www.islavidajmk.com/blog" },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/blog" },
+      { rel: "canonical", href: "https://www.islavidajmk.com/blog" },
     ],
   }),
   component: BlogPage,
