@@ -28,11 +28,11 @@ export const Route = createFileRoute("/services")({
         content:
           "Airport, port, VIP, villa and group transfers in Mykonos. Premium chauffeur service, 24/7.",
       },
-      { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/services" },
+      { property: "og:url", content: "https://www.islavidajmk.com/services" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/services" },
+      { rel: "canonical", href: "https://www.islavidajmk.com/services" },
     ],
   }),
   component: ServicesPage,
