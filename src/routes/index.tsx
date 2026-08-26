@@ -31,11 +31,11 @@ export const Route = createFileRoute("/")({
         content:
           "Private transfers, airport & port pickups, villa and VIP chauffeur services in Mykonos. 24/7.",
       },
-      { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/" },
+      { property: "og:url", content: "https://www.islavidajmk.com/" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/" },
+      { rel: "canonical", href: "https://www.islavidajmk.com/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
