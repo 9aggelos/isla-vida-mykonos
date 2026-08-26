@@ -23,7 +23,6 @@ export const Route = createFileRoute("/about")({
     ],
     links: [
       { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/about" },
-      { rel: "preload", as: "image", href: aboutImage, fetchpriority: "high" },
     ],
   }),
   component: AboutPage,
