@@ -11,7 +11,7 @@ import { Check, Plane, Ship, UserCheck, Compass, Users } from "lucide-react";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Mykonos Transfer Services: Airport, Port, VIP & Groups" },
+      { title: "Mykonos Transfer Services: Airport, Port, VIP & Groups | Isla Vida" },
       {
         name: "description",
         content:
@@ -22,7 +22,11 @@ export const Route = createFileRoute("/services")({
         content:
           "Mykonos airport transfer, JMK airport taxi, Mykonos port transfer, VIP transfer Mykonos, helicopter transfer Mykonos, villa transfer Mykonos, group transport Mykonos",
       },
-      { property: "og:title", content: "Mykonos Transfer Services: Airport, Port, VIP & Groups" },
+      {
+        property: "og:site_name",
+        content: "Isla Vida Mykonos",
+      },
+      { property: "og:title", content: "Mykonos Transfer Services: Airport, Port, VIP & Groups | Isla Vida" },
       {
         property: "og:description",
         content:
@@ -37,7 +41,6 @@ export const Route = createFileRoute("/services")({
   }),
   component: ServicesPage,
 });
-
 const services = [
   {
     title: "Airport Transfers",
