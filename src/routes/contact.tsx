@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
-import contactImage from "../assets/hero-van.jpg";
+import contactImage from "../assets/hero-van.webp";
 import { Phone, Mail, MapPin, Instagram, Clock, Send } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({

@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroVan from "../assets/van-yacht.jpg";
-import airportTransfer from "../assets/airport-transfer.jpg";
-import portTransfer from "../assets/port-transfer.jpg";
-import chauffeurService from "../assets/helicopter-mykonos.jpg";
-import islandTours from "../assets/mykonos-pool-view.jpg";
+import heroVan from "../assets/van-yacht.webp";
+import airportTransfer from "../assets/airport-transfer.webp";
+import portTransfer from "../assets/port-transfer.webp";
+import chauffeurService from "../assets/helicopter-mykonos.webp";
+import islandTours from "../assets/mykonos-pool-view.webp";
 import yacht from "../assets/yacht.avif";
 import { ServiceCard } from "../components/ServiceCard";
 import { ArrowRight, Clock, Shield, Star, Users, MessageCircle } from "lucide-react";
@@ -34,7 +34,10 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/" }],
+    links: [
+      { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/" },
+      { rel: "preload", as: "image", href: heroVan, fetchpriority: "high" },
+    ],
   }),
   component: Index,
 });
@@ -87,7 +90,10 @@ function Index() {
             src={heroVan}
             alt="Luxury white van on a Mykonos coastal road with white Cycladic buildings and blue sea"
             width={1920}
-            height={1080}
+            height={1440}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40" />

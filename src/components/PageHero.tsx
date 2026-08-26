@@ -19,6 +19,9 @@ export function PageHero({ title, subtitle, image, cta, children }: PageHeroProp
           alt={title}
           width={1920}
           height={1080}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
