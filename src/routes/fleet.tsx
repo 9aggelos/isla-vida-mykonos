@@ -23,11 +23,11 @@ export const Route = createFileRoute("/fleet")({
         content:
           "Premium SUV (1–4 pax) and luxury Van (up to 7 pax) for private transfers across Mykonos.",
       },
-      { property: "og:url", content: "https://isla-vida-mykonos.lovable.app/fleet" },
+      { property: "og:url", content: "https://www.islavidajmk.com/fleet" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://isla-vida-mykonos.lovable.app/fleet" },
+      { rel: "canonical", href: "https://www.islavidajmk.com/fleet" },
     ],
   }),
   component: FleetPage,
