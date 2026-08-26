@@ -10,6 +10,10 @@ export const Route = createFileRoute("/blog")({
         content:
           "Read the Isla Vida Mykonos journal for Mykonos travel tips, luxury transfer guides, insider itineraries, and service updates.",
       },
+      {
+        property: "og:site_name",
+        content: "Isla Vida Mykonos",
+      },
       { property: "og:title", content: "Blog — Isla Vida Mykonos" },
       {
         property: "og:description",
