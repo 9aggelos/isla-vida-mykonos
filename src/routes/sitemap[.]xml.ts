@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { villas } from "../data/villas";
 
 const BASE_URL = "https://www.islavidajmk.com";
 
@@ -18,6 +19,14 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "", changefreq: "weekly", priority: "1.0" },
           { path: "/services", changefreq: "weekly", priority: "0.8" },
           { path: "/mykonos-cruise-port-transfers", changefreq: "monthly", priority: "0.8" },
+          { path: "/villas", changefreq: "weekly", priority: "0.8" },
+          ...villas.map(
+            (villa): SitemapEntry => ({
+              path: `/villas/${villa.slug}`,
+              changefreq: "monthly",
+              priority: "0.7",
+            }),
+          ),
           { path: "/fleet", changefreq: "weekly", priority: "0.7" },
           { path: "/about", changefreq: "monthly", priority: "0.7" },
           { path: "/blog", changefreq: "weekly", priority: "0.7" },

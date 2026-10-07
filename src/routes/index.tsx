@@ -64,7 +64,7 @@ const services = [
     description:
       "Bespoke luxury villa rentals and five-star hotel reservations in Mykonos. Offering exclusive access to the island’s most prestigious accommodations, tailored to your exact desires.",
     image: islandTours,
-    to: "/services",
+    to: "/villas",
   },
   {
     title: "Helicopter Chartering",
@@ -72,6 +72,7 @@ const services = [
       "Seamless luxury ground transportation, private helicopter chartering all over Greece, and VIP concierge services and bespoke itineraries. Discreet, punctual, and tailored to your schedule.",
     image: chauffeurService,
     to: "/services",
+    hash: "helicopter-chartering",
   },
   {
     title: "Yacht & Catamaran Chartering",
@@ -79,6 +80,7 @@ const services = [
       "Bespoke yacht and catamaran charters in Mykonos and all over the Greek islands. From private daily cruises to Delos and Rhenia, sunset tours, and half-day trips, to seamless boat taxi transfers to the island's premier beach venues.",
     image: yacht,
     to: "/services",
+    hash: "yacht-catamaran-chartering",
   },
   {
     title: "Airport Transfers",
