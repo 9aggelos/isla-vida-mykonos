@@ -2,20 +2,42 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "./ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "./ui/dropdown-menu";
 
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
+  { to: "/villas", label: "Villas" },
   { to: "/fleet", label: "Fleet" },
   { to: "/about", label: "About" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 
+const serviceLinks = [
+  { to: "/services", label: "All Services" },
+  { to: "/mykonos-cruise-port-transfers", label: "Cruise Port Transfers" },
+];
+
+const mobileLinks = [
+  ...navLinks.slice(0, 2),
+  serviceLinks[1],
+  ...navLinks.slice(2),
+];
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  // A link is active on its own page and on pages below it (/villas/some-villa).
+  const isActive = (to: string) =>
+    pathname === to || (to !== "/" && pathname.startsWith(`${to}/`));
+  const servicesActive = serviceLinks.some((link) => isActive(link.to));
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm">
@@ -40,28 +62,42 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => link.to === "/services" ? (
-            <DropdownMenu key={link.to}>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="h-auto gap-1 px-0 font-medium text-muted-foreground hover:bg-transparent hover:text-navy-accent">Services<ChevronDown /></Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start">
-                <DropdownMenuItem asChild><Link to="/services">All Services</Link></DropdownMenuItem>
-                <DropdownMenuItem asChild><Link to="/mykonos-cruise-port-transfers">Cruise Port Transfers</Link></DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          ) : (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={`text-sm font-medium tracking-wide transition-colors hover:text-navy-accent ${
-                pathname === link.to ? "text-navy" : "text-muted-foreground"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+        {/* Seven links do not fit on a tablet, so the full menu starts at laptop width. */}
+        <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
+          {navLinks.map((link) =>
+            link.to === "/services" ? (
+              <DropdownMenu key={link.to}>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    className={`h-auto gap-1 px-0 font-medium tracking-wide hover:bg-transparent hover:text-navy-accent ${
+                      servicesActive ? "text-navy" : "text-muted-foreground"
+                    }`}
+                  >
+                    Services
+                    <ChevronDown />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start">
+                  {serviceLinks.map((item) => (
+                    <DropdownMenuItem key={item.to} asChild>
+                      <Link to={item.to}>{item.label}</Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-navy-accent ${
+                  isActive(link.to) ? "text-navy" : "text-muted-foreground"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
           <a
             href="https://wa.me/306948041931"
             target="_blank"
@@ -75,24 +111,25 @@ export function Header() {
         <Button
           variant="ghost"
           size="icon"
-          className="inline-flex items-center justify-center rounded-md p-2 text-foreground md:hidden"
+          className="text-foreground lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </Button>
       </div>
 
       {isOpen && (
-        <div className="border-t border-border bg-background px-4 py-6 md:hidden">
+        <div className="border-t border-border bg-background px-4 py-6 lg:hidden">
           <nav className="flex flex-col gap-4">
-            {[...navLinks.slice(0, 2), { to: "/mykonos-cruise-port-transfers", label: "Cruise Port Transfers" }, ...navLinks.slice(2)].map((link) => (
+            {mobileLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 onClick={() => setIsOpen(false)}
                 className={`text-base font-medium ${
-                  pathname === link.to ? "text-navy" : "text-muted-foreground"
+                  isActive(link.to) ? "text-navy" : "text-muted-foreground"
                 }`}
               >
                 {link.label}
