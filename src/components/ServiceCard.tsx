@@ -7,13 +7,16 @@ interface ServiceCardProps {
   description: string;
   image: string;
   to: string;
+  /** Section of the target page to scroll to, without the # sign. */
+  hash?: string;
   icon?: ReactNode;
 }
 
-export function ServiceCard({ title, description, image, to, icon }: ServiceCardProps) {
+export function ServiceCard({ title, description, image, to, hash, icon }: ServiceCardProps) {
   return (
     <Link
       to={to}
+      hash={hash}
       className="group relative flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all hover:shadow-md"
     >
       <div className="aspect-[4/3] overflow-hidden">

@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { PageHero } from "../components/PageHero";
 import { ServiceCard } from "../components/ServiceCard";
 import airportTransfer from "../assets/airport-transfer.webp";
@@ -6,7 +7,21 @@ import portTransfer from "../assets/port-transfer.webp";
 import chauffeurService from "../assets/chauffeur-service.webp";
 import islandTours from "../assets/island-tours.webp";
 import groupTransport from "../assets/group-transport.webp";
-import { Check, Plane, Ship, UserCheck, Compass, Users } from "lucide-react";
+import villaImage from "../assets/mykonos-pool-view.webp";
+import helicopterImage from "../assets/helicopter-mykonos.webp";
+import yachtImage from "../assets/yacht.avif";
+import {
+  Anchor,
+  ArrowRight,
+  Check,
+  Compass,
+  Home,
+  Navigation,
+  Plane,
+  Ship,
+  UserCheck,
+  Users,
+} from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -15,7 +30,7 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Mykonos airport (JMK) transfers, port pickups, VIP & helicopter coordination, villa transfers and group transportation. Premium chauffeur service, 24/7.",
+          "Airport (JMK) and port transfers, chauffeur service, island tours and group transport in Mykonos, plus villa rentals, yacht and helicopter charters. 24/7.",
       },
       {
         name: "keywords",
@@ -30,7 +45,7 @@ export const Route = createFileRoute("/services")({
       {
         property: "og:description",
         content:
-          "Airport, port, VIP, villa and group transfers in Mykonos. Premium chauffeur service, 24/7.",
+          "Airport and port transfers, chauffeur service and group transport in Mykonos, plus villas, yacht and helicopter charters. 24/7.",
       },
       { property: "og:url", content: "https://www.islavidajmk.com/services" },
       { property: "og:type", content: "website" },
@@ -42,13 +57,25 @@ export const Route = createFileRoute("/services")({
   }),
   component: ServicesPage,
 });
-const services = [
+interface Service {
+  /** Used for links that jump straight to this service: /services#<id> */
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  icon: ReactNode;
+  features: string[];
+  /** Optional link to a page with more detail. */
+  link?: { to: string; label: string };
+}
+
+const services: Service[] = [
   {
+    id: "airport-transfers",
     title: "Airport Transfers",
     description:
       "Seamless arrivals and departures from Mykonos Airport (JMK). Our driver meets you at the terminal, assists with luggage, and delivers you directly to your hotel or villa.",
     image: airportTransfer,
-    to: "/contact",
     icon: <Plane className="h-5 w-5" />,
     features: [
       "Meet & greet at arrivals",
@@ -58,11 +85,11 @@ const services = [
     ],
   },
   {
+    id: "port-transfers",
     title: "Port Transfers",
     description:
       "Timely ferry and yacht connections from Mykonos New Port. We track arrivals and adjust pickups, so you never wait when your schedule changes.",
     image: portTransfer,
-    to: "/contact",
     icon: <Ship className="h-5 w-5" />,
     features: [
       "Ferry & yacht pickup",
@@ -72,11 +99,11 @@ const services = [
     ],
   },
   {
+    id: "chauffeur-services",
     title: "Chauffeur Services",
     description:
       "A private chauffeur at your disposal for restaurants, beach clubs, nightlife, shopping, and events. Travel with discretion and comfort throughout your stay.",
     image: chauffeurService,
-    to: "/contact",
     icon: <UserCheck className="h-5 w-5" />,
     features: [
       "Hourly & daily hire",
@@ -86,11 +113,11 @@ const services = [
     ],
   },
   {
+    id: "private-island-tours",
     title: "Private Island Tours",
     description:
       "Discover Mykonos at your own pace. Visit the iconic windmills, Little Venice, hidden beaches, and panoramic viewpoints with a local expert behind the wheel.",
     image: islandTours,
-    to: "/contact",
     icon: <Compass className="h-5 w-5" />,
     features: [
       "Custom routes",
@@ -100,17 +127,60 @@ const services = [
     ],
   },
   {
+    id: "group-transportation",
     title: "Group Transportation",
     description:
       "Luxury vans and minibuses for families, weddings, corporate retreats, and events. Travel together with comfort, space, and premium service.",
     image: groupTransport,
-    to: "/contact",
     icon: <Users className="h-5 w-5" />,
     features: [
       "Up to 20 passengers",
       "Event & wedding logistics",
       "Multiple vehicles on request",
       "Spacious luggage capacity",
+    ],
+  },
+  {
+    id: "luxury-villas",
+    title: "Luxury Villa & Hotel Reservations",
+    description:
+      "Bespoke luxury villa rentals and five-star hotel reservations in Mykonos, with access to the island's most prestigious accommodations, tailored to your exact wishes.",
+    image: villaImage,
+    icon: <Home className="h-5 w-5" />,
+    features: [
+      "Private luxury villas",
+      "Five-star hotel reservations",
+      "Tailored to your dates and group",
+      "Transfers arranged with your stay",
+    ],
+    link: { to: "/villas", label: "See the villa portfolio" },
+  },
+  {
+    id: "helicopter-chartering",
+    title: "Helicopter Chartering",
+    description:
+      "Private helicopter charters all over Greece, combined with luxury ground transportation and VIP concierge services. Discreet, punctual, and tailored to your schedule.",
+    image: helicopterImage,
+    icon: <Navigation className="h-5 w-5" />,
+    features: [
+      "Private charters across Greece",
+      "Ground transfers on both ends",
+      "VIP concierge services",
+      "Bespoke itineraries",
+    ],
+  },
+  {
+    id: "yacht-catamaran-chartering",
+    title: "Yacht & Catamaran Chartering",
+    description:
+      "Bespoke yacht and catamaran charters in Mykonos and across the Greek islands, from private day cruises to boat taxi transfers to the island's premier beach venues.",
+    image: yachtImage,
+    icon: <Anchor className="h-5 w-5" />,
+    features: [
+      "Day cruises to Delos and Rhenia",
+      "Sunset tours",
+      "Half-day trips",
+      "Boat taxi to beach venues",
     ],
   },
 ];
@@ -120,7 +190,7 @@ function ServicesPage() {
     <div className="flex flex-col">
       <PageHero
         title="Premium services tailored to you"
-        subtitle="From airport arrivals to private island tours, every journey with Isla Vida is designed for comfort, discretion, and reliability."
+        subtitle="From airport arrivals to private villas and yacht days, every service with Isla Vida is designed for comfort, discretion, and reliability."
         image={airportTransfer}
         cta={{ to: "/contact", label: "Request a quote" }}
       />
@@ -132,15 +202,16 @@ function ServicesPage() {
               What we offer
             </p>
             <h2 className="mt-3 font-display text-4xl font-bold text-foreground sm:text-5xl">
-              Complete Mykonos transportation
+              Transfers and lifestyle services in Mykonos
             </h2>
           </div>
 
           <div className="grid gap-10 lg:grid-cols-2">
             {services.map((service) => (
               <div
-                key={service.title}
-                className="flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm lg:flex-row"
+                key={service.id}
+                id={service.id}
+                className="flex scroll-mt-28 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm lg:flex-row"
               >
                 <div className="lg:w-2/5">
                   <img
@@ -169,6 +240,15 @@ function ServicesPage() {
                       </li>
                     ))}
                   </ul>
+                  {service.link && (
+                    <Link
+                      to={service.link.to}
+                      className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-navy-accent transition-colors hover:text-navy"
+                    >
+                      {service.link.label}
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}

@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Blog — Isla Vida Mykonos" },
+      { title: "Mykonos Travel Guide & Tips | Isla Vida Blog" },
       {
         name: "description",
         content:
@@ -14,14 +14,14 @@ export const Route = createFileRoute("/blog")({
         property: "og:site_name",
         content: "Isla Vida Mykonos",
       },
-      { property: "og:title", content: "Blog — Isla Vida Mykonos" },
+      { property: "og:title", content: "Mykonos Travel Guide & Tips | Isla Vida Blog" },
       {
         property: "og:description",
         content:
           "Read the Isla Vida Mykonos journal for Mykonos travel tips, luxury transfer guides, insider itineraries, and service updates.",
       },
       { property: "og:url", content: "https://www.islavidajmk.com/blog" },
-      { property: "og:type", content: "article" },
+      { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

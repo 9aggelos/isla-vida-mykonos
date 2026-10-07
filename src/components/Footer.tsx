@@ -11,7 +11,7 @@ export function Footer() {
               ISLA VIDA MYKONOS
             </h3>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-navy-muted">
-              Private transfers, chauffeur services, and premium island transportation across
+              Private transfers, chauffeur services, luxury villas and yacht charters across
               Mykonos. Available 24/7.
             </p>
           </div>
@@ -30,7 +30,17 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/mykonos-cruise-port-transfers" className="hover:text-primary-foreground transition-colors">Cruise Port Transfers</Link>
+                <Link
+                  to="/mykonos-cruise-port-transfers"
+                  className="hover:text-white transition-colors"
+                >
+                  Cruise Port Transfers
+                </Link>
+              </li>
+              <li>
+                <Link to="/villas" className="hover:text-white transition-colors">
+                  Villas
+                </Link>
               </li>
               <li>
                 <Link to="/fleet" className="hover:text-white transition-colors">
