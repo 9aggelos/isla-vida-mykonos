@@ -1,6 +1,8 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { Button } from "./ui/button";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "./ui/dropdown-menu";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -39,7 +41,17 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
+          {navLinks.map((link) => link.to === "/services" ? (
+            <DropdownMenu key={link.to}>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="h-auto gap-1 px-0 font-medium text-muted-foreground hover:bg-transparent hover:text-navy-accent">Services<ChevronDown /></Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem asChild><Link to="/services">All Services</Link></DropdownMenuItem>
+                <DropdownMenuItem asChild><Link to="/mykonos-cruise-port-transfers">Cruise Port Transfers</Link></DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : (
             <Link
               key={link.to}
               to={link.to}
@@ -60,19 +72,21 @@ export function Header() {
           </a>
         </nav>
 
-        <button
+        <Button
+          variant="ghost"
+          size="icon"
           className="inline-flex items-center justify-center rounded-md p-2 text-foreground md:hidden"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        </Button>
       </div>
 
       {isOpen && (
         <div className="border-t border-border bg-background px-4 py-6 md:hidden">
           <nav className="flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {[...navLinks.slice(0, 2), { to: "/mykonos-cruise-port-transfers", label: "Cruise Port Transfers" }, ...navLinks.slice(2)].map((link) => (
               <Link
                 key={link.to}
                 to={link.to}

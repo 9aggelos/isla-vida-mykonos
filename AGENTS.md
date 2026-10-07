@@ -10,3 +10,5 @@
 > the editor, so keep the branch in a working state.
 
 <!-- LOVABLE:END -->
+
+- Keep the cruise port offer in its dedicated leaf route, linked from the Services dropdown and homepage, so its page copy and search metadata remain independently addressable.
