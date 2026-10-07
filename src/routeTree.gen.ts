@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as MykonosCruisePortTransfersRouteImport } from './routes/mykonos-cruise-port-transfers'
 import { Route as FleetRouteImport } from './routes/fleet'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -27,6 +28,12 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MykonosCruisePortTransfersRoute =
+  MykonosCruisePortTransfersRouteImport.update({
+    id: '/mykonos-cruise-port-transfers',
+    path: '/mykonos-cruise-port-transfers',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const FleetRoute = FleetRouteImport.update({
   id: '/fleet',
   path: '/fleet',
@@ -59,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/fleet': typeof FleetRoute
+  '/mykonos-cruise-port-transfers': typeof MykonosCruisePortTransfersRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
@@ -68,6 +76,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/fleet': typeof FleetRoute
+  '/mykonos-cruise-port-transfers': typeof MykonosCruisePortTransfersRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
@@ -78,6 +87,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/fleet': typeof FleetRoute
+  '/mykonos-cruise-port-transfers': typeof MykonosCruisePortTransfersRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/fleet'
+    | '/mykonos-cruise-port-transfers'
     | '/services'
     | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +109,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/fleet'
+    | '/mykonos-cruise-port-transfers'
     | '/services'
     | '/sitemap.xml'
   id:
@@ -107,6 +119,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/fleet'
+    | '/mykonos-cruise-port-transfers'
     | '/services'
     | '/sitemap.xml'
   fileRoutesById: FileRoutesById
@@ -117,6 +130,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
   FleetRoute: typeof FleetRoute
+  MykonosCruisePortTransfersRoute: typeof MykonosCruisePortTransfersRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -135,6 +149,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mykonos-cruise-port-transfers': {
+      id: '/mykonos-cruise-port-transfers'
+      path: '/mykonos-cruise-port-transfers'
+      fullPath: '/mykonos-cruise-port-transfers'
+      preLoaderRoute: typeof MykonosCruisePortTransfersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/fleet': {
@@ -181,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
   FleetRoute: FleetRoute,
+  MykonosCruisePortTransfersRoute: MykonosCruisePortTransfersRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
