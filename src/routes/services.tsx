@@ -234,7 +234,7 @@ function ServicesPage() {
               What we offer
             </p>
             <h2 className="mt-3 font-display text-4xl font-bold text-foreground sm:text-5xl">
-              Transfers and lifestyle services in Mykonos
+              Private Transfers and Concierge Services in Mykonos
             </h2>
           </div>
 
