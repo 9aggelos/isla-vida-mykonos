@@ -24,6 +24,7 @@ export const Route = createFileRoute("/about")({
       },
       { property: "og:url", content: "https://www.islavidajmk.com/about" },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "canonical", href: "https://www.islavidajmk.com/about" },

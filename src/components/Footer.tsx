@@ -30,6 +30,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/mykonos-cruise-port-transfers" className="hover:text-primary-foreground transition-colors">Cruise Port Transfers</Link>
+              </li>
+              <li>
                 <Link to="/fleet" className="hover:text-white transition-colors">
                   Fleet
                 </Link>

@@ -34,6 +34,7 @@ export const Route = createFileRoute("/services")({
       },
       { property: "og:url", content: "https://www.islavidajmk.com/services" },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "canonical", href: "https://www.islavidajmk.com/services" },

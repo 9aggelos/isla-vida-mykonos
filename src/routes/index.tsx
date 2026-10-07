@@ -37,6 +37,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:url", content: "https://www.islavidajmk.com/" },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "canonical", href: "https://www.islavidajmk.com/" },
@@ -52,6 +53,12 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
+  {
+    title: "Cruise Port Transfers",
+    description: "Step off your ship and into a private vehicle. Your local driver meets you at the port, shows you Mykonos at your own pace and has you back well before all-aboard.",
+    image: heroVan,
+    to: "/mykonos-cruise-port-transfers",
+  },
   {
     title: "Luxury Villa & Hotel Reservations",
     description:
@@ -220,7 +227,7 @@ function Index() {
             ))}
           </div>
           <p className="mt-4 text-lg text-muted-foreground">
-            Based on 37 verified reviews from travelers across Mykonos.
+            Based on 67 verified reviews from travelers across Mykonos.
           </p>
           <div className="mt-8">
             <a
