@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
-import aboutImage from "../assets/island-tours.webp";
+import aboutImage from "../assets/about-hero.webp";
+import storyImage from "../assets/island-tours.webp";
 import { Clock, MapPin, Shield, Heart } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
@@ -101,7 +102,7 @@ function AboutPage() {
             </div>
             <div className="relative">
               <img
-                src={aboutImage}
+                src={storyImage}
                 alt="Mykonos windmills and coastal view"
                 width={1200}
                 height={800}
