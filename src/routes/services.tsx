@@ -3,12 +3,13 @@ import type { ReactNode } from "react";
 import { PageHero } from "../components/PageHero";
 import { ServiceCard } from "../components/ServiceCard";
 import airportTransfer from "../assets/airport-transfer.webp";
+import servicesHero from "../assets/services-hero.webp";
 import portTransfer from "../assets/port-transfer.webp";
 import chauffeurService from "../assets/chauffeur-service.webp";
-import islandTours from "../assets/island-tours.webp";
+import islandTours from "../assets/island-tours-doorway.webp";
 import groupTransport from "../assets/group-transport.webp";
-import villaImage from "../assets/mykonos-pool-view.webp";
-import helicopterImage from "../assets/helicopter-mykonos.webp";
+import villaImage from "../assets/villa-dining-room.webp";
+import helicopterImage from "../assets/helicopter-pool-deck.webp";
 import yachtImage from "../assets/yacht.avif";
 import {
   Anchor,
@@ -223,7 +224,7 @@ function ServicesPage() {
       <PageHero
         title="Premium services tailored to you"
         subtitle="From airport arrivals to private villas and yacht days, every service with Isla Vida is designed for comfort, discretion, and reliability."
-        image={airportTransfer}
+        image={servicesHero}
         cta={{ to: "/contact", label: "Request a quote" }}
       />
 
@@ -234,7 +235,7 @@ function ServicesPage() {
               What we offer
             </p>
             <h2 className="mt-3 font-display text-4xl font-bold text-foreground sm:text-5xl">
-              Private Transfers and Concierge Services in Mykonos
+              Transfers and lifestyle services in Mykonos
             </h2>
           </div>
 
