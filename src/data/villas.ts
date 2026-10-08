@@ -15,7 +15,7 @@
 // general villa request.
 // ---------------------------------------------------------------------------
 
-import samplePhoto from "../assets/mykonos-pool-view.webp";
+import samplePhoto from "../assets/villa-pool-terrace.webp";
 
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
