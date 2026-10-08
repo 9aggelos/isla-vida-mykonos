@@ -9,25 +9,48 @@ import {
   DropdownMenuItem,
 } from "./ui/dropdown-menu";
 
-const navLinks = [
+interface NavLink {
+  to: string;
+  label: string;
+}
+
+interface NavItem extends NavLink {
+  /** Pages shown in a dropdown under this item. The first one is the item itself. */
+  children?: NavLink[];
+  /**
+   * Pages that belong to this item without crowding the menu. They appear as a
+   * slim bar under the header, only while the visitor is on one of them.
+   */
+  section?: NavLink[];
+}
+
+// The menu. To add a page, add a line here; nothing else in this file changes.
+const navItems: NavItem[] = [
   { to: "/", label: "Home" },
-  { to: "/services", label: "Services" },
+  {
+    to: "/services",
+    label: "Services",
+    section: [
+      { to: "/services", label: "All Services" },
+      { to: "/mykonos-cruise-port-transfers", label: "Cruise Port Transfers" },
+      { to: "/fleet", label: "Our Fleet" },
+    ],
+  },
+  {
+    to: "/concierge",
+    label: "Concierge",
+    children: [
+      { to: "/concierge", label: "Concierge Services" },
+      { to: "/concierge/beach-club-reservations", label: "Beach Clubs" },
+      { to: "/concierge/restaurant-reservations", label: "Restaurants" },
+      { to: "/concierge/sunset-bars", label: "Sunset Bars" },
+      { to: "/concierge/nightlife-vip-tables", label: "Nightlife & VIP Tables" },
+    ],
+  },
   { to: "/villas", label: "Villas" },
-  { to: "/fleet", label: "Fleet" },
   { to: "/about", label: "About" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
-];
-
-const serviceLinks = [
-  { to: "/services", label: "All Services" },
-  { to: "/mykonos-cruise-port-transfers", label: "Cruise Port Transfers" },
-];
-
-const mobileLinks = [
-  ...navLinks.slice(0, 2),
-  serviceLinks[1],
-  ...navLinks.slice(2),
 ];
 
 export function Header() {
@@ -37,7 +60,13 @@ export function Header() {
   // A link is active on its own page and on pages below it (/villas/some-villa).
   const isActive = (to: string) =>
     pathname === to || (to !== "/" && pathname.startsWith(`${to}/`));
-  const servicesActive = serviceLinks.some((link) => isActive(link.to));
+  const isGroupActive = (item: NavItem) =>
+    isActive(item.to) ||
+    [...(item.children ?? []), ...(item.section ?? [])].some((page) => isActive(page.to));
+  // The section bar to show, if the visitor is inside a section.
+  const section = navItems.find(
+    (item) => item.section && item.section.some((page) => isActive(page.to)),
+  )?.section;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm">
@@ -62,39 +91,39 @@ export function Header() {
           </div>
         </Link>
 
-        {/* Seven links do not fit on a tablet, so the full menu starts at laptop width. */}
+        {/* The full menu needs laptop width; smaller screens get the button below. */}
         <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
-          {navLinks.map((link) =>
-            link.to === "/services" ? (
-              <DropdownMenu key={link.to}>
+          {navItems.map((item) =>
+            item.children ? (
+              <DropdownMenu key={item.to}>
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
                     className={`h-auto gap-1 px-0 font-medium tracking-wide hover:bg-transparent hover:text-navy-accent ${
-                      servicesActive ? "text-navy" : "text-muted-foreground"
+                      isGroupActive(item) ? "text-navy" : "text-muted-foreground"
                     }`}
                   >
-                    Services
+                    {item.label}
                     <ChevronDown />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start">
-                  {serviceLinks.map((item) => (
-                    <DropdownMenuItem key={item.to} asChild>
-                      <Link to={item.to}>{item.label}</Link>
+                  {item.children.map((child) => (
+                    <DropdownMenuItem key={child.to} asChild>
+                      <Link to={child.to}>{child.label}</Link>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
               <Link
-                key={link.to}
-                to={link.to}
+                key={item.to}
+                to={item.to}
                 className={`text-sm font-medium tracking-wide transition-colors hover:text-navy-accent ${
-                  isActive(link.to) ? "text-navy" : "text-muted-foreground"
+                  isActive(item.to) ? "text-navy" : "text-muted-foreground"
                 }`}
               >
-                {link.label}
+                {item.label}
               </Link>
             ),
           )}
@@ -121,19 +150,37 @@ export function Header() {
       </div>
 
       {isOpen && (
-        <div className="border-t border-border bg-background px-4 py-6 lg:hidden">
+        <div className="max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-border bg-background px-4 py-6 lg:hidden">
           <nav className="flex flex-col gap-4">
-            {mobileLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                onClick={() => setIsOpen(false)}
-                className={`text-base font-medium ${
-                  isActive(link.to) ? "text-navy" : "text-muted-foreground"
-                }`}
-              >
-                {link.label}
-              </Link>
+            {navItems.map((item) => (
+              <div key={item.to} className="flex flex-col gap-3">
+                <Link
+                  to={item.to}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-base font-medium ${
+                    isGroupActive(item) ? "text-navy" : "text-muted-foreground"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+                {/* The first child repeats the item above, so it is skipped here. */}
+                {item.children && (
+                  <div className="flex flex-col gap-3 border-l border-border pl-4">
+                    {item.children.slice(1).map((child) => (
+                      <Link
+                        key={child.to}
+                        to={child.to}
+                        onClick={() => setIsOpen(false)}
+                        className={`text-sm ${
+                          isActive(child.to) ? "text-navy" : "text-muted-foreground"
+                        }`}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <a
               href="https://wa.me/306948041931"
@@ -146,6 +193,29 @@ export function Header() {
             </a>
           </nav>
         </div>
+      )}
+      {section && (
+        <nav
+          aria-label="In this section"
+          className="border-t border-border bg-secondary/60"
+        >
+          <div className="mx-auto flex max-w-7xl gap-6 overflow-x-auto px-4 sm:px-6 lg:px-8">
+            {section.map((page) => (
+              <Link
+                key={page.to}
+                to={page.to}
+                aria-current={isActive(page.to) ? "page" : undefined}
+                className={`whitespace-nowrap border-b-2 py-2.5 text-xs font-medium uppercase tracking-widest transition-colors hover:text-navy-accent ${
+                  isActive(page.to)
+                    ? "border-navy text-navy"
+                    : "border-transparent text-muted-foreground"
+                }`}
+              >
+                {page.label}
+              </Link>
+            ))}
+          </div>
+        </nav>
       )}
     </header>
   );

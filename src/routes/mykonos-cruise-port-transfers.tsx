@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, MessageCircle, Star } from "lucide-react";
 import { Button } from "../components/ui/button";
-import portVehicle from "../assets/van-yacht.webp";
+import portVehicle from "../assets/cruise-ship-mykonos-sunset.webp";
 
 const title = "Mykonos Cruise Port Transfers & Shore Tours | Isla Vida";
 const description = "Private Mykonos cruise port transfers and shore tours: a pre-booked alternative to port taxis. Your driver meets you at the port and gets you back to your ship on time.";
@@ -78,7 +78,7 @@ function CruisePortPage() {
   return (
     <div>
       <section className="relative isolate overflow-hidden bg-primary text-primary-foreground">
-        <img src={portVehicle} alt="Private driver and vehicle waiting for cruise passengers at Mykonos New Port" width={1920} height={1080} loading="eager" fetchPriority="high" decoding="async" className="absolute inset-0 -z-20 h-full w-full object-cover" />
+        <img src={portVehicle} alt="Cruise ship off the Old Port of Mykonos at sunset" width={1920} height={1080} loading="eager" fetchPriority="high" decoding="async" className="absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-primary/70" />
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <h1 className="max-w-3xl text-balance font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Mykonos Cruise Port Transfers &amp; Private Shore Tours</h1>
