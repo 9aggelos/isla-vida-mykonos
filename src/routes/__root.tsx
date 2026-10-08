@@ -13,6 +13,7 @@ import { Analytics } from "@vercel/analytics/react";
 import appCss from "../styles.css?url";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { FloatingWhatsApp } from "../components/FloatingWhatsApp";
 
 const SITE_URL = "https://www.islavidajmk.com";
 const SHARE_IMAGE = `${SITE_URL}/og-image.jpg`;
@@ -198,6 +199,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
+        <FloatingWhatsApp />
       </div>
     </QueryClientProvider>
   );
