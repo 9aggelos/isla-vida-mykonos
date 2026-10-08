@@ -3,7 +3,7 @@ import { PageHero } from "../../components/PageHero";
 import { VillaCard } from "../../components/VillaCard";
 import { VillaRequestDialog } from "../../components/VillaRequestDialog";
 import { villas } from "../../data/villas";
-import heroImage from "../../assets/mykonos-pool-view.webp";
+import heroImage from "../../assets/villas-hero.webp";
 
 const TITLE = "Luxury Villas in Mykonos: Private Villa Rentals | Isla Vida";
 const DESCRIPTION =
