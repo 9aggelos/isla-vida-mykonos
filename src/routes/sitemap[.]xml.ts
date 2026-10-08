@@ -19,6 +19,9 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "", changefreq: "weekly", priority: "1.0" },
           { path: "/services", changefreq: "weekly", priority: "0.8" },
           { path: "/mykonos-cruise-port-transfers", changefreq: "monthly", priority: "0.8" },
+          { path: "/concierge", changefreq: "weekly", priority: "0.8" },
+          { path: "/concierge/restaurants-beach-clubs", changefreq: "weekly", priority: "0.8" },
+          { path: "/concierge/nightlife-vip-tables", changefreq: "weekly", priority: "0.8" },
           { path: "/villas", changefreq: "weekly", priority: "0.8" },
           ...villas.map(
             (villa): SitemapEntry => ({
