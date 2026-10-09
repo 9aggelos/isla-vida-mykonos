@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
-import fleetImage from "../assets/fleet-van-sunset.webp";
+import fleetImage from "../assets/fleet-sedan-hotel.webp";
 import { Shield, Wifi, Snowflake, Luggage, Baby, Music } from "lucide-react";
 
 export const Route = createFileRoute("/fleet")({
@@ -75,6 +75,7 @@ function FleetPage() {
         title="A fleet built for comfort"
         subtitle="Immaculate vehicles, professional drivers, and premium amenities for every journey across Mykonos."
         image={fleetImage}
+        imageClassName="object-[60%_50%]"
         cta={{ to: "/contact", label: "Reserve your vehicle" }}
       />
 

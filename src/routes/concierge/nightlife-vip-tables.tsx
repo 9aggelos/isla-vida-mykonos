@@ -10,7 +10,7 @@ import {
   nightlifeTiles,
   nightlifeVenues,
 } from "../../data/concierge";
-import backdropImage from "../../assets/venues/nightlife-backdrop.webp";
+import backdropImage from "../../assets/venues/nightlife-lounge.webp";
 
 const TITLE = "Mykonos Nightlife & VIP Table Reservations | Isla Vida Concierge";
 const DESCRIPTION =
@@ -62,21 +62,21 @@ const requestButton =
 function NightlifePage() {
   return (
     <div className="flex flex-col">
-      {/* The party photo sits behind the right half of the hero and melts into the navy
+      {/* The lounge photo sits behind the right half of the hero and melts into the navy
           on the left and at the bottom, so the headline stays easy to read. */}
       <section className="relative isolate overflow-hidden bg-[oklch(0.17_0.05_264)] text-white">
         <img
           src={backdropImage}
-          alt="Open-air party at dusk in Mykonos, with a mirror ball hanging between palm trees"
-          width={1400}
-          height={984}
+          alt="Open-air lounge at night in Mykonos, with candlelit tables beside a lit pool"
+          width={1500}
+          height={1884}
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          className="absolute inset-y-0 right-0 -z-20 h-full w-full object-cover object-[50%_30%] lg:w-[60%]"
+          className="absolute inset-y-0 right-0 -z-20 h-full w-full object-cover object-[50%_45%] lg:w-[60%]"
         />
         {/* Phones: an even dark veil. Wide screens: fade from solid navy into the photo. */}
-        <div className="absolute inset-0 -z-10 bg-[oklch(0.17_0.05_264)]/55 lg:hidden" />
+        <div className="absolute inset-0 -z-10 bg-[oklch(0.17_0.05_264)]/60 lg:hidden" />
         <div className="absolute inset-y-0 right-0 -z-10 hidden w-[60%] bg-gradient-to-r from-[oklch(0.17_0.05_264)] via-[oklch(0.17_0.05_264)]/10 via-40% to-transparent lg:block" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-1/5 bg-gradient-to-t from-navy/80 to-transparent" />
         <div className="mx-auto max-w-6xl px-4 pb-24 pt-24 sm:px-6 sm:pt-28 lg:px-8 lg:pb-36 lg:pt-36">
