@@ -62,6 +62,7 @@ interface Service {
 const WIDE = "sm:col-span-2";
 const LARGE = "sm:col-span-2 sm:row-span-2";
 const TALL = "lg:row-span-2";
+const PORTRAIT = "sm:row-span-2";
 
 const CHAMPAGNE = "bg-champagne text-navy";
 const NAVY = "bg-navy text-white";
@@ -82,10 +83,10 @@ const services: Service[] = [
     name: "Yachts and catamarans",
     line: "Private charters to Delos and Rhenia.",
     photo: yachtImage,
-    alt: "Motor yacht cruising past the white houses of the Mykonos coast",
+    alt: "Motor yacht at anchor on turquoise water, seen from above",
     to: "/services",
     hash: "yacht-catamaran-chartering",
-    size: WIDE,
+    size: PORTRAIT,
   },
   {
     name: "24/7 guest services",

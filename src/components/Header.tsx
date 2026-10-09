@@ -47,9 +47,19 @@ const navItems: NavItem[] = [
       { to: "/concierge/nightlife-vip-tables", label: "Nightlife & VIP Tables" },
     ],
   },
+  {
+    to: "/holidays",
+    label: "Holidays",
+    children: [
+      { to: "/holidays", label: "Mykonos Holidays" },
+      { to: "/holidays/uae-dubai", label: "UAE & Dubai" },
+      { to: "/holidays/usa-mexico", label: "USA & Mexico" },
+      { to: "/holidays/israel", label: "Israel" },
+    ],
+  },
   { to: "/villas", label: "Villas" },
   { to: "/about", label: "About" },
-  { to: "/blog", label: "Blog" },
+  // The Blog is linked from the footer.
   { to: "/contact", label: "Contact" },
 ];
 

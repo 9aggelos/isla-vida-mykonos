@@ -24,6 +24,10 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/concierge/restaurant-reservations", changefreq: "weekly", priority: "0.8" },
           { path: "/concierge/sunset-bars", changefreq: "weekly", priority: "0.8" },
           { path: "/concierge/nightlife-vip-tables", changefreq: "weekly", priority: "0.8" },
+          { path: "/holidays", changefreq: "weekly", priority: "0.8" },
+          { path: "/holidays/uae-dubai", changefreq: "monthly", priority: "0.8" },
+          { path: "/holidays/usa-mexico", changefreq: "monthly", priority: "0.8" },
+          { path: "/holidays/israel", changefreq: "monthly", priority: "0.8" },
           { path: "/villas", changefreq: "weekly", priority: "0.8" },
           ...villas.map(
             (villa): SitemapEntry => ({

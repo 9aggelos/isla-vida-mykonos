@@ -6,11 +6,20 @@ interface PageHeroProps {
   title: string;
   subtitle: string;
   image: string;
+  /** Optional: which part of the photo stays in view, as a complete class name. */
+  imageClassName?: string;
   cta?: { to: string; label: string };
   children?: ReactNode;
 }
 
-export function PageHero({ title, subtitle, image, cta, children }: PageHeroProps) {
+export function PageHero({
+  title,
+  subtitle,
+  image,
+  imageClassName = "",
+  cta,
+  children,
+}: PageHeroProps) {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
@@ -22,7 +31,7 @@ export function PageHero({ title, subtitle, image, cta, children }: PageHeroProp
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          className="h-full w-full object-cover"
+          className={`h-full w-full object-cover ${imageClassName}`}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
       </div>
