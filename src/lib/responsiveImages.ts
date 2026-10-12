@@ -7,12 +7,16 @@
 // Service card photos (homepage)
 import airportTransfer from "../assets/airport-transfer.webp";
 import airportTransfer640 from "../assets/small/airport-transfer-640.webp";
+import airportTransfer960 from "../assets/small/airport-transfer-960.webp";
 import portTransfer from "../assets/port-transfer.webp";
 import portTransfer640 from "../assets/small/port-transfer-640.webp";
+import portTransfer960 from "../assets/small/port-transfer-960.webp";
 import helicopterMykonos from "../assets/helicopter-mykonos.webp";
 import helicopterMykonos640 from "../assets/small/helicopter-mykonos-640.webp";
+import helicopterMykonos960 from "../assets/small/helicopter-mykonos-960.webp";
 import mykonosPoolView from "../assets/mykonos-pool-view.webp";
 import mykonosPoolView640 from "../assets/small/mykonos-pool-view-640.webp";
+import mykonosPoolView960 from "../assets/small/mykonos-pool-view-960.webp";
 import vanYacht from "../assets/van-yacht.webp";
 import vanYacht828 from "../assets/small/van-yacht-828.webp";
 import vanYacht1280 from "../assets/small/van-yacht-1280.webp";
@@ -51,10 +55,10 @@ import cruiseShipMykonosSunset828 from "../assets/small/cruise-ship-mykonos-suns
 import cruiseShipMykonosSunset1280 from "../assets/small/cruise-ship-mykonos-sunset-1280.webp";
 
 const sets: Record<string, string> = {
-  [airportTransfer]: `${airportTransfer640} 640w, ${airportTransfer} 1200w`,
-  [portTransfer]: `${portTransfer640} 640w, ${portTransfer} 1200w`,
-  [helicopterMykonos]: `${helicopterMykonos640} 640w, ${helicopterMykonos} 1200w`,
-  [mykonosPoolView]: `${mykonosPoolView640} 640w, ${mykonosPoolView} 1280w`,
+  [airportTransfer]: `${airportTransfer640} 640w, ${airportTransfer960} 960w, ${airportTransfer} 1200w`,
+  [portTransfer]: `${portTransfer640} 640w, ${portTransfer960} 960w, ${portTransfer} 1200w`,
+  [helicopterMykonos]: `${helicopterMykonos640} 640w, ${helicopterMykonos960} 960w, ${helicopterMykonos} 1200w`,
+  [mykonosPoolView]: `${mykonosPoolView640} 640w, ${mykonosPoolView960} 960w, ${mykonosPoolView} 1280w`,
   [vanYacht]: `${vanYacht828} 828w, ${vanYacht1280} 1280w, ${vanYacht} 1920w`,
   [heroVan]: `${heroVan828} 828w, ${heroVan1280} 1280w, ${heroVan} 1920w`,
   [fleetSedanHotel]: `${fleetSedanHotel828} 828w, ${fleetSedanHotel1280} 1280w, ${fleetSedanHotel} 1725w`,
