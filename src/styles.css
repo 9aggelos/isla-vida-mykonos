@@ -107,7 +107,7 @@
   --sidebar-ring: oklch(0.55 0.1 240);
 
   --font-display: "Cormorant Garamond", "Georgia", serif;
-  --font-body: "Karla", "Inter", sans-serif;
+  --font-body: "Karla", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
 }
 
 .dark {

@@ -99,11 +99,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: SHARE_IMAGE },
     ],
     links: [
-      // The design uses Cormorant Garamond and Karla; without these lines the
-      // browser falls back to its default fonts.
+      // The design uses Cormorant Garamond and Karla. The font file is fetched early here,
+      // but switched on by the small script below, so the page shows its text straight
+      // away in a standard font instead of waiting for Google Fonts.
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: FONTS_URL },
+      { rel: "preload", as: "style", href: FONTS_URL },
       {
         rel: "preload",
         as: "style",
@@ -115,6 +116,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     scripts: [
+      {
+        // Switches on the fonts preloaded above without holding up the first paint.
+        children: `(function(){var l=document.createElement("link");l.rel="stylesheet";l.href=${JSON.stringify(
+          FONTS_URL,
+        )};document.head.appendChild(l);})();`,
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({
