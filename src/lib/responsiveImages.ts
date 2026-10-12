@@ -4,6 +4,9 @@
  * The small copies live in src/assets/small. If you replace a banner photo, delete its
  * line here (the page then simply uses the full photo) or ask for new small copies.
  */
+import vanYacht from "../assets/van-yacht.webp";
+import vanYacht828 from "../assets/small/van-yacht-828.webp";
+import vanYacht1280 from "../assets/small/van-yacht-1280.webp";
 import heroVan from "../assets/hero-van.webp";
 import heroVan828 from "../assets/small/hero-van-828.webp";
 import heroVan1280 from "../assets/small/hero-van-1280.webp";
@@ -39,6 +42,7 @@ import cruiseShipMykonosSunset828 from "../assets/small/cruise-ship-mykonos-suns
 import cruiseShipMykonosSunset1280 from "../assets/small/cruise-ship-mykonos-sunset-1280.webp";
 
 const sets: Record<string, string> = {
+  [vanYacht]: `${vanYacht828} 828w, ${vanYacht1280} 1280w, ${vanYacht} 1920w`,
   [heroVan]: `${heroVan828} 828w, ${heroVan1280} 1280w, ${heroVan} 1920w`,
   [fleetSedanHotel]: `${fleetSedanHotel828} 828w, ${fleetSedanHotel1280} 1280w, ${fleetSedanHotel} 1725w`,
   [villasHero]: `${villasHero828} 828w, ${villasHero1280} 1280w, ${villasHero} 1920w`,

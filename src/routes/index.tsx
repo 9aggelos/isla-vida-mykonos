@@ -6,7 +6,8 @@ import chauffeurService from "../assets/helicopter-mykonos.webp";
 import islandTours from "../assets/mykonos-pool-view.webp";
 import yacht from "../assets/yacht.avif";
 import { ServiceCard } from "../components/ServiceCard";
-import { ArrowRight, Clock, Shield, Star, Users, MessageCircle } from "lucide-react";
+import { srcSetFor } from "../lib/responsiveImages";
+import { ArrowRight, Clock, Shield, Star, Users } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -45,6 +46,8 @@ export const Route = createFileRoute("/")({
         rel: "preload",
         as: "image",
         href: heroVan,
+        imageSrcSet: srcSetFor(heroVan),
+        imageSizes: "100vw",
         type: "image/webp",
       },
     ],
@@ -106,12 +109,14 @@ function Index() {
         <div className="absolute inset-0">
           <img
             src={heroVan}
+            srcSet={srcSetFor(heroVan)}
+            sizes="100vw"
             alt="Luxury private transfer in Mykonos"
             width={1920}
             height={1080}
             loading="eager"
             fetchPriority="high"
-            decoding="sync"
+            decoding="async"
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40" />
@@ -267,16 +272,7 @@ function Index() {
         </div>
       </section>
 
-      {/* Floating Action Button (WhatsApp / Contact) */}
-      <a
-        href="https://wa.me/306948041931"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#20ba5a] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2"
-        aria-label="Contact us on WhatsApp"
-      >
-        <MessageCircle className="h-7 w-7 fill-current" />
-      </a>
+      {/* The WhatsApp button for every page is in components/FloatingWhatsApp.tsx. */}
     </div>
   );
 }
