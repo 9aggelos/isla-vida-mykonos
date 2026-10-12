@@ -10,7 +10,8 @@ import {
   nightlifeTiles,
   nightlifeVenues,
 } from "../../data/concierge";
-import backdropImage from "../../assets/venues/nightlife-lounge.webp";
+import { srcSetFor } from "../../lib/responsiveImages";
+import backdropImage from "../../assets/venues/nightlife-party.webp";
 
 const TITLE = "Mykonos Nightlife & VIP Table Reservations | Isla Vida Concierge";
 const DESCRIPTION =
@@ -62,29 +63,32 @@ const requestButton =
 function NightlifePage() {
   return (
     <div className="flex flex-col">
-      {/* The lounge photo sits behind the right half of the hero and melts into the navy
-          on the left and at the bottom, so the headline stays easy to read. */}
+      {/* The party photo fills the right of the hero on wide screens and the whole hero on
+          phones. Only a light veil sits on it, so the photo stays bright. */}
       <section className="relative isolate overflow-hidden bg-[oklch(0.17_0.05_264)] text-white">
         <img
           src={backdropImage}
-          alt="Open-air lounge at night in Mykonos, with candlelit tables beside a lit pool"
+          srcSet={srcSetFor(backdropImage)}
+          sizes="(min-width: 1024px) 64vw, 100vw"
+          alt="Disco balls above a crowd dancing at a Mykonos beach party at dusk"
           width={1500}
-          height={1884}
+          height={1001}
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          className="absolute inset-y-0 right-0 -z-20 h-full w-full object-cover object-[50%_45%] lg:w-[60%]"
+          className="absolute inset-y-0 right-0 -z-20 h-full w-full object-cover object-[38%_50%] lg:w-[64%]"
         />
-        {/* Phones: an even dark veil. Wide screens: fade from solid navy into the photo. */}
-        <div className="absolute inset-0 -z-10 bg-[oklch(0.17_0.05_264)]/60 lg:hidden" />
-        <div className="absolute inset-y-0 right-0 -z-10 hidden w-[60%] bg-gradient-to-r from-[oklch(0.17_0.05_264)] via-[oklch(0.17_0.05_264)]/10 via-40% to-transparent lg:block" />
-        <div className="absolute inset-x-0 bottom-0 -z-10 h-1/5 bg-gradient-to-t from-navy/80 to-transparent" />
+        {/* Phones: a light veil, a little darker behind the text. Wide screens: only a short
+            soft edge where the photo meets the navy, the rest of the photo is untouched. */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[oklch(0.17_0.05_264)]/55 via-[oklch(0.17_0.05_264)]/35 to-[oklch(0.17_0.05_264)]/45 lg:hidden" />
+        <div className="absolute inset-y-0 right-0 -z-10 hidden w-[64%] bg-gradient-to-r from-[oklch(0.17_0.05_264)] to-transparent to-[18%] lg:block" />
         <div className="mx-auto max-w-6xl px-4 pb-24 pt-24 sm:px-6 sm:pt-28 lg:px-8 lg:pb-36 lg:pt-36">
-          <div className="max-w-xl">
-            <h1 className="font-display text-5xl font-bold leading-[1.05] sm:text-6xl">
+          {/* On wide screens the text keeps to the navy side, so the photo stays clear. */}
+          <div className="max-w-xl lg:max-w-[30vw] 2xl:max-w-xl">
+            <h1 className="font-display text-5xl font-bold leading-[1.05] [text-shadow:0_2px_16px_rgb(0_0_0/0.45)] sm:text-6xl">
               Mykonos nightlife and VIP table reservations
             </h1>
-            <p className="mt-8 text-lg leading-relaxed text-white/80 sm:text-xl">
+            <p className="mt-8 text-lg leading-relaxed text-white/90 [text-shadow:0_1px_10px_rgb(0_0_0/0.5)] sm:text-xl">
               Tell us the night you have in mind. We request the table, confirm the details
               with you and keep a driver ready until you are home.
             </p>

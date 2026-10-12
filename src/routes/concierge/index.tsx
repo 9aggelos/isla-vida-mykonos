@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ConciergeRequestDialog } from "../../components/ConciergeRequestDialog";
+import { srcSetFor } from "../../lib/responsiveImages";
 import heroImage from "../../assets/mykonos-terrace-view.webp";
 import villaImage from "../../assets/villa-pool-terrace.webp";
 import yachtImage from "../../assets/concierge-yacht-aerial.webp";
@@ -297,6 +298,8 @@ function ConciergePage() {
       <section className="relative isolate flex min-h-[36rem] items-end overflow-hidden bg-[oklch(0.17_0.05_264)] text-white lg:min-h-[46rem]">
         <img
           src={heroImage}
+          srcSet={srcSetFor(heroImage)}
+          sizes="100vw"
           alt="Mykonos Town, its windmill and the sea seen from a terrace above the old port"
           width={1920}
           height={1080}

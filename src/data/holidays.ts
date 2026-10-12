@@ -1,6 +1,6 @@
 import hubImage from "../assets/about-hero.webp";
 import uaeImage from "../assets/villas-hero.webp";
-import usaMexicoImage from "../assets/venues/nightlife-lounge.webp";
+import usaMexicoImage from "../assets/venues/nightlife-party.webp";
 import israelImage from "../assets/venues/sunset-bars-hero.webp";
 
 /*
@@ -40,6 +40,8 @@ export interface HolidayImage {
   height: number;
   /** Complete class name, so the stylesheet picks it up. */
   position: string;
+  /** Show the photo bright on the right of the banner on wide screens, with only a light veil. */
+  split?: boolean;
 }
 
 export interface HolidayMarket {
@@ -215,13 +217,14 @@ export const usaMexico: HolidayMarket = {
   heading: "Mykonos holidays for guests from the United States and Mexico",
   title: "Mykonos Holidays from the USA & Mexico | Isla Vida",
   description:
-    "Mykonos holidays for guests from the United States and Mexico: villas, a chauffeur at your disposal, beach club and nightclub tables, party planning and 24/7 service.",
+    "Mykonos holidays for guests from the USA and Mexico: villas, a chauffeur at your disposal, beach club and nightclub tables, party planning and 24/7 service.",
   image: {
     src: usaMexicoImage,
-    alt: "Open-air lounge at night in Mykonos, with candlelit tables beside a lit pool",
+    alt: "Disco balls above a crowd dancing at a Mykonos beach party at dusk",
     width: 1500,
-    height: 1884,
-    position: "object-[50%_45%]",
+    height: 1001,
+    position: "object-[38%_50%]",
+    split: true,
   },
   groups: [
     {
@@ -394,9 +397,6 @@ export function holidayHead(page: {
       { property: "og:url", content: url },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      { rel: "canonical", href: url },
-      { rel: "preload", as: "image", href: page.image.src, type: "image/webp" },
-    ],
+    links: [{ rel: "canonical", href: url }],
   };
 }
