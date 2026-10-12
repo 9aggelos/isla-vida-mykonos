@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
+import { srcSetFor } from "../lib/responsiveImages";
 
 interface ServiceCardProps {
   title: string;
@@ -22,6 +23,8 @@ export function ServiceCard({ title, description, image, to, hash, icon }: Servi
       <div className="aspect-[4/3] overflow-hidden">
         <img
           src={image}
+          srcSet={srcSetFor(image)}
+          sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
           alt={title}
           width={1200}
           height={800}
