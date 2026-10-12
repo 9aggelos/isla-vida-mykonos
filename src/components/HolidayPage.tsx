@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { Button } from "./ui/button";
+import { srcSetFor } from "../lib/responsiveImages";
 import {
   INTRO_HEADLINE,
   INTRO_TEXT,
@@ -49,16 +50,34 @@ function HolidayHero({
     <section className="relative isolate overflow-hidden bg-primary text-primary-foreground">
       <img
         src={image.src}
+        srcSet={srcSetFor(image.src)}
+        sizes={image.split ? "(min-width: 1024px) 64vw, 100vw" : "100vw"}
         alt={image.alt}
         width={image.width}
         height={image.height}
         loading="eager"
         fetchPriority="high"
         decoding="async"
-        className={`absolute inset-0 -z-20 h-full w-full object-cover ${image.position}`}
+        className={`absolute inset-y-0 right-0 -z-20 h-full w-full object-cover ${image.position} ${
+          image.split ? "lg:w-[64%]" : ""
+        }`}
       />
-      <div className="absolute inset-0 -z-10 bg-primary/75" />
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
+      {image.split ? (
+        <>
+          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/55 via-primary/35 to-primary/45 lg:hidden" />
+          <div className="absolute inset-y-0 right-0 -z-10 hidden w-[64%] bg-gradient-to-r from-primary to-transparent to-[18%] lg:block" />
+        </>
+      ) : (
+        <div className="absolute inset-0 -z-10 bg-primary/75" />
+      )}
+      {/* With a bright photo the text keeps to the left on wide screens, with a soft shadow. */}
+      <div
+        className={`mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36 ${
+          image.split
+            ? "[text-shadow:0_2px_14px_rgb(0_0_0/0.45)] lg:[&>*]:max-w-[34%] xl:[&>*]:max-w-[32%]"
+            : ""
+        }`}
+      >
         {heading ? (
           <>
             <h1 className="max-w-2xl text-base font-medium tracking-wide text-champagne sm:text-lg">
