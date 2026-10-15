@@ -125,6 +125,62 @@ import ammosShadedTerraceSmall from "../assets/villas/ammos/shaded-terrace-800.w
 import ammosTerraceSeaView from "../assets/villas/ammos/terrace-sea-view.webp";
 import ammosTerraceSeaViewSmall from "../assets/villas/ammos/terrace-sea-view-800.webp";
 
+// Villa Elia (Agia Anna).
+import eliaBathroom from "../assets/villas/elia/bathroom.webp";
+import eliaBathroomSmall from "../assets/villas/elia/bathroom-800.webp";
+import eliaCoverPoolDusk from "../assets/villas/elia/cover-pool-dusk.webp";
+import eliaCoverPoolDuskSmall from "../assets/villas/elia/cover-pool-dusk-800.webp";
+import eliaDiningKitchen from "../assets/villas/elia/dining-kitchen.webp";
+import eliaDiningKitchenSmall from "../assets/villas/elia/dining-kitchen-800.webp";
+import eliaFireLoungeFromAbove from "../assets/villas/elia/fire-lounge-from-above.webp";
+import eliaFireLoungeFromAboveSmall from "../assets/villas/elia/fire-lounge-from-above-600.webp";
+import eliaGardenDining from "../assets/villas/elia/garden-dining.webp";
+import eliaGardenDiningSmall from "../assets/villas/elia/garden-dining-800.webp";
+import eliaInfinityPool from "../assets/villas/elia/infinity-pool.webp";
+import eliaInfinityPoolSmall from "../assets/villas/elia/infinity-pool-800.webp";
+import eliaLivingRoom from "../assets/villas/elia/living-room.webp";
+import eliaLivingRoomSmall from "../assets/villas/elia/living-room-800.webp";
+import eliaOutdoorDining from "../assets/villas/elia/outdoor-dining.webp";
+import eliaOutdoorDiningSmall from "../assets/villas/elia/outdoor-dining-800.webp";
+import eliaPoolNight from "../assets/villas/elia/pool-night.webp";
+import eliaPoolNightSmall from "../assets/villas/elia/pool-night-800.webp";
+import eliaPoolSunbeds from "../assets/villas/elia/pool-sunbeds.webp";
+import eliaPoolSunbedsSmall from "../assets/villas/elia/pool-sunbeds-800.webp";
+import eliaShadedLounge from "../assets/villas/elia/shaded-lounge.webp";
+import eliaShadedLoungeSmall from "../assets/villas/elia/shaded-lounge-800.webp";
+import eliaSuiteOne from "../assets/villas/elia/suite-one.webp";
+import eliaSuiteOneSmall from "../assets/villas/elia/suite-one-800.webp";
+import eliaSuiteSeaView from "../assets/villas/elia/suite-sea-view.webp";
+import eliaSuiteSeaViewSmall from "../assets/villas/elia/suite-sea-view-800.webp";
+
+// Villa Selini (Fanari).
+import seliniBathroom from "../assets/villas/selini/bathroom.webp";
+import seliniBathroomSmall from "../assets/villas/selini/bathroom-800.webp";
+import seliniBedroomOne from "../assets/villas/selini/bedroom-one.webp";
+import seliniBedroomOneSmall from "../assets/villas/selini/bedroom-one-800.webp";
+import seliniBedroomTwo from "../assets/villas/selini/bedroom-two.webp";
+import seliniBedroomTwoSmall from "../assets/villas/selini/bedroom-two-800.webp";
+import seliniCoverPoolDusk from "../assets/villas/selini/cover-pool-dusk.webp";
+import seliniCoverPoolDuskSmall from "../assets/villas/selini/cover-pool-dusk-800.webp";
+import seliniDiningRoom from "../assets/villas/selini/dining-room.webp";
+import seliniDiningRoomSmall from "../assets/villas/selini/dining-room-800.webp";
+import seliniLivingRoom from "../assets/villas/selini/living-room.webp";
+import seliniLivingRoomSmall from "../assets/villas/selini/living-room-800.webp";
+import seliniOutdoorBar from "../assets/villas/selini/outdoor-bar.webp";
+import seliniOutdoorBarSmall from "../assets/villas/selini/outdoor-bar-800.webp";
+import seliniPoolCurve from "../assets/villas/selini/pool-curve.webp";
+import seliniPoolCurveSmall from "../assets/villas/selini/pool-curve-600.webp";
+import seliniPoolHammock from "../assets/villas/selini/pool-hammock.webp";
+import seliniPoolHammockSmall from "../assets/villas/selini/pool-hammock-800.webp";
+import seliniPoolSeaView from "../assets/villas/selini/pool-sea-view.webp";
+import seliniPoolSeaViewSmall from "../assets/villas/selini/pool-sea-view-800.webp";
+import seliniPoolTerraceDusk from "../assets/villas/selini/pool-terrace-dusk.webp";
+import seliniPoolTerraceDuskSmall from "../assets/villas/selini/pool-terrace-dusk-800.webp";
+import seliniStoneDiningTerrace from "../assets/villas/selini/stone-dining-terrace.webp";
+import seliniStoneDiningTerraceSmall from "../assets/villas/selini/stone-dining-terrace-800.webp";
+import seliniTerraceNight from "../assets/villas/selini/terrace-night.webp";
+import seliniTerraceNightSmall from "../assets/villas/selini/terrace-night-800.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -236,7 +292,144 @@ const ammos = {
   terraceSeaView: withSmall(ammosTerraceSeaView, ammosTerraceSeaViewSmall, 1600, 800),
 };
 
+const elia = {
+  bathroom: withSmall(eliaBathroom, eliaBathroomSmall, 1600, 800),
+  coverPoolDusk: withSmall(eliaCoverPoolDusk, eliaCoverPoolDuskSmall, 1600, 800),
+  diningKitchen: withSmall(eliaDiningKitchen, eliaDiningKitchenSmall, 1600, 800),
+  fireLoungeFromAbove: withSmall(eliaFireLoungeFromAbove, eliaFireLoungeFromAboveSmall, 1000, 600),
+  gardenDining: withSmall(eliaGardenDining, eliaGardenDiningSmall, 1600, 800),
+  infinityPool: withSmall(eliaInfinityPool, eliaInfinityPoolSmall, 1600, 800),
+  livingRoom: withSmall(eliaLivingRoom, eliaLivingRoomSmall, 1600, 800),
+  outdoorDining: withSmall(eliaOutdoorDining, eliaOutdoorDiningSmall, 1600, 800),
+  poolNight: withSmall(eliaPoolNight, eliaPoolNightSmall, 1600, 800),
+  poolSunbeds: withSmall(eliaPoolSunbeds, eliaPoolSunbedsSmall, 1600, 800),
+  shadedLounge: withSmall(eliaShadedLounge, eliaShadedLoungeSmall, 1600, 800),
+  suiteOne: withSmall(eliaSuiteOne, eliaSuiteOneSmall, 1600, 800),
+  suiteSeaView: withSmall(eliaSuiteSeaView, eliaSuiteSeaViewSmall, 1600, 800),
+};
+
+const selini = {
+  bathroom: withSmall(seliniBathroom, seliniBathroomSmall, 1600, 800),
+  bedroomOne: withSmall(seliniBedroomOne, seliniBedroomOneSmall, 1600, 800),
+  bedroomTwo: withSmall(seliniBedroomTwo, seliniBedroomTwoSmall, 1557, 800),
+  coverPoolDusk: withSmall(seliniCoverPoolDusk, seliniCoverPoolDuskSmall, 1600, 800),
+  diningRoom: withSmall(seliniDiningRoom, seliniDiningRoomSmall, 1600, 800),
+  livingRoom: withSmall(seliniLivingRoom, seliniLivingRoomSmall, 1600, 800),
+  outdoorBar: withSmall(seliniOutdoorBar, seliniOutdoorBarSmall, 1600, 800),
+  poolCurve: withSmall(seliniPoolCurve, seliniPoolCurveSmall, 909, 600),
+  poolHammock: withSmall(seliniPoolHammock, seliniPoolHammockSmall, 1600, 800),
+  poolSeaView: withSmall(seliniPoolSeaView, seliniPoolSeaViewSmall, 1600, 800),
+  poolTerraceDusk: withSmall(seliniPoolTerraceDusk, seliniPoolTerraceDuskSmall, 1600, 800),
+  stoneDiningTerrace: withSmall(seliniStoneDiningTerrace, seliniStoneDiningTerraceSmall, 1600, 800),
+  terraceNight: withSmall(seliniTerraceNight, seliniTerraceNightSmall, 1600, 800),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-elia",
+    name: "Villa Elia",
+    area: "Agia Anna",
+    bedrooms: 7,
+    bathrooms: 9,
+    guests: 16,
+    summary:
+      "A seven-bedroom villa 50 m from Agia Anna beach, with an infinity pool with jacuzzi and waterfall, olive gardens and an outdoor fireplace. Sleeps 16.",
+    description: [
+      "Just steps from the turquoise water of Agia Anna, Villa Elia brings together Cycladic architecture and calm, light-filled modern design, with the beaches of Kalafatis and Kalo Livadi a short stroll or drive away.",
+      "Life outside centres on an infinity pool with a jacuzzi and waterfall, framed by shaded lounges, an outdoor bar, a BBQ and an al fresco dining table. Seven en-suite bedrooms, most with sea views and two in independent guesthouses, sleep up to sixteen, with an olive grove, an outdoor fireplace lounge and a yoga and massage space for slower days.",
+    ],
+    amenities: [
+      "50 m from Agia Anna beach",
+      "Infinity pool with jacuzzi and waterfall",
+      "Sea views",
+      "Outdoor bar and BBQ",
+      "Shaded lounges and outdoor dining",
+      "Outdoor fireplace lounge",
+      "Massage and yoga space",
+      "Olive grove and organic vegetable garden",
+      "Two independent guesthouses",
+      "Daily housekeeping",
+      "Welcome hamper with Greek produce",
+      "Gated estate with private parking",
+      "Alarm and security system",
+      "Pet friendly on request",
+    ],
+    photos: [
+      elia.coverPoolDusk,
+      elia.infinityPool,
+      elia.poolSunbeds,
+      elia.poolNight,
+      elia.shadedLounge,
+      elia.outdoorDining,
+      elia.gardenDining,
+      elia.livingRoom,
+      elia.diningKitchen,
+      elia.suiteOne,
+      elia.suiteSeaView,
+      elia.bathroom,
+    ],
+    featurePhoto: elia.fireLoungeFromAbove,
+    gallery: [
+      { title: "The pool", photos: [elia.poolNight, elia.infinityPool, elia.poolSunbeds] },
+      { title: "Outdoor living", photos: [elia.shadedLounge, elia.outdoorDining, elia.gardenDining] },
+      { title: "Living and dining", photos: [elia.livingRoom, elia.diningKitchen] },
+      { title: "Suites", photos: [elia.suiteSeaView, elia.suiteOne, elia.bathroom] },
+    ],
+    events: [
+      "With 315 m² of sunlit terraces around a striking infinity pool, Villa Elia is an elegant setting for celebrations, from a private party by the pool to a wedding reception or a family gathering under the Mykonos sky.",
+      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
+    ],
+  },
+  {
+    slug: "villa-selini",
+    name: "Villa Selini",
+    area: "Fanari",
+    bedrooms: 10,
+    bathrooms: 9,
+    guests: 20,
+    summary:
+      "A ten-bedroom Cycladic villa in Fanari with a private pool, outdoor jacuzzi and panoramic sea and sunset views. Sleeps 20.",
+    description: [
+      "Set in Fanari, Villa Selini is a classic white Cycladic house of flowing curves and wide terraces, with panoramic views of the sea and evenings built around the sunset.",
+      "Its free-form pool, outdoor jacuzzi, stone-walled dining terrace and outdoor bar make it a natural gathering place for a large group, with ten bedrooms for up to twenty guests, bright living and dining rooms and a fully equipped kitchen.",
+    ],
+    amenities: [
+      "Private swimming pool",
+      "Outdoor jacuzzi",
+      "Panoramic sea and sunset view",
+      "Private balconies and terraces",
+      "Sunbeds",
+      "Shaded outdoor dining terrace",
+      "BBQ",
+      "Air conditioning",
+      "Free Wi-Fi",
+      "Fully equipped kitchen",
+      "Daily maid service",
+      "Linen and towels changed every two days",
+      "Parking for 4 cars",
+    ],
+    photos: [
+      selini.coverPoolDusk,
+      selini.poolTerraceDusk,
+      selini.poolSeaView,
+      selini.poolHammock,
+      selini.stoneDiningTerrace,
+      selini.outdoorBar,
+      selini.terraceNight,
+      selini.livingRoom,
+      selini.diningRoom,
+      selini.bedroomOne,
+      selini.bedroomTwo,
+      selini.bathroom,
+    ],
+    featurePhoto: selini.poolCurve,
+    gallery: [
+      { title: "The pool", photos: [selini.poolTerraceDusk, selini.poolSeaView, selini.poolHammock] },
+      { title: "Terraces and the bar", photos: [selini.stoneDiningTerrace, selini.outdoorBar, selini.terraceNight] },
+      { title: "Living and dining", photos: [selini.livingRoom, selini.diningRoom] },
+      { title: "Bedrooms", photos: [selini.bedroomOne, selini.bedroomTwo, selini.bathroom] },
+    ],
+  },
   {
     slug: "villa-ammos",
     name: "Villa Ammos",
