@@ -12,11 +12,11 @@ import { ArrowRight, Clock, Shield, Star, Users } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mykonos Private Transfers & Chauffeur Service | Isla Vida" },
+      { title: "Luxury Private Transfers & Concierge in Mykonos | Isla Vida" },
       {
         name: "description",
         content:
-          "Private transfers in Mykonos: airport (JMK), port, villa & VIP chauffeur services. Professional drivers, luxury vans & SUVs, 24/7 availability. Book now.",
+          "Luxury private transfers and concierge in Mykonos: airport (JMK) and port pickups, a chauffeur at your disposal, villas, yachts and VIP tables, 24/7.",
       },
       {
         name: "keywords",
@@ -29,12 +29,12 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Mykonos Private Transfers & Chauffeur Service | Isla Vida",
+        content: "Luxury Private Transfers & Concierge in Mykonos | Isla Vida",
       },
       {
         property: "og:description",
         content:
-          "Private transfers, airport & port pickups, villa and VIP chauffeur services in Mykonos. 24/7.",
+          "Luxury private transfers, airport and port pickups, chauffeur and concierge services in Mykonos. 24/7.",
       },
       { property: "og:url", content: "https://www.islavidajmk.com/" },
       { property: "og:type", content: "website" },
