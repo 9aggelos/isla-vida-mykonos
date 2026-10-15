@@ -181,6 +181,32 @@ import seliniStoneDiningTerraceSmall from "../assets/villas/selini/stone-dining-
 import seliniTerraceNight from "../assets/villas/selini/terrace-night.webp";
 import seliniTerraceNightSmall from "../assets/villas/selini/terrace-night-800.webp";
 
+// Villa Galini (Agios Lazaros, above Psarou).
+import galiniBathroom from "../assets/villas/galini/bathroom.webp";
+import galiniBathroomSmall from "../assets/villas/galini/bathroom-800.webp";
+import galiniBedroomOne from "../assets/villas/galini/bedroom-one.webp";
+import galiniBedroomOneSmall from "../assets/villas/galini/bedroom-one-800.webp";
+import galiniBedroomSeaView from "../assets/villas/galini/bedroom-sea-view.webp";
+import galiniBedroomSeaViewSmall from "../assets/villas/galini/bedroom-sea-view-800.webp";
+import galiniCoverPoolSeaView from "../assets/villas/galini/cover-pool-sea-view.webp";
+import galiniCoverPoolSeaViewSmall from "../assets/villas/galini/cover-pool-sea-view-800.webp";
+import galiniDiningRoom from "../assets/villas/galini/dining-room.webp";
+import galiniDiningRoomSmall from "../assets/villas/galini/dining-room-800.webp";
+import galiniJacuzziNight from "../assets/villas/galini/jacuzzi-night.webp";
+import galiniJacuzziNightSmall from "../assets/villas/galini/jacuzzi-night-600.webp";
+import galiniKitchen from "../assets/villas/galini/kitchen.webp";
+import galiniKitchenSmall from "../assets/villas/galini/kitchen-800.webp";
+import galiniLivingRoom from "../assets/villas/galini/living-room.webp";
+import galiniLivingRoomSmall from "../assets/villas/galini/living-room-800.webp";
+import galiniOutdoorDiningNight from "../assets/villas/galini/outdoor-dining-night.webp";
+import galiniOutdoorDiningNightSmall from "../assets/villas/galini/outdoor-dining-night-800.webp";
+import galiniPergolaLounge from "../assets/villas/galini/pergola-lounge.webp";
+import galiniPergolaLoungeSmall from "../assets/villas/galini/pergola-lounge-800.webp";
+import galiniPoolNight from "../assets/villas/galini/pool-night.webp";
+import galiniPoolNightSmall from "../assets/villas/galini/pool-night-800.webp";
+import galiniPoolTerrace from "../assets/villas/galini/pool-terrace.webp";
+import galiniPoolTerraceSmall from "../assets/villas/galini/pool-terrace-800.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -324,7 +350,71 @@ const selini = {
   terraceNight: withSmall(seliniTerraceNight, seliniTerraceNightSmall, 1600, 800),
 };
 
+const galini = {
+  bathroom: withSmall(galiniBathroom, galiniBathroomSmall, 1600, 800),
+  bedroomOne: withSmall(galiniBedroomOne, galiniBedroomOneSmall, 1600, 800),
+  bedroomSeaView: withSmall(galiniBedroomSeaView, galiniBedroomSeaViewSmall, 1600, 800),
+  coverPoolSeaView: withSmall(galiniCoverPoolSeaView, galiniCoverPoolSeaViewSmall, 1600, 800),
+  diningRoom: withSmall(galiniDiningRoom, galiniDiningRoomSmall, 1600, 800),
+  jacuzziNight: withSmall(galiniJacuzziNight, galiniJacuzziNightSmall, 1000, 600),
+  kitchen: withSmall(galiniKitchen, galiniKitchenSmall, 1600, 800),
+  livingRoom: withSmall(galiniLivingRoom, galiniLivingRoomSmall, 1600, 800),
+  outdoorDiningNight: withSmall(galiniOutdoorDiningNight, galiniOutdoorDiningNightSmall, 1600, 800),
+  pergolaLounge: withSmall(galiniPergolaLounge, galiniPergolaLoungeSmall, 1600, 800),
+  poolNight: withSmall(galiniPoolNight, galiniPoolNightSmall, 1600, 800),
+  poolTerrace: withSmall(galiniPoolTerrace, galiniPoolTerraceSmall, 1600, 800),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-galini",
+    name: "Villa Galini",
+    area: "Psarou",
+    bedrooms: 5,
+    bathrooms: 5,
+    guests: 10,
+    summary:
+      "A five-bedroom villa on the hillside above Psarou Beach, with a heated pool, an 8-person jacuzzi and panoramic sea views. Sleeps 10.",
+    description: [
+      "Perched on the hillside of Agios Lazaros above Psarou Beach, Villa Galini looks out over the Aegean from almost every room, a few minutes from some of the island's most exclusive beaches, restaurants and boutiques.",
+      "Across 350 m², warm wood, stone and soft neutral tones open onto terraces with a heated pool, shaded pergolas, an outdoor dining table and an eight-person jacuzzi that comes into its own at night. Five deluxe bedrooms, each with its own bathroom, sleep up to ten guests.",
+    ],
+    amenities: [
+      "Above Psarou Beach",
+      "Heated pool",
+      "8-person jacuzzi",
+      "Panoramic sea views",
+      "Sunbeds and pergolas",
+      "Outdoor dining and BBQ area",
+      "Spa and wellness",
+      "Living and dining room",
+      "Fully equipped kitchen",
+      "Air conditioning",
+      "Free Wi-Fi",
+      "Gated entrance and night security",
+      "Private parking",
+    ],
+    photos: [
+      galini.coverPoolSeaView,
+      galini.poolNight,
+      galini.poolTerrace,
+      galini.pergolaLounge,
+      galini.outdoorDiningNight,
+      galini.livingRoom,
+      galini.kitchen,
+      galini.diningRoom,
+      galini.bedroomSeaView,
+      galini.bedroomOne,
+      galini.bathroom,
+    ],
+    featurePhoto: galini.jacuzziNight,
+    gallery: [
+      { title: "The pool and the view", photos: [galini.poolNight, galini.poolTerrace, galini.pergolaLounge] },
+      { title: "Evenings outside", photos: [galini.outdoorDiningNight] },
+      { title: "Living and dining", photos: [galini.livingRoom, galini.kitchen, galini.diningRoom] },
+      { title: "Bedrooms", photos: [galini.bedroomSeaView, galini.bedroomOne, galini.bathroom] },
+    ],
+  },
   {
     slug: "villa-elia",
     name: "Villa Elia",
