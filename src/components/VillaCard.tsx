@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Bath, BedDouble, MapPin, Users } from "lucide-react";
-import { formatVillaPrice, type Villa } from "../data/villas";
+import { formatVillaPrice, villaSrcSet, type Villa } from "../data/villas";
 import { VillaRequestDialog } from "./VillaRequestDialog";
 
 export function VillaCard({ villa }: { villa: Villa }) {
@@ -13,6 +13,8 @@ export function VillaCard({ villa }: { villa: Villa }) {
       >
         <img
           src={villa.photos[0]}
+          srcSet={villaSrcSet(villa.photos[0])}
+          sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
           alt={`${villa.name}, luxury villa in ${villa.area}, Mykonos`}
           width={1200}
           height={900}
