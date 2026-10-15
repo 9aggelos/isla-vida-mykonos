@@ -1,16 +1,16 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import { ArrowLeft, Bath, BedDouble, Check, MapPin, Users } from "lucide-react";
+import { useState } from "react";
+import { ArrowLeft, MessageCircle } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  type CarouselApi,
 } from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { VillaRequestDialog } from "../../components/VillaRequestDialog";
-import { formatVillaPrice, getVilla } from "../../data/villas";
+import { formatVillaPrice, getVilla, villaSrcSet, type Villa } from "../../data/villas";
 
 const BASE_URL = "https://www.islavidajmk.com";
 
@@ -38,7 +38,16 @@ export const Route = createFileRoute("/villas/$slug")({
         { name: "twitter:image", content: `${BASE_URL}${villa.photos[0]}` },
         { name: "twitter:card", content: "summary_large_image" },
       ],
-      links: [{ rel: "canonical", href: url }],
+      links: [
+        { rel: "canonical", href: url },
+        {
+          rel: "preload",
+          as: "image",
+          href: villa.photos[0],
+          imageSrcSet: villaSrcSet(villa.photos[0]),
+          imageSizes: "100vw",
+        },
+      ],
     };
   },
   notFoundComponent: VillaNotFound,
@@ -62,160 +71,257 @@ function VillaNotFound() {
   );
 }
 
+/*
+ * The villa page follows the style of a villa brochure: a full-width cover, a
+ * "Villa Summary" with a round photo, then the photos in short chapters.
+ * Everything it shows comes from src/data/villas.ts.
+ */
+
+/** Thin line with a small diamond at each end, as in the brochure. */
+function LineAccent({ className = "" }: { className?: string }) {
+  return (
+    <div aria-hidden="true" className={`flex items-center ${className}`}>
+      <span className="h-2 w-2 rotate-45 bg-current" />
+      <span className="h-px flex-1 bg-current" />
+      <span className="h-2 w-2 rotate-45 bg-current" />
+    </div>
+  );
+}
+
+/** Outline diamonds drawn behind the round photo. */
+function DiamondPattern({ className = "" }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 120 200" fill="none" className={className}>
+      <g stroke="currentColor" strokeWidth="1">
+        <path d="M60 2 L100 50 L60 98 L20 50 Z" />
+        <path d="M60 52 L100 100 L60 148 L20 100 Z" />
+        <path d="M60 102 L100 150 L60 198 L20 150 Z" />
+        <path d="M20 50 L60 98 L20 146" />
+        <path d="M100 50 L60 98 L100 146" />
+      </g>
+    </svg>
+  );
+}
+
+function RequestButton({
+  villa,
+  light = false,
+  className = "",
+}: {
+  villa: Villa;
+  light?: boolean;
+  className?: string;
+}) {
+  return (
+    <VillaRequestDialog villa={villa}>
+      <button
+        type="button"
+        className={`inline-flex items-center justify-center gap-2 rounded-md px-7 py-3 text-sm font-semibold transition-colors ${
+          light ? "bg-white text-navy hover:bg-white/90" : "bg-navy text-white hover:bg-navy-light"
+        } ${className}`}
+      >
+        <MessageCircle className="h-4 w-4" />
+        Request this villa
+      </button>
+    </VillaRequestDialog>
+  );
+}
+
 function VillaPage() {
   const { villa } = Route.useLoaderData();
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
+  const chapters =
+    villa.gallery ?? (villa.photos.length > 1 ? [{ title: "Gallery", photos: villa.photos.slice(1) }] : []);
+  const galleryPhotos = chapters.flatMap((chapter) => chapter.photos);
+  const featurePhoto = villa.featurePhoto ?? villa.photos[1] ?? villa.photos[0];
+  const [openAt, setOpenAt] = useState<number | null>(null);
 
-  useEffect(() => {
-    if (!api) return;
-    const onSelect = () => setCurrent(api.selectedScrollSnap());
-    onSelect();
-    api.on("select", onSelect);
-    return () => {
-      api.off("select", onSelect);
-    };
-  }, [api]);
+  const bathrooms = `${villa.bathrooms} Bathrooms${villa.wcs ? ` + ${villa.wcs} WCs` : ""}`;
+  const facts = [
+    `${villa.bedrooms} Bedrooms`,
+    bathrooms,
+    `Up to ${villa.guests} guests`,
+    villa.area,
+  ];
+  const altFor = (index: number) =>
+    `${villa.name}, luxury villa in ${villa.area}, Mykonos, photo ${index + 1}`;
 
-  const photoAlt = (index: number) =>
-    `${villa.name} in ${villa.area}, Mykonos, photo ${index + 1} of ${villa.photos.length}`;
+  let photoIndex = 0;
 
   return (
     <div className="bg-background">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-        <Link
-          to="/villas"
-          className="inline-flex items-center gap-2 text-sm font-medium text-navy-accent transition-colors hover:text-navy"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          All villas
-        </Link>
+      {/* Cover */}
+      <section className="relative isolate flex min-h-[70vh] items-end overflow-hidden bg-navy text-white">
+        <img
+          src={villa.photos[0]}
+          srcSet={villaSrcSet(villa.photos[0])}
+          sizes="100vw"
+          alt={`${villa.name} in ${villa.area}, Mykonos`}
+          width={1600}
+          height={1064}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-navy/85 via-navy/30 to-navy/10" />
+        <div className="mx-auto w-full max-w-7xl px-4 pb-12 pt-28 sm:px-6 lg:px-8 lg:pb-16">
+          <Link
+            to="/villas"
+            className="absolute left-4 top-6 inline-flex items-center gap-2 rounded-full bg-navy/60 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-navy/80 sm:left-6 lg:left-8"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            All villas
+          </Link>
+          <h1 className="font-display text-5xl font-bold leading-[1.05] [text-shadow:0_2px_16px_rgb(0_0_0/0.35)] sm:text-6xl lg:text-7xl">
+            {villa.name}
+          </h1>
+          <p className="mt-3 font-display text-2xl italic text-white/90 sm:text-3xl">
+            {villa.bedrooms} Bedrooms · Mykonos Island
+          </p>
+          <LineAccent className="mt-6 w-56 text-white/70" />
+        </div>
+      </section>
 
-        <div className="mt-6 grid gap-10 lg:grid-cols-3">
-          {/* Gallery */}
-          <div className="lg:col-span-2">
-            <Carousel setApi={setApi} opts={{ loop: villa.photos.length > 1 }}>
-              <CarouselContent>
-                {villa.photos.map((photo, index) => (
-                  <CarouselItem key={index}>
-                    <div className="aspect-[3/2] overflow-hidden rounded-lg bg-navy-muted">
-                      <img
-                        src={photo}
-                        alt={photoAlt(index)}
-                        width={1600}
-                        height={1067}
-                        loading={index === 0 ? "eager" : "lazy"}
-                        fetchPriority={index === 0 ? "high" : undefined}
-                        decoding="async"
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              {villa.photos.length > 1 && (
-                <>
-                  <CarouselPrevious className="left-3 h-10 w-10" />
-                  <CarouselNext className="right-3 h-10 w-10" />
-                  <span className="absolute bottom-3 right-3 rounded-full bg-navy/80 px-3 py-1 text-xs font-medium text-white">
-                    {current + 1} / {villa.photos.length}
-                  </span>
-                </>
-              )}
-            </Carousel>
-
-            {villa.photos.length > 1 && (
-              <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
-                {villa.photos.map((photo, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={() => api?.scrollTo(index)}
-                    aria-label={`Show photo ${index + 1}`}
-                    aria-current={index === current}
-                    className={`h-16 w-24 shrink-0 overflow-hidden rounded-md border-2 transition-opacity ${
-                      index === current
-                        ? "border-navy"
-                        : "border-transparent opacity-60 hover:opacity-100"
-                    }`}
-                  >
-                    <img
-                      src={photo}
-                      alt=""
-                      loading="lazy"
-                      decoding="async"
-                      className="h-full w-full object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
+      {/* Villa summary */}
+      <section className="section-padding">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
+          <div className="relative mx-auto w-full max-w-sm lg:col-span-5 lg:max-w-none">
+            <DiamondPattern className="absolute -right-6 -top-10 h-56 w-auto text-navy-accent/40 sm:-right-10 lg:h-72" />
+            <div className="relative aspect-square overflow-hidden rounded-full shadow-xl ring-8 ring-background">
+              <img
+                src={featurePhoto}
+                srcSet={villaSrcSet(featurePhoto)}
+                sizes="(min-width: 1024px) 480px, 384px"
+                alt={`${villa.name} pool seen from above`}
+                width={1000}
+                height={1000}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
 
-          {/* Summary and request */}
-          <aside className="lg:col-span-1 lg:row-span-2">
-            <div className="rounded-lg border border-border bg-card p-6 shadow-sm lg:sticky lg:top-28">
-              <p className="flex items-center gap-1.5 text-sm font-medium text-navy-accent">
-                <MapPin className="h-4 w-4" />
-                {villa.area}, Mykonos
-              </p>
-              <h1 className="mt-2 font-display text-4xl font-bold leading-tight text-card-foreground">
-                {villa.name}
-              </h1>
+          <div className="lg:col-span-7">
+            <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">Villa Summary</h2>
+            <p className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-sm font-medium uppercase tracking-wider text-muted-foreground">
+              {facts.map((fact, index) => (
+                <span key={fact} className="flex items-center gap-3">
+                  {index > 0 && <span aria-hidden="true" className="text-navy-accent/50">|</span>}
+                  {fact}
+                </span>
+              ))}
+            </p>
+            <LineAccent className="mt-4 max-w-md text-navy-accent/60" />
 
-              <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <BedDouble className="h-4 w-4" />
-                  {villa.bedrooms} bedrooms
-                </li>
-                <li className="flex items-center gap-2">
-                  <Bath className="h-4 w-4" />
-                  {villa.bathrooms} bathrooms
-                </li>
-                <li className="flex items-center gap-2">
-                  <Users className="h-4 w-4" />
-                  Up to {villa.guests} guests
-                </li>
-              </ul>
-
-              <p className="mt-6 text-lg font-semibold text-foreground">
-                {formatVillaPrice(villa)}
-              </p>
-
-              <VillaRequestDialog villa={villa}>
-                <button
-                  type="button"
-                  className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-light"
-                >
-                  Request this villa
-                </button>
-              </VillaRequestDialog>
-              <p className="mt-3 text-center text-xs text-muted-foreground">
-                A request is not a booking. We confirm availability first.
-              </p>
-            </div>
-          </aside>
-
-          {/* Description and amenities */}
-          <div className="lg:col-span-2">
-            <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
+            <div className="mt-8 space-y-4 text-lg leading-relaxed text-muted-foreground">
               {villa.description.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
 
-            <h2 className="mt-10 font-display text-3xl font-bold text-foreground">Amenities</h2>
-            <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+            <h3 className="mt-10 font-display text-2xl font-semibold text-foreground">Amenities</h3>
+            <ul className="mt-4 grid gap-x-8 gap-y-2 text-muted-foreground sm:grid-cols-2">
               {villa.amenities.map((amenity) => (
-                <li key={amenity} className="flex items-start gap-2">
-                  <Check className="mt-1 h-4 w-4 shrink-0 text-navy-accent" />
-                  <span>{amenity}</span>
+                <li key={amenity} className="flex items-baseline gap-3">
+                  <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rotate-45 bg-navy-accent" />
+                  {amenity}
                 </li>
               ))}
             </ul>
+
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <RequestButton villa={villa} />
+              <p className="font-semibold text-foreground">{formatVillaPrice(villa)}</p>
+            </div>
+            <p className="mt-3 text-sm text-muted-foreground">
+              A request is not a booking. We confirm availability and send you a clear quote.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Photo chapters */}
+      {chapters.map((chapter, chapterIndex) => (
+        <section
+          key={chapter.title}
+          className={`py-12 sm:py-16 ${chapterIndex % 2 === 0 ? "border-y border-border bg-secondary" : ""}`}
+        >
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">{chapter.title}</h2>
+            <LineAccent className="mt-3 w-40 text-navy-accent/60" />
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4">
+              {chapter.photos.map((photo, index) => {
+                const position = photoIndex++;
+                const wide = chapter.photos.length % 2 === 1 && index === 0;
+                return (
+                  <button
+                    key={photo}
+                    type="button"
+                    onClick={() => setOpenAt(position)}
+                    aria-label={`Open photo ${position + 1} of ${galleryPhotos.length} full screen`}
+                    className={`group block overflow-hidden rounded-lg bg-navy-muted ${
+                      wide ? "aspect-[3/2] sm:col-span-2 sm:aspect-[2/1]" : "aspect-[3/2]"
+                    }`}
+                  >
+                    <img
+                      src={photo}
+                      srcSet={villaSrcSet(photo)}
+                      sizes={wide ? "(min-width: 1280px) 1216px, 100vw" : "(min-width: 1280px) 600px, (min-width: 640px) 50vw, 100vw"}
+                      alt={altFor(position)}
+                      width={1600}
+                      height={1064}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none"
+                    />
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      ))}
+
+      {/* Closing call to action */}
+      <section className="bg-navy py-16 text-center text-white sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl font-medium sm:text-5xl">Stay at {villa.name}</h2>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-white/85">
+            Tell us your dates and group size. We confirm availability and can add transfers, a
+            private chef or a yacht day to your stay.
+          </p>
+          <RequestButton villa={villa} light className="mt-8" />
+        </div>
+      </section>
+
+      {/* Full-screen photo viewer */}
+      <Dialog open={openAt !== null} onOpenChange={(open) => !open && setOpenAt(null)}>
+        <DialogContent className="max-w-6xl border-none bg-navy p-2 text-white sm:p-4">
+          <DialogTitle className="sr-only">{villa.name} photos</DialogTitle>
+          {openAt !== null && (
+            <Carousel opts={{ startIndex: openAt, loop: true }}>
+              <CarouselContent>
+                {galleryPhotos.map((photo, index) => (
+                  <CarouselItem key={photo}>
+                    <img
+                      src={photo}
+                      alt={altFor(index)}
+                      width={1600}
+                      height={1064}
+                      loading="lazy"
+                      decoding="async"
+                      className="max-h-[80vh] w-full rounded-md object-contain"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2 h-10 w-10 border-none bg-white/90 text-navy" />
+              <CarouselNext className="right-2 h-10 w-10 border-none bg-white/90 text-navy" />
+            </Carousel>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
