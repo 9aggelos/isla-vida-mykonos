@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Bath, BedDouble, MapPin, Users } from "lucide-react";
+import { ArrowRight, Bath, BedDouble, Disc3, MapPin, Users } from "lucide-react";
 import { formatVillaPrice, villaSrcSet, type Villa } from "../data/villas";
 import { VillaRequestDialog } from "./VillaRequestDialog";
 
@@ -9,8 +9,14 @@ export function VillaCard({ villa }: { villa: Villa }) {
       <Link
         to="/villas/$slug"
         params={{ slug: villa.slug }}
-        className="block aspect-[4/3] overflow-hidden"
+        className="relative block aspect-[4/3] overflow-hidden"
       >
+        {villa.events?.length ? (
+          <span className="absolute left-3 top-3 z-10 inline-flex items-center gap-1.5 rounded-full bg-navy/85 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
+            <Disc3 className="h-3.5 w-3.5" />
+            Private parties &amp; DJ
+          </span>
+        ) : null}
         <img
           src={villa.photos[0]}
           srcSet={villaSrcSet(villa.photos[0])}
