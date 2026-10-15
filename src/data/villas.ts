@@ -99,6 +99,32 @@ import orizonTennisCourtSmall from "../assets/villas/orizon/tennis-court-800.web
 import orizonTerracesNight from "../assets/villas/orizon/terraces-night.webp";
 import orizonTerracesNightSmall from "../assets/villas/orizon/terraces-night-800.webp";
 
+// Villa Ammos (Ftelia).
+import ammosBathroom from "../assets/villas/ammos/bathroom.webp";
+import ammosBathroomSmall from "../assets/villas/ammos/bathroom-800.webp";
+import ammosBedroomOne from "../assets/villas/ammos/bedroom-one.webp";
+import ammosBedroomOneSmall from "../assets/villas/ammos/bedroom-one-800.webp";
+import ammosBedroomTwo from "../assets/villas/ammos/bedroom-two.webp";
+import ammosBedroomTwoSmall from "../assets/villas/ammos/bedroom-two-800.webp";
+import ammosCoverVillaPool from "../assets/villas/ammos/cover-villa-pool.webp";
+import ammosCoverVillaPoolSmall from "../assets/villas/ammos/cover-villa-pool-800.webp";
+import ammosKitchen from "../assets/villas/ammos/kitchen.webp";
+import ammosKitchenSmall from "../assets/villas/ammos/kitchen-800.webp";
+import ammosLivingRoom from "../assets/villas/ammos/living-room.webp";
+import ammosLivingRoomSmall from "../assets/villas/ammos/living-room-800.webp";
+import ammosOutdoorDining from "../assets/villas/ammos/outdoor-dining.webp";
+import ammosOutdoorDiningSmall from "../assets/villas/ammos/outdoor-dining-800.webp";
+import ammosPoolFromAbove from "../assets/villas/ammos/pool-from-above.webp";
+import ammosPoolFromAboveSmall from "../assets/villas/ammos/pool-from-above-600.webp";
+import ammosPoolPergolaBay from "../assets/villas/ammos/pool-pergola-bay.webp";
+import ammosPoolPergolaBaySmall from "../assets/villas/ammos/pool-pergola-bay-800.webp";
+import ammosPoolTerrace from "../assets/villas/ammos/pool-terrace.webp";
+import ammosPoolTerraceSmall from "../assets/villas/ammos/pool-terrace-800.webp";
+import ammosShadedTerrace from "../assets/villas/ammos/shaded-terrace.webp";
+import ammosShadedTerraceSmall from "../assets/villas/ammos/shaded-terrace-800.webp";
+import ammosTerraceSeaView from "../assets/villas/ammos/terrace-sea-view.webp";
+import ammosTerraceSeaViewSmall from "../assets/villas/ammos/terrace-sea-view-800.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -195,7 +221,71 @@ const orizon = {
   terracesNight: withSmall(orizonTerracesNight, orizonTerracesNightSmall, 1600, 800),
 };
 
+const ammos = {
+  bathroom: withSmall(ammosBathroom, ammosBathroomSmall, 1600, 800),
+  bedroomOne: withSmall(ammosBedroomOne, ammosBedroomOneSmall, 1600, 800),
+  bedroomTwo: withSmall(ammosBedroomTwo, ammosBedroomTwoSmall, 1600, 800),
+  coverVillaPool: withSmall(ammosCoverVillaPool, ammosCoverVillaPoolSmall, 1600, 800),
+  kitchen: withSmall(ammosKitchen, ammosKitchenSmall, 1600, 800),
+  livingRoom: withSmall(ammosLivingRoom, ammosLivingRoomSmall, 1600, 800),
+  outdoorDining: withSmall(ammosOutdoorDining, ammosOutdoorDiningSmall, 1600, 800),
+  poolFromAbove: withSmall(ammosPoolFromAbove, ammosPoolFromAboveSmall, 1000, 600),
+  poolPergolaBay: withSmall(ammosPoolPergolaBay, ammosPoolPergolaBaySmall, 1600, 800),
+  poolTerrace: withSmall(ammosPoolTerrace, ammosPoolTerraceSmall, 1600, 800),
+  shadedTerrace: withSmall(ammosShadedTerrace, ammosShadedTerraceSmall, 1600, 800),
+  terraceSeaView: withSmall(ammosTerraceSeaView, ammosTerraceSeaViewSmall, 1600, 800),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-ammos",
+    name: "Villa Ammos",
+    area: "Ftelia",
+    bedrooms: 7,
+    bathrooms: 8,
+    guests: 14,
+    summary:
+      "A seven-bedroom beachfront villa on Ftelia Bay with a heated infinity pool, an outdoor gym and a path straight down to the sandy beach. Sleeps 14.",
+    description: [
+      "Villa Ammos sits on the hillside of Ftelia Bay, sheltered from the wind, with uninterrupted views over the sea and a paved path that leads straight down to the golden sand. Newly refurbished, the house spreads across 400 m² on a 6,000 m² plot, ten minutes' drive from Mykonos Town.",
+      "Cycladic architecture meets contemporary design across two levels, with seven en-suite bedrooms, six of them with sea views and two set apart as guest suites with their own entrance. Outside, two lounges, a shaded dining and BBQ area, an outdoor bar and a sea-view gym frame the heated infinity pool overlooking the bay.",
+    ],
+    amenities: [
+      "Beachfront, 50 m from Ftelia Beach",
+      "Heated infinity pool",
+      "Sea views from six bedrooms",
+      "Sheltered from the wind",
+      "Outdoor gym with sea view",
+      "Outdoor bar and lounges",
+      "Outdoor dining area and BBQ",
+      "Sonos and outdoor sound system",
+      "Air conditioning and fans",
+      "Smart TVs and high-speed Wi-Fi",
+      "Fully equipped kitchen",
+      "Daily maid service",
+      "Parking",
+    ],
+    photos: [
+      ammos.coverVillaPool,
+      ammos.poolPergolaBay,
+      ammos.terraceSeaView,
+      ammos.poolTerrace,
+      ammos.outdoorDining,
+      ammos.shadedTerrace,
+      ammos.livingRoom,
+      ammos.kitchen,
+      ammos.bedroomOne,
+      ammos.bedroomTwo,
+      ammos.bathroom,
+    ],
+    featurePhoto: ammos.poolFromAbove,
+    gallery: [
+      { title: "The pool and the bay", photos: [ammos.poolPergolaBay, ammos.terraceSeaView, ammos.poolTerrace] },
+      { title: "Outdoor living", photos: [ammos.outdoorDining, ammos.shadedTerrace] },
+      { title: "Living and kitchen", photos: [ammos.livingRoom, ammos.kitchen] },
+      { title: "Bedrooms", photos: [ammos.bedroomOne, ammos.bedroomTwo, ammos.bathroom] },
+    ],
+  },
   {
     slug: "villa-thalassa",
     name: "Villa Thalassa",
