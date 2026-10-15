@@ -43,6 +43,62 @@ import iliosBathroomSmall from "../assets/villas/ilios/bathroom-800.webp";
 import iliosPoolFromAbove from "../assets/villas/ilios/pool-from-above.webp";
 import iliosPoolFromAboveSmall from "../assets/villas/ilios/pool-from-above-600.webp";
 
+// Villa Thalassa (Houlakia).
+import thalassaBedroomOne from "../assets/villas/thalassa/bedroom-one.webp";
+import thalassaBedroomOneSmall from "../assets/villas/thalassa/bedroom-one-800.webp";
+import thalassaBedroomTwo from "../assets/villas/thalassa/bedroom-two.webp";
+import thalassaBedroomTwoSmall from "../assets/villas/thalassa/bedroom-two-800.webp";
+import thalassaClubNight from "../assets/villas/thalassa/club-night.webp";
+import thalassaClubNightSmall from "../assets/villas/thalassa/club-night-800.webp";
+import thalassaCoverPoolSunset from "../assets/villas/thalassa/cover-pool-sunset.webp";
+import thalassaCoverPoolSunsetSmall from "../assets/villas/thalassa/cover-pool-sunset-800.webp";
+import thalassaDiningNight from "../assets/villas/thalassa/dining-night.webp";
+import thalassaDiningNightSmall from "../assets/villas/thalassa/dining-night-800.webp";
+import thalassaGym from "../assets/villas/thalassa/gym.webp";
+import thalassaGymSmall from "../assets/villas/thalassa/gym-800.webp";
+import thalassaLoungeSea from "../assets/villas/thalassa/lounge-sea.webp";
+import thalassaLoungeSeaSmall from "../assets/villas/thalassa/lounge-sea-800.webp";
+import thalassaNightPools from "../assets/villas/thalassa/night-pools.webp";
+import thalassaNightPoolsSmall from "../assets/villas/thalassa/night-pools-800.webp";
+import thalassaPoolBar from "../assets/villas/thalassa/pool-bar.webp";
+import thalassaPoolBarSmall from "../assets/villas/thalassa/pool-bar-800.webp";
+import thalassaPoolEdgeSea from "../assets/villas/thalassa/pool-edge-sea.webp";
+import thalassaPoolEdgeSeaSmall from "../assets/villas/thalassa/pool-edge-sea-800.webp";
+import thalassaPoolFromAbove from "../assets/villas/thalassa/pool-from-above.webp";
+import thalassaPoolFromAboveSmall from "../assets/villas/thalassa/pool-from-above-600.webp";
+import thalassaPoolTerrace from "../assets/villas/thalassa/pool-terrace.webp";
+import thalassaPoolTerraceSmall from "../assets/villas/thalassa/pool-terrace-800.webp";
+import thalassaPoolsSeaView from "../assets/villas/thalassa/pools-sea-view.webp";
+import thalassaPoolsSeaViewSmall from "../assets/villas/thalassa/pools-sea-view-800.webp";
+
+// Villa Orizon (Kastro).
+import orizonBedroomOne from "../assets/villas/orizon/bedroom-one.webp";
+import orizonBedroomOneSmall from "../assets/villas/orizon/bedroom-one-800.webp";
+import orizonBedroomTwo from "../assets/villas/orizon/bedroom-two.webp";
+import orizonBedroomTwoSmall from "../assets/villas/orizon/bedroom-two-800.webp";
+import orizonCoverInfinityPool from "../assets/villas/orizon/cover-infinity-pool.webp";
+import orizonCoverInfinityPoolSmall from "../assets/villas/orizon/cover-infinity-pool-800.webp";
+import orizonGym from "../assets/villas/orizon/gym.webp";
+import orizonGymSmall from "../assets/villas/orizon/gym-800.webp";
+import orizonHelipad from "../assets/villas/orizon/helipad.webp";
+import orizonHelipadSmall from "../assets/villas/orizon/helipad-800.webp";
+import orizonInfinityPool from "../assets/villas/orizon/infinity-pool.webp";
+import orizonInfinityPoolSmall from "../assets/villas/orizon/infinity-pool-800.webp";
+import orizonKitchen from "../assets/villas/orizon/kitchen.webp";
+import orizonKitchenSmall from "../assets/villas/orizon/kitchen-800.webp";
+import orizonLivingLounge from "../assets/villas/orizon/living-lounge.webp";
+import orizonLivingLoungeSmall from "../assets/villas/orizon/living-lounge-800.webp";
+import orizonPoolFromAbove from "../assets/villas/orizon/pool-from-above.webp";
+import orizonPoolFromAboveSmall from "../assets/villas/orizon/pool-from-above-600.webp";
+import orizonPoolLounge from "../assets/villas/orizon/pool-lounge.webp";
+import orizonPoolLoungeSmall from "../assets/villas/orizon/pool-lounge-800.webp";
+import orizonPoolSunset from "../assets/villas/orizon/pool-sunset.webp";
+import orizonPoolSunsetSmall from "../assets/villas/orizon/pool-sunset-800.webp";
+import orizonTennisCourt from "../assets/villas/orizon/tennis-court.webp";
+import orizonTennisCourtSmall from "../assets/villas/orizon/tennis-court-800.webp";
+import orizonTerracesNight from "../assets/villas/orizon/terraces-night.webp";
+import orizonTerracesNightSmall from "../assets/villas/orizon/terraces-night-800.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -68,6 +124,11 @@ export interface Villa {
   featurePhoto?: string;
   /** Optional photo chapters for the villa page. Without them, all photos after the cover form one gallery. */
   gallery?: { title: string; photos: string[] }[];
+  /**
+   * Optional "Private parties and events" section, for villas with the space to host one.
+   * One string per paragraph. Also adds a "Private parties & DJ" label on the villa's card.
+   */
+  events?: string[];
   /** Sample entries are hidden on the live site. Leave this out for real villas. */
   sample?: boolean;
 }
@@ -102,7 +163,147 @@ const ilios = {
   poolFromAbove: withSmall(iliosPoolFromAbove, iliosPoolFromAboveSmall, 1000, 600),
 };
 
+const thalassa = {
+  bedroomOne: withSmall(thalassaBedroomOne, thalassaBedroomOneSmall, 1600, 800),
+  bedroomTwo: withSmall(thalassaBedroomTwo, thalassaBedroomTwoSmall, 1600, 800),
+  clubNight: withSmall(thalassaClubNight, thalassaClubNightSmall, 1024, 800),
+  coverPoolSunset: withSmall(thalassaCoverPoolSunset, thalassaCoverPoolSunsetSmall, 1600, 800),
+  diningNight: withSmall(thalassaDiningNight, thalassaDiningNightSmall, 1600, 800),
+  gym: withSmall(thalassaGym, thalassaGymSmall, 1600, 800),
+  loungeSea: withSmall(thalassaLoungeSea, thalassaLoungeSeaSmall, 1600, 800),
+  nightPools: withSmall(thalassaNightPools, thalassaNightPoolsSmall, 1600, 800),
+  poolBar: withSmall(thalassaPoolBar, thalassaPoolBarSmall, 1417, 800),
+  poolEdgeSea: withSmall(thalassaPoolEdgeSea, thalassaPoolEdgeSeaSmall, 1440, 800),
+  poolFromAbove: withSmall(thalassaPoolFromAbove, thalassaPoolFromAboveSmall, 1000, 600),
+  poolTerrace: withSmall(thalassaPoolTerrace, thalassaPoolTerraceSmall, 1600, 800),
+  poolsSeaView: withSmall(thalassaPoolsSeaView, thalassaPoolsSeaViewSmall, 1600, 800),
+};
+
+const orizon = {
+  bedroomOne: withSmall(orizonBedroomOne, orizonBedroomOneSmall, 1600, 800),
+  bedroomTwo: withSmall(orizonBedroomTwo, orizonBedroomTwoSmall, 1400, 800),
+  coverInfinityPool: withSmall(orizonCoverInfinityPool, orizonCoverInfinityPoolSmall, 1600, 800),
+  gym: withSmall(orizonGym, orizonGymSmall, 1600, 800),
+  helipad: withSmall(orizonHelipad, orizonHelipadSmall, 1363, 800),
+  infinityPool: withSmall(orizonInfinityPool, orizonInfinityPoolSmall, 1600, 800),
+  kitchen: withSmall(orizonKitchen, orizonKitchenSmall, 1331, 800),
+  livingLounge: withSmall(orizonLivingLounge, orizonLivingLoungeSmall, 1600, 800),
+  poolFromAbove: withSmall(orizonPoolFromAbove, orizonPoolFromAboveSmall, 1000, 600),
+  poolLounge: withSmall(orizonPoolLounge, orizonPoolLoungeSmall, 1600, 800),
+  poolSunset: withSmall(orizonPoolSunset, orizonPoolSunsetSmall, 1080, 800),
+  tennisCourt: withSmall(orizonTennisCourt, orizonTennisCourtSmall, 1051, 800),
+  terracesNight: withSmall(orizonTerracesNight, orizonTerracesNightSmall, 1600, 800),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-thalassa",
+    name: "Villa Thalassa",
+    area: "Houlakia",
+    bedrooms: 12,
+    bathrooms: 15,
+    guests: 24,
+    summary:
+      "A twelve-bedroom seafront estate in Houlakia with a 500 m² lake-shaped pool, a second heated pool, five bars and a private seafront club for parties and events.",
+    description: [
+      "Set right on the water in Houlakia, Villa Thalassa is a private seafront estate with panoramic views of the Aegean from every suite. Its lake-shaped pool covers some 500 m², with a second heated pool by the sunset terrace for the master suites.",
+      "Twelve double en-suite bedrooms, nine of them master suites, are spread across the estate, with handcrafted interiors, tropical gardens and a wooden bridge leading to a private seafront club. Two spas, four jacuzzis, a sauna and a large gym make it as easy to rest here as to celebrate.",
+    ],
+    amenities: [
+      "Beachfront access",
+      "500 m² lake-shaped pool",
+      "Second heated pool",
+      "Panoramic sea views",
+      "Private seafront club",
+      "5 bars, including an underwater bar",
+      "4 jacuzzis",
+      "2 spas and a sauna",
+      "Gym with Technogym equipment",
+      "Tropical gardens",
+      "Safe in every bedroom",
+      "Power generator",
+      "Parking for 10 cars",
+    ],
+    photos: [
+      thalassa.coverPoolSunset,
+      thalassa.poolsSeaView,
+      thalassa.poolTerrace,
+      thalassa.poolEdgeSea,
+      thalassa.nightPools,
+      thalassa.poolBar,
+      thalassa.clubNight,
+      thalassa.loungeSea,
+      thalassa.diningNight,
+      thalassa.bedroomOne,
+      thalassa.bedroomTwo,
+      thalassa.gym,
+    ],
+    featurePhoto: thalassa.poolFromAbove,
+    gallery: [
+      { title: "The pools and the sea", photos: [thalassa.poolsSeaView, thalassa.poolTerrace, thalassa.poolEdgeSea] },
+      { title: "Bars and the club", photos: [thalassa.nightPools, thalassa.poolBar, thalassa.clubNight] },
+      { title: "Living and dining", photos: [thalassa.loungeSea, thalassa.diningNight] },
+      { title: "Suites and wellness", photos: [thalassa.gym, thalassa.bedroomOne, thalassa.bedroomTwo] },
+    ],
+    events: [
+      "Villa Thalassa was made for celebrations. With a private seafront club, five bars and terraces that open straight onto the sea, it can host anything from a birthday dinner for your group to a full night party.",
+      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
+    ],
+  },
+  {
+    slug: "villa-orizon",
+    name: "Villa Orizon",
+    area: "Kastro",
+    bedrooms: 11,
+    bathrooms: 14,
+    guests: 23,
+    summary:
+      "An eleven-bedroom villa in Kastro with two pools, jacuzzis, a bar, two kitchens, a private gym, tennis court, helipad and private chapel, five minutes from the port.",
+    description: [
+      "High above the island in the private area of Kastro, Villa Orizon looks out over a 180° view of Mykonos, by day and by night, and is only five minutes from the port.",
+      "Life centres on the infinity pool with its bar and lounges, with a second pool, jacuzzis and sea-view master bedrooms. Two fully equipped kitchens make big dinners easy, and the estate adds a private gym, a tennis court, a shared helipad and its own chapel for weddings and celebrations.",
+    ],
+    amenities: [
+      "180° view of the island",
+      "Infinity pool",
+      "Second pool",
+      "Jacuzzis",
+      "Bar and lounges",
+      "2 fully equipped kitchens",
+      "Private gym with Technogym equipment",
+      "Tennis court",
+      "Helipad (shared)",
+      "Private chapel for weddings",
+      "Private water supply",
+      "Parking for 10 cars",
+      "5 minutes from the port",
+    ],
+    photos: [
+      orizon.coverInfinityPool,
+      orizon.infinityPool,
+      orizon.poolSunset,
+      orizon.terracesNight,
+      orizon.poolLounge,
+      orizon.livingLounge,
+      orizon.bedroomOne,
+      orizon.bedroomTwo,
+      orizon.kitchen,
+      orizon.gym,
+      orizon.tennisCourt,
+      orizon.helipad,
+    ],
+    featurePhoto: orizon.poolFromAbove,
+    gallery: [
+      { title: "The infinity pool", photos: [orizon.infinityPool, orizon.poolSunset] },
+      { title: "Lounges and the bar", photos: [orizon.terracesNight, orizon.poolLounge, orizon.livingLounge] },
+      { title: "Bedrooms and kitchen", photos: [orizon.bedroomOne, orizon.bedroomTwo, orizon.kitchen] },
+      { title: "Gym, tennis and helipad", photos: [orizon.gym, orizon.tennisCourt, orizon.helipad] },
+    ],
+    events: [
+      "With two pools, a bar, jacuzzis, two full kitchens and its own chapel, Villa Orizon has the space for real celebrations, from a private party by the infinity pool to a wedding with dinner under the stars.",
+      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
+    ],
+  },
   {
     slug: "villa-ilios",
     name: "Villa Ilios",

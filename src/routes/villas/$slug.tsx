@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowLeft, MessageCircle } from "lucide-react";
+import { ArrowLeft, Disc3, MessageCircle, Music, PartyPopper, ShieldCheck, Sparkles, UtensilsCrossed } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -127,6 +127,63 @@ function RequestButton({
   );
 }
 
+/** What we arrange for a private party, shown on villas that can host one. */
+const PARTY_SERVICES = [
+  { icon: Disc3, label: "Professional DJ" },
+  { icon: Music, label: "Sound and lighting" },
+  { icon: PartyPopper, label: "Bar team and cocktails" },
+  { icon: UtensilsCrossed, label: "Private chef or catering" },
+  { icon: Sparkles, label: "Decoration and flowers" },
+  { icon: ShieldCheck, label: "Security and guest transfers" },
+];
+
+function PartySection({ villa }: { villa: Villa }) {
+  if (!villa.events?.length) return null;
+  const message = `Hello Isla Vida, I would like to organise a private party at ${villa.name}. Our dates and number of guests:`;
+  return (
+    <section className="relative isolate overflow-hidden bg-navy py-16 text-white sm:py-20">
+      <DiamondPattern className="absolute -right-8 top-6 -z-10 h-64 w-auto text-white/10 lg:right-12" />
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-champagne">
+            Space to celebrate
+          </p>
+          <h2 className="mt-3 font-display text-4xl font-bold sm:text-5xl">Private parties with a DJ</h2>
+          <LineAccent className="mt-4 w-48 text-white/50" />
+          <div className="mt-6 space-y-4 text-lg leading-relaxed text-white/85">
+            {villa.events.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+          <a
+            href={`https://wa.me/306948041931?text=${encodeURIComponent(message)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-3 text-sm font-semibold text-navy transition-colors hover:bg-white/90"
+          >
+            <MessageCircle className="h-4 w-4" />
+            Plan a party at {villa.name}
+          </a>
+          <p className="mt-3 text-sm text-white/60">
+            Events are arranged on request and subject to the villa&apos;s approval for your dates.
+          </p>
+        </div>
+        <ul className="grid grid-cols-2 content-center gap-3 sm:gap-4">
+          {PARTY_SERVICES.map(({ icon: Icon, label }) => (
+            <li
+              key={label}
+              className="flex flex-col gap-2 rounded-lg border border-white/15 bg-white/5 p-4 sm:flex-row sm:items-center sm:gap-4 sm:p-5"
+            >
+              <Icon className="h-6 w-6 shrink-0 text-champagne" />
+              <span className="text-sm font-medium sm:text-base">{label}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
 function VillaPage() {
   const { villa } = Route.useLoaderData();
   const chapters =
@@ -240,6 +297,8 @@ function VillaPage() {
           </div>
         </div>
       </section>
+
+      <PartySection villa={villa} />
 
       {/* Photo chapters */}
       {chapters.map((chapter, chapterIndex) => (
