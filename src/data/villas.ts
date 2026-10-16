@@ -339,6 +339,60 @@ import oneiroShadedLoungeSeaViewSmall from "../assets/villas/oneiro/shaded-loung
 import oneiroVillaFromAbove from "../assets/villas/oneiro/villa-from-above.webp";
 import oneiroVillaFromAboveSmall from "../assets/villas/oneiro/villa-from-above-600.webp";
 
+// Villa Thea (Tourlos). Brochure photos only; swap for originals when available.
+import theaBathroom from "../assets/villas/thea/bathroom.webp";
+import theaBathroomSmall from "../assets/villas/thea/bathroom-800.webp";
+import theaBedroomSeaView from "../assets/villas/thea/bedroom-sea-view.webp";
+import theaBedroomSeaViewSmall from "../assets/villas/thea/bedroom-sea-view-800.webp";
+import theaCoverInfinityPool from "../assets/villas/thea/cover-infinity-pool.webp";
+import theaCoverInfinityPoolSmall from "../assets/villas/thea/cover-infinity-pool-800.webp";
+import theaDiningRoom from "../assets/villas/thea/dining-room.webp";
+import theaDiningRoomSmall from "../assets/villas/thea/dining-room-800.webp";
+import theaGardenSeaView from "../assets/villas/thea/garden-sea-view.webp";
+import theaGardenSeaViewSmall from "../assets/villas/thea/garden-sea-view-800.webp";
+import theaGuestHouseBedroom from "../assets/villas/thea/guest-house-bedroom.webp";
+import theaGuestHouseBedroomSmall from "../assets/villas/thea/guest-house-bedroom-800.webp";
+import theaLivingRoom from "../assets/villas/thea/living-room.webp";
+import theaLivingRoomSmall from "../assets/villas/thea/living-room-800.webp";
+import theaMasterBedroom from "../assets/villas/thea/master-bedroom.webp";
+import theaMasterBedroomSmall from "../assets/villas/thea/master-bedroom-800.webp";
+import theaOutdoorDining from "../assets/villas/thea/outdoor-dining.webp";
+import theaOutdoorDiningSmall from "../assets/villas/thea/outdoor-dining-800.webp";
+import theaPergolaLoungeDusk from "../assets/villas/thea/pergola-lounge-dusk.webp";
+import theaPergolaLoungeDuskSmall from "../assets/villas/thea/pergola-lounge-dusk-800.webp";
+import theaPoolDusk from "../assets/villas/thea/pool-dusk.webp";
+import theaPoolDuskSmall from "../assets/villas/thea/pool-dusk-800.webp";
+import theaPoolFromAbove from "../assets/villas/thea/pool-from-above.webp";
+import theaPoolFromAboveSmall from "../assets/villas/thea/pool-from-above-600.webp";
+
+// Villa Kyanos (Tourlos, Paradisia hills).
+import kyanosBathroom from "../assets/villas/kyanos/bathroom.webp";
+import kyanosBathroomSmall from "../assets/villas/kyanos/bathroom-800.webp";
+import kyanosBedroomSeaView from "../assets/villas/kyanos/bedroom-sea-view.webp";
+import kyanosBedroomSeaViewSmall from "../assets/villas/kyanos/bedroom-sea-view-800.webp";
+import kyanosBedroomTerraceDoor from "../assets/villas/kyanos/bedroom-terrace-door.webp";
+import kyanosBedroomTerraceDoorSmall from "../assets/villas/kyanos/bedroom-terrace-door-800.webp";
+import kyanosCourtyardLounge from "../assets/villas/kyanos/courtyard-lounge.webp";
+import kyanosCourtyardLoungeSmall from "../assets/villas/kyanos/courtyard-lounge-800.webp";
+import kyanosCoverInfinityPool from "../assets/villas/kyanos/cover-infinity-pool.webp";
+import kyanosCoverInfinityPoolSmall from "../assets/villas/kyanos/cover-infinity-pool-800.webp";
+import kyanosGarden from "../assets/villas/kyanos/garden.webp";
+import kyanosGardenSmall from "../assets/villas/kyanos/garden-800.webp";
+import kyanosInfinityPool from "../assets/villas/kyanos/infinity-pool.webp";
+import kyanosInfinityPoolSmall from "../assets/villas/kyanos/infinity-pool-800.webp";
+import kyanosKitchen from "../assets/villas/kyanos/kitchen.webp";
+import kyanosKitchenSmall from "../assets/villas/kyanos/kitchen-800.webp";
+import kyanosKitchenIsland from "../assets/villas/kyanos/kitchen-island.webp";
+import kyanosKitchenIslandSmall from "../assets/villas/kyanos/kitchen-island-800.webp";
+import kyanosPoolFromAbove from "../assets/villas/kyanos/pool-from-above.webp";
+import kyanosPoolFromAboveSmall from "../assets/villas/kyanos/pool-from-above-600.webp";
+import kyanosPoolTerrace from "../assets/villas/kyanos/pool-terrace.webp";
+import kyanosPoolTerraceSmall from "../assets/villas/kyanos/pool-terrace-800.webp";
+import kyanosShadedTerrace from "../assets/villas/kyanos/shaded-terrace.webp";
+import kyanosShadedTerraceSmall from "../assets/villas/kyanos/shaded-terrace-800.webp";
+import kyanosVillaNight from "../assets/villas/kyanos/villa-night.webp";
+import kyanosVillaNightSmall from "../assets/villas/kyanos/villa-night-800.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -573,7 +627,136 @@ const oneiro = {
   villaFromAbove: withSmall(oneiroVillaFromAbove, oneiroVillaFromAboveSmall, 1000, 600),
 };
 
+const thea = {
+  bathroom: withSmall(theaBathroom, theaBathroomSmall, 983, 800),
+  bedroomSeaView: withSmall(theaBedroomSeaView, theaBedroomSeaViewSmall, 966, 800),
+  coverInfinityPool: withSmall(theaCoverInfinityPool, theaCoverInfinityPoolSmall, 1439, 800),
+  diningRoom: withSmall(theaDiningRoom, theaDiningRoomSmall, 883, 800),
+  gardenSeaView: withSmall(theaGardenSeaView, theaGardenSeaViewSmall, 898, 800),
+  guestHouseBedroom: withSmall(theaGuestHouseBedroom, theaGuestHouseBedroomSmall, 898, 800),
+  livingRoom: withSmall(theaLivingRoom, theaLivingRoomSmall, 812, 800),
+  masterBedroom: withSmall(theaMasterBedroom, theaMasterBedroomSmall, 898, 800),
+  outdoorDining: withSmall(theaOutdoorDining, theaOutdoorDiningSmall, 909, 800),
+  pergolaLoungeDusk: withSmall(theaPergolaLoungeDusk, theaPergolaLoungeDuskSmall, 898, 800),
+  poolDusk: withSmall(theaPoolDusk, theaPoolDuskSmall, 812, 800),
+  poolFromAbove: withSmall(theaPoolFromAbove, theaPoolFromAboveSmall, 601, 600),
+};
+
+const kyanos = {
+  bathroom: withSmall(kyanosBathroom, kyanosBathroomSmall, 1017, 800),
+  bedroomSeaView: withSmall(kyanosBedroomSeaView, kyanosBedroomSeaViewSmall, 1600, 800),
+  bedroomTerraceDoor: withSmall(kyanosBedroomTerraceDoor, kyanosBedroomTerraceDoorSmall, 1016, 800),
+  courtyardLounge: withSmall(kyanosCourtyardLounge, kyanosCourtyardLoungeSmall, 1600, 800),
+  coverInfinityPool: withSmall(kyanosCoverInfinityPool, kyanosCoverInfinityPoolSmall, 1600, 800),
+  garden: withSmall(kyanosGarden, kyanosGardenSmall, 1600, 800),
+  infinityPool: withSmall(kyanosInfinityPool, kyanosInfinityPoolSmall, 1292, 800),
+  kitchen: withSmall(kyanosKitchen, kyanosKitchenSmall, 1600, 800),
+  kitchenIsland: withSmall(kyanosKitchenIsland, kyanosKitchenIslandSmall, 1600, 800),
+  poolFromAbove: withSmall(kyanosPoolFromAbove, kyanosPoolFromAboveSmall, 1000, 600),
+  poolTerrace: withSmall(kyanosPoolTerrace, kyanosPoolTerraceSmall, 1600, 800),
+  shadedTerrace: withSmall(kyanosShadedTerrace, kyanosShadedTerraceSmall, 1600, 800),
+  villaNight: withSmall(kyanosVillaNight, kyanosVillaNightSmall, 1600, 800),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-kyanos",
+    name: "Villa Kyanos",
+    area: "Tourlos",
+    bedrooms: 5,
+    bathrooms: 9,
+    guests: 10,
+    summary:
+      "A newly available five-bedroom villa in the Paradisia hills of Tourlos, with an 18-metre infinity pool, a gym and sea, sunset and town views from every bedroom terrace. Sleeps 10.",
+    description: [
+      "Nestled among the Paradisia hills above Tourlos, Villa Kyanos is a private sea-view retreat of crafted wood, white walls and terraced Mediterranean gardens that give a feeling of complete seclusion, 1.3 km from the new port and a few minutes from Mykonos Town.",
+      "A sprawling terrace looks over the Aegean and the coastline, with sun loungers, outdoor sofas and a dining table for ten beside an 18-metre infinity pool that seems to run into the horizon. Inside, a warm wooden kitchen and a calm, minimal living room frame the view, and five spacious bedrooms each open onto their own sea-view terrace, with nine bathrooms across the house.",
+    ],
+    amenities: [
+      "18 m infinity pool",
+      "Sea, sunset, port and town views",
+      "Private terrace for every bedroom",
+      "Outdoor dining for 10",
+      "Outdoor lounges and sun loungers",
+      "Equipped indoor gym",
+      "Mediterranean terraced garden",
+      "Central air conditioning",
+      "In-house staff and daily housekeeping",
+      "Security guard",
+      "Alarm, CCTV and power generator",
+      "Safe in every room",
+    ],
+    photos: [
+      kyanos.coverInfinityPool,
+      kyanos.infinityPool,
+      kyanos.poolTerrace,
+      kyanos.villaNight,
+      kyanos.shadedTerrace,
+      kyanos.courtyardLounge,
+      kyanos.garden,
+      kyanos.kitchen,
+      kyanos.kitchenIsland,
+      kyanos.bedroomSeaView,
+      kyanos.bedroomTerraceDoor,
+      kyanos.bathroom,
+    ],
+    featurePhoto: kyanos.poolFromAbove,
+    gallery: [
+      { title: "The infinity pool", photos: [kyanos.infinityPool, kyanos.poolTerrace, kyanos.villaNight] },
+      { title: "Terraces and garden", photos: [kyanos.shadedTerrace, kyanos.courtyardLounge, kyanos.garden] },
+      { title: "Kitchen", photos: [kyanos.kitchen, kyanos.kitchenIsland] },
+      { title: "Bedrooms", photos: [kyanos.bedroomSeaView, kyanos.bedroomTerraceDoor, kyanos.bathroom] },
+    ],
+  },
+  {
+    slug: "villa-thea",
+    name: "Villa Thea",
+    area: "Tourlos",
+    bedrooms: 6,
+    bathrooms: 7,
+    wcs: 1,
+    guests: 12,
+    summary:
+      "A six-bedroom villa in Tourlos with a 15-metre heated infinity pool, views of the sea and Mykonos Town, an al fresco gym and a private guest house. Sleeps 12.",
+    description: [
+      "Sheltered from the northern summer winds on the hillside of Tourlos, Villa Thea looks out over the Aegean and Mykonos Town, with stone-walled paths winding between terraces and gardens, 1.3 km from the new port and a few minutes from Agios Stefanos beach.",
+      "The entrance level opens onto a 15-metre infinity pool with loungers, a built-in dining area for twelve, a lounge under a pergola and an al fresco gym. Inside, an open-plan kitchen with a wine fridge flows into the living and dining room with sea views. Three lower-level bedrooms each have their own entrance, and a separate guest house with a sea view and private lounge completes the six en-suite bedrooms for up to twelve guests.",
+    ],
+    amenities: [
+      "Sea, town and sunset view",
+      "15 m heated infinity pool (heating on request)",
+      "Sheltered from the north winds",
+      "Outdoor dining for 12 and BBQ",
+      "Lounge under a pergola",
+      "Al fresco gym",
+      "Private guest house with sea view",
+      "Kitchen with wine fridge",
+      "Central air conditioning",
+      "In-house staff and daily maid service",
+      "Smart TV, sound system and Wi-Fi",
+      "Alarm, CCTV and power generator",
+      "Private parking",
+    ],
+    photos: [
+      thea.coverInfinityPool,
+      thea.poolDusk,
+      thea.gardenSeaView,
+      thea.pergolaLoungeDusk,
+      thea.outdoorDining,
+      thea.diningRoom,
+      thea.livingRoom,
+      thea.masterBedroom,
+      thea.bedroomSeaView,
+      thea.guestHouseBedroom,
+      thea.bathroom,
+    ],
+    featurePhoto: thea.poolFromAbove,
+    gallery: [
+      { title: "The pool and the view", photos: [thea.poolDusk, thea.pergolaLoungeDusk, thea.gardenSeaView] },
+      { title: "Dining and living", photos: [thea.outdoorDining, thea.diningRoom, thea.livingRoom] },
+      { title: "Bedrooms", photos: [thea.masterBedroom, thea.bedroomSeaView, thea.guestHouseBedroom, thea.bathroom] },
+    ],
+  },
   {
     slug: "villa-oneiro",
     name: "Villa Oneiro",
@@ -1274,6 +1457,8 @@ const VILLA_ORDER = [
   "villa-avra",
   "villa-petra",
   "villa-oneiro",
+  "villa-thea",
+  "villa-kyanos",
 ];
 
 const position = (villa: Villa) => {
