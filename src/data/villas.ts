@@ -207,6 +207,60 @@ import galiniPoolNightSmall from "../assets/villas/galini/pool-night-800.webp";
 import galiniPoolTerrace from "../assets/villas/galini/pool-terrace.webp";
 import galiniPoolTerraceSmall from "../assets/villas/galini/pool-terrace-800.webp";
 
+// Villa Kyma (Kalo Livadi).
+import kymaBathroom from "../assets/villas/kyma/bathroom.webp";
+import kymaBathroomSmall from "../assets/villas/kyma/bathroom-800.webp";
+import kymaBayView from "../assets/villas/kyma/bay-view.webp";
+import kymaBayViewSmall from "../assets/villas/kyma/bay-view-800.webp";
+import kymaBedroomOne from "../assets/villas/kyma/bedroom-one.webp";
+import kymaBedroomOneSmall from "../assets/villas/kyma/bedroom-one-800.webp";
+import kymaBedroomTwo from "../assets/villas/kyma/bedroom-two.webp";
+import kymaBedroomTwoSmall from "../assets/villas/kyma/bedroom-two-800.webp";
+import kymaCoverInfinityPool from "../assets/villas/kyma/cover-infinity-pool.webp";
+import kymaCoverInfinityPoolSmall from "../assets/villas/kyma/cover-infinity-pool-800.webp";
+import kymaDiningTable from "../assets/villas/kyma/dining-table.webp";
+import kymaDiningTableSmall from "../assets/villas/kyma/dining-table-800.webp";
+import kymaKitchen from "../assets/villas/kyma/kitchen.webp";
+import kymaKitchenSmall from "../assets/villas/kyma/kitchen-800.webp";
+import kymaLivingRoom from "../assets/villas/kyma/living-room.webp";
+import kymaLivingRoomSmall from "../assets/villas/kyma/living-room-800.webp";
+import kymaOutdoorDining from "../assets/villas/kyma/outdoor-dining.webp";
+import kymaOutdoorDiningSmall from "../assets/villas/kyma/outdoor-dining-800.webp";
+import kymaPoolSunbeds from "../assets/villas/kyma/pool-sunbeds.webp";
+import kymaPoolSunbedsSmall from "../assets/villas/kyma/pool-sunbeds-800.webp";
+import kymaPoolTerrace from "../assets/villas/kyma/pool-terrace.webp";
+import kymaPoolTerraceSmall from "../assets/villas/kyma/pool-terrace-800.webp";
+import kymaShadedLounge from "../assets/villas/kyma/shaded-lounge.webp";
+import kymaShadedLoungeSmall from "../assets/villas/kyma/shaded-lounge-800.webp";
+import kymaVillaFromAbove from "../assets/villas/kyma/villa-from-above.webp";
+import kymaVillaFromAboveSmall from "../assets/villas/kyma/villa-from-above-600.webp";
+
+// Villa Akti (Ornos).
+import aktiBedroomOne from "../assets/villas/akti/bedroom-one.webp";
+import aktiBedroomOneSmall from "../assets/villas/akti/bedroom-one-800.webp";
+import aktiBedroomSeaView from "../assets/villas/akti/bedroom-sea-view.webp";
+import aktiBedroomSeaViewSmall from "../assets/villas/akti/bedroom-sea-view-800.webp";
+import aktiBedroomTwo from "../assets/villas/akti/bedroom-two.webp";
+import aktiBedroomTwoSmall from "../assets/villas/akti/bedroom-two-800.webp";
+import aktiCoverTerraceDusk from "../assets/villas/akti/cover-terrace-dusk.webp";
+import aktiCoverTerraceDuskSmall from "../assets/villas/akti/cover-terrace-dusk-800.webp";
+import aktiDiningRoom from "../assets/villas/akti/dining-room.webp";
+import aktiDiningRoomSmall from "../assets/villas/akti/dining-room-800.webp";
+import aktiEntrance from "../assets/villas/akti/entrance.webp";
+import aktiEntranceSmall from "../assets/villas/akti/entrance-600.webp";
+import aktiFirepitLounge from "../assets/villas/akti/firepit-lounge.webp";
+import aktiFirepitLoungeSmall from "../assets/villas/akti/firepit-lounge-800.webp";
+import aktiInfinityPool from "../assets/villas/akti/infinity-pool.webp";
+import aktiInfinityPoolSmall from "../assets/villas/akti/infinity-pool-800.webp";
+import aktiInterior from "../assets/villas/akti/interior.webp";
+import aktiInteriorSmall from "../assets/villas/akti/interior-800.webp";
+import aktiPergolaTerrace from "../assets/villas/akti/pergola-terrace.webp";
+import aktiPergolaTerraceSmall from "../assets/villas/akti/pergola-terrace-800.webp";
+import aktiPrivateDock from "../assets/villas/akti/private-dock.webp";
+import aktiPrivateDockSmall from "../assets/villas/akti/private-dock-800.webp";
+import aktiSeaDeck from "../assets/villas/akti/sea-deck.webp";
+import aktiSeaDeckSmall from "../assets/villas/akti/sea-deck-800.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -365,7 +419,138 @@ const galini = {
   poolTerrace: withSmall(galiniPoolTerrace, galiniPoolTerraceSmall, 1600, 800),
 };
 
+const kyma = {
+  bathroom: withSmall(kymaBathroom, kymaBathroomSmall, 1600, 800),
+  bayView: withSmall(kymaBayView, kymaBayViewSmall, 1200, 800),
+  bedroomOne: withSmall(kymaBedroomOne, kymaBedroomOneSmall, 1600, 800),
+  bedroomTwo: withSmall(kymaBedroomTwo, kymaBedroomTwoSmall, 1600, 800),
+  coverInfinityPool: withSmall(kymaCoverInfinityPool, kymaCoverInfinityPoolSmall, 1600, 800),
+  diningTable: withSmall(kymaDiningTable, kymaDiningTableSmall, 1416, 800),
+  kitchen: withSmall(kymaKitchen, kymaKitchenSmall, 1600, 800),
+  livingRoom: withSmall(kymaLivingRoom, kymaLivingRoomSmall, 1600, 800),
+  outdoorDining: withSmall(kymaOutdoorDining, kymaOutdoorDiningSmall, 1600, 800),
+  poolSunbeds: withSmall(kymaPoolSunbeds, kymaPoolSunbedsSmall, 1600, 800),
+  poolTerrace: withSmall(kymaPoolTerrace, kymaPoolTerraceSmall, 1600, 800),
+  shadedLounge: withSmall(kymaShadedLounge, kymaShadedLoungeSmall, 1053, 800),
+  villaFromAbove: withSmall(kymaVillaFromAbove, kymaVillaFromAboveSmall, 1000, 600),
+};
+
+const akti = {
+  bedroomOne: withSmall(aktiBedroomOne, aktiBedroomOneSmall, 1600, 800),
+  bedroomSeaView: withSmall(aktiBedroomSeaView, aktiBedroomSeaViewSmall, 808, 800),
+  bedroomTwo: withSmall(aktiBedroomTwo, aktiBedroomTwoSmall, 1600, 800),
+  coverTerraceDusk: withSmall(aktiCoverTerraceDusk, aktiCoverTerraceDuskSmall, 1600, 800),
+  diningRoom: withSmall(aktiDiningRoom, aktiDiningRoomSmall, 1600, 800),
+  entrance: withSmall(aktiEntrance, aktiEntranceSmall, 1000, 600),
+  firepitLounge: withSmall(aktiFirepitLounge, aktiFirepitLoungeSmall, 971, 800),
+  infinityPool: withSmall(aktiInfinityPool, aktiInfinityPoolSmall, 1086, 800),
+  interior: withSmall(aktiInterior, aktiInteriorSmall, 808, 800),
+  pergolaTerrace: withSmall(aktiPergolaTerrace, aktiPergolaTerraceSmall, 1086, 800),
+  privateDock: withSmall(aktiPrivateDock, aktiPrivateDockSmall, 1093, 800),
+  seaDeck: withSmall(aktiSeaDeck, aktiSeaDeckSmall, 1085, 800),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-akti",
+    name: "Villa Akti",
+    area: "Ornos",
+    bedrooms: 11,
+    bathrooms: 11,
+    guests: 22,
+    summary:
+      "A brand-new eleven-bedroom seafront villa above Ornos Bay, with an infinity pool, a path to the sea and its own private dock. Sleeps 22.",
+    description: [
+      "Perched in an elevated waterfront position above Ornos Bay, Villa Akti looks across the turquoise water of the Aegean, three kilometres from Mykonos Town and a short walk from Ornos and Agios Ioannis beaches.",
+      "Built amphitheatrically over three levels, the villa is filled with sunlight all day. An infinity pool sits at its heart with unlimited sea views, a wooden path leads down to the water, and a private dock means guests can arrive by sea. Inside, earthy tones meet wood, black, grey and gold, with eleven en-suite bedrooms for up to twenty-two guests, and a private chef included in the stay.",
+    ],
+    amenities: [
+      "Seafront, above Ornos Bay",
+      "Private dock, reachable by sea",
+      "Infinity pool with shallow end",
+      "Path down to the sea",
+      "Firepit lounge and shaded terraces",
+      "Private chef included",
+      "Professional kitchen",
+      "Sound system",
+      "Air conditioning in every room",
+      "Daily housekeeping",
+      "Accessible for guests with reduced mobility",
+      "Gated property with alarm and CCTV",
+      "Private parking for 5 cars",
+    ],
+    photos: [
+      akti.coverTerraceDusk,
+      akti.infinityPool,
+      akti.seaDeck,
+      akti.privateDock,
+      akti.firepitLounge,
+      akti.pergolaTerrace,
+      akti.diningRoom,
+      akti.interior,
+      akti.bedroomOne,
+      akti.bedroomTwo,
+      akti.bedroomSeaView,
+    ],
+    featurePhoto: akti.entrance,
+    gallery: [
+      { title: "The pool and the sea", photos: [akti.infinityPool, akti.seaDeck, akti.privateDock] },
+      { title: "Outdoor living", photos: [akti.firepitLounge, akti.pergolaTerrace] },
+      { title: "Living and dining", photos: [akti.diningRoom, akti.interior] },
+      { title: "Bedrooms", photos: [akti.bedroomOne, akti.bedroomTwo, akti.bedroomSeaView] },
+    ],
+  },
+  {
+    slug: "villa-kyma",
+    name: "Villa Kyma",
+    area: "Kalo Livadi",
+    bedrooms: 9,
+    bathrooms: 10,
+    guests: 18,
+    summary:
+      "A nine-bedroom villa 300 m from Kalo Livadi beach, with an infinity pool, sea views from every bedroom, a gym and in-house staff. Sleeps 18.",
+    description: [
+      "Set on 1,200 m² above Kalo Livadi, Villa Kyma looks out over the Aegean and the bay's dramatic coastline, just 300 m from the beach and a dock for boat transfers, with the Kalo Livadi helipad 400 m away.",
+      "An infinity pool that seems to merge with the horizon leads onto wide terraces with sun loungers, outdoor sofas and a dining table for twenty. Inside there are two living rooms, a professional kitchen and nine calm, minimalist en-suite bedrooms, every one with its own terrace and sea view. In-house staff, daily cleaning and a night security guard take care of the rest.",
+    ],
+    amenities: [
+      "300 m from Kalo Livadi beach",
+      "Infinity pool and pool bar",
+      "Sea view from every bedroom",
+      "Private terrace for every bedroom",
+      "Outdoor dining for 20",
+      "Gas BBQ and firepit",
+      "Fully equipped gym",
+      "Professional kitchen and wine cooler",
+      "Two living rooms",
+      "Sound system",
+      "In-house staff and daily cleaning",
+      "Security guard at night",
+      "Air conditioning and Wi-Fi",
+      "Private parking",
+    ],
+    photos: [
+      kyma.coverInfinityPool,
+      kyma.poolSunbeds,
+      kyma.poolTerrace,
+      kyma.bayView,
+      kyma.outdoorDining,
+      kyma.diningTable,
+      kyma.shadedLounge,
+      kyma.livingRoom,
+      kyma.kitchen,
+      kyma.bedroomOne,
+      kyma.bedroomTwo,
+      kyma.bathroom,
+    ],
+    featurePhoto: kyma.villaFromAbove,
+    gallery: [
+      { title: "The pool and the bay", photos: [kyma.bayView, kyma.poolSunbeds, kyma.poolTerrace] },
+      { title: "Terraces and dining", photos: [kyma.outdoorDining, kyma.diningTable, kyma.shadedLounge] },
+      { title: "Living and kitchen", photos: [kyma.livingRoom, kyma.kitchen] },
+      { title: "Bedrooms", photos: [kyma.bedroomOne, kyma.bedroomTwo, kyma.bathroom] },
+    ],
+  },
   {
     slug: "villa-galini",
     name: "Villa Galini",
@@ -795,10 +980,32 @@ const allVillas: Villa[] = [
   },
 ];
 
-/** The villas shown on the site. Samples are included only in the preview. */
-export const villas: Villa[] = allVillas.filter(
-  (villa) => !villa.sample || import.meta.env.DEV,
-);
+/*
+ * THE ORDER OF THE VILLAS ON THE SITE.
+ * The villas appear in this order, top to bottom. To move a villa, move its line.
+ * A villa that is not in this list is shown after the ones that are.
+ */
+const VILLA_ORDER = [
+  "villa-elia",
+  "villa-selini",
+  "villa-ammos",
+  "villa-thalassa",
+  "villa-orizon",
+  "villa-ilios",
+  "villa-galini",
+  "villa-kyma",
+  "villa-akti",
+];
+
+const position = (villa: Villa) => {
+  const index = VILLA_ORDER.indexOf(villa.slug);
+  return index === -1 ? VILLA_ORDER.length : index;
+};
+
+/** The villas shown on the site, in the order above. Samples are included only in the preview. */
+export const villas: Villa[] = allVillas
+  .filter((villa) => !villa.sample || import.meta.env.DEV)
+  .sort((a, b) => position(a) - position(b));
 
 export function getVilla(slug: string): Villa | undefined {
   return villas.find((villa) => villa.slug === slug);
