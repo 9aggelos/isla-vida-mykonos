@@ -261,6 +261,84 @@ import aktiPrivateDockSmall from "../assets/villas/akti/private-dock-800.webp";
 import aktiSeaDeck from "../assets/villas/akti/sea-deck.webp";
 import aktiSeaDeckSmall from "../assets/villas/akti/sea-deck-800.webp";
 
+// Villa Avra (Tourlos).
+import avraCoverInfinityPool from "../assets/villas/avra/cover-infinity-pool.webp";
+import avraCoverInfinityPoolSmall from "../assets/villas/avra/cover-infinity-pool-800.webp";
+import avraKitchen from "../assets/villas/avra/kitchen.webp";
+import avraKitchenSmall from "../assets/villas/avra/kitchen-800.webp";
+import avraOutdoorDining from "../assets/villas/avra/outdoor-dining.webp";
+import avraOutdoorDiningSmall from "../assets/villas/avra/outdoor-dining-800.webp";
+import avraPoolDusk from "../assets/villas/avra/pool-dusk.webp";
+import avraPoolDuskSmall from "../assets/villas/avra/pool-dusk-800.webp";
+import avraPoolGarden from "../assets/villas/avra/pool-garden.webp";
+import avraPoolGardenSmall from "../assets/villas/avra/pool-garden-600.webp";
+import avraPoolNight from "../assets/villas/avra/pool-night.webp";
+import avraPoolNightSmall from "../assets/villas/avra/pool-night-800.webp";
+import avraPoolTerrace from "../assets/villas/avra/pool-terrace.webp";
+import avraPoolTerraceSmall from "../assets/villas/avra/pool-terrace-800.webp";
+import avraShadedLounge from "../assets/villas/avra/shaded-lounge.webp";
+import avraShadedLoungeSmall from "../assets/villas/avra/shaded-lounge-800.webp";
+import avraSuiteOne from "../assets/villas/avra/suite-one.webp";
+import avraSuiteOneSmall from "../assets/villas/avra/suite-one-800.webp";
+import avraSuiteSeaView from "../assets/villas/avra/suite-sea-view.webp";
+import avraSuiteSeaViewSmall from "../assets/villas/avra/suite-sea-view-800.webp";
+import avraSuiteTwo from "../assets/villas/avra/suite-two.webp";
+import avraSuiteTwoSmall from "../assets/villas/avra/suite-two-800.webp";
+import avraWineRoom from "../assets/villas/avra/wine-room.webp";
+import avraWineRoomSmall from "../assets/villas/avra/wine-room-800.webp";
+
+// Villa Petra (Kanalia).
+import petraBedroomOne from "../assets/villas/petra/bedroom-one.webp";
+import petraBedroomOneSmall from "../assets/villas/petra/bedroom-one-800.webp";
+import petraBedroomTwo from "../assets/villas/petra/bedroom-two.webp";
+import petraBedroomTwoSmall from "../assets/villas/petra/bedroom-two-800.webp";
+import petraCoverPool from "../assets/villas/petra/cover-pool.webp";
+import petraCoverPoolSmall from "../assets/villas/petra/cover-pool-800.webp";
+import petraJacuzziSeaView from "../assets/villas/petra/jacuzzi-sea-view.webp";
+import petraJacuzziSeaViewSmall from "../assets/villas/petra/jacuzzi-sea-view-800.webp";
+import petraKitchen from "../assets/villas/petra/kitchen.webp";
+import petraKitchenSmall from "../assets/villas/petra/kitchen-800.webp";
+import petraLivingRoom from "../assets/villas/petra/living-room.webp";
+import petraLivingRoomSmall from "../assets/villas/petra/living-room-800.webp";
+import petraOutdoorDining from "../assets/villas/petra/outdoor-dining.webp";
+import petraOutdoorDiningSmall from "../assets/villas/petra/outdoor-dining-800.webp";
+import petraPoolFromAbove from "../assets/villas/petra/pool-from-above.webp";
+import petraPoolFromAboveSmall from "../assets/villas/petra/pool-from-above-600.webp";
+import petraPoolSunset from "../assets/villas/petra/pool-sunset.webp";
+import petraPoolSunsetSmall from "../assets/villas/petra/pool-sunset-800.webp";
+import petraPoolTerrace from "../assets/villas/petra/pool-terrace.webp";
+import petraPoolTerraceSmall from "../assets/villas/petra/pool-terrace-800.webp";
+import petraSuiteJacuzzi from "../assets/villas/petra/suite-jacuzzi.webp";
+import petraSuiteJacuzziSmall from "../assets/villas/petra/suite-jacuzzi-800.webp";
+import petraSunbedsSeaView from "../assets/villas/petra/sunbeds-sea-view.webp";
+import petraSunbedsSeaViewSmall from "../assets/villas/petra/sunbeds-sea-view-800.webp";
+import petraTerraceDining from "../assets/villas/petra/terrace-dining.webp";
+import petraTerraceDiningSmall from "../assets/villas/petra/terrace-dining-800.webp";
+
+// Villa Oneiro (Ano Mera).
+import oneiroBathroom from "../assets/villas/oneiro/bathroom.webp";
+import oneiroBathroomSmall from "../assets/villas/oneiro/bathroom-800.webp";
+import oneiroBedroomGardenView from "../assets/villas/oneiro/bedroom-garden-view.webp";
+import oneiroBedroomGardenViewSmall from "../assets/villas/oneiro/bedroom-garden-view-800.webp";
+import oneiroBedroomStoneWall from "../assets/villas/oneiro/bedroom-stone-wall.webp";
+import oneiroBedroomStoneWallSmall from "../assets/villas/oneiro/bedroom-stone-wall-800.webp";
+import oneiroCoverPoolDusk from "../assets/villas/oneiro/cover-pool-dusk.webp";
+import oneiroCoverPoolDuskSmall from "../assets/villas/oneiro/cover-pool-dusk-800.webp";
+import oneiroDiningRoom from "../assets/villas/oneiro/dining-room.webp";
+import oneiroDiningRoomSmall from "../assets/villas/oneiro/dining-room-800.webp";
+import oneiroHangingChairs from "../assets/villas/oneiro/hanging-chairs.webp";
+import oneiroHangingChairsSmall from "../assets/villas/oneiro/hanging-chairs-800.webp";
+import oneiroLivingRoomSeaView from "../assets/villas/oneiro/living-room-sea-view.webp";
+import oneiroLivingRoomSeaViewSmall from "../assets/villas/oneiro/living-room-sea-view-800.webp";
+import oneiroLivingRoomStoneWall from "../assets/villas/oneiro/living-room-stone-wall.webp";
+import oneiroLivingRoomStoneWallSmall from "../assets/villas/oneiro/living-room-stone-wall-800.webp";
+import oneiroOutdoorLounge from "../assets/villas/oneiro/outdoor-lounge.webp";
+import oneiroOutdoorLoungeSmall from "../assets/villas/oneiro/outdoor-lounge-800.webp";
+import oneiroShadedLoungeSeaView from "../assets/villas/oneiro/shaded-lounge-sea-view.webp";
+import oneiroShadedLoungeSeaViewSmall from "../assets/villas/oneiro/shaded-lounge-sea-view-800.webp";
+import oneiroVillaFromAbove from "../assets/villas/oneiro/villa-from-above.webp";
+import oneiroVillaFromAboveSmall from "../assets/villas/oneiro/villa-from-above-600.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -450,7 +528,201 @@ const akti = {
   seaDeck: withSmall(aktiSeaDeck, aktiSeaDeckSmall, 1085, 800),
 };
 
+const avra = {
+  coverInfinityPool: withSmall(avraCoverInfinityPool, avraCoverInfinityPoolSmall, 1437, 800),
+  kitchen: withSmall(avraKitchen, avraKitchenSmall, 902, 800),
+  outdoorDining: withSmall(avraOutdoorDining, avraOutdoorDiningSmall, 900, 800),
+  poolDusk: withSmall(avraPoolDusk, avraPoolDuskSmall, 913, 800),
+  poolGarden: withSmall(avraPoolGarden, avraPoolGardenSmall, 720, 600),
+  poolNight: withSmall(avraPoolNight, avraPoolNightSmall, 800, 800),
+  poolTerrace: withSmall(avraPoolTerrace, avraPoolTerraceSmall, 1200, 800),
+  shadedLounge: withSmall(avraShadedLounge, avraShadedLoungeSmall, 900, 800),
+  suiteOne: withSmall(avraSuiteOne, avraSuiteOneSmall, 1260, 800),
+  suiteSeaView: withSmall(avraSuiteSeaView, avraSuiteSeaViewSmall, 1262, 800),
+  suiteTwo: withSmall(avraSuiteTwo, avraSuiteTwoSmall, 1260, 800),
+  wineRoom: withSmall(avraWineRoom, avraWineRoomSmall, 1200, 800),
+};
+
+const petra = {
+  bedroomOne: withSmall(petraBedroomOne, petraBedroomOneSmall, 1600, 800),
+  bedroomTwo: withSmall(petraBedroomTwo, petraBedroomTwoSmall, 1600, 800),
+  coverPool: withSmall(petraCoverPool, petraCoverPoolSmall, 1600, 800),
+  jacuzziSeaView: withSmall(petraJacuzziSeaView, petraJacuzziSeaViewSmall, 1261, 800),
+  kitchen: withSmall(petraKitchen, petraKitchenSmall, 1600, 800),
+  livingRoom: withSmall(petraLivingRoom, petraLivingRoomSmall, 1600, 800),
+  outdoorDining: withSmall(petraOutdoorDining, petraOutdoorDiningSmall, 1600, 800),
+  poolFromAbove: withSmall(petraPoolFromAbove, petraPoolFromAboveSmall, 1000, 600),
+  poolSunset: withSmall(petraPoolSunset, petraPoolSunsetSmall, 1600, 800),
+  poolTerrace: withSmall(petraPoolTerrace, petraPoolTerraceSmall, 1600, 800),
+  suiteJacuzzi: withSmall(petraSuiteJacuzzi, petraSuiteJacuzziSmall, 1369, 800),
+  sunbedsSeaView: withSmall(petraSunbedsSeaView, petraSunbedsSeaViewSmall, 1600, 800),
+  terraceDining: withSmall(petraTerraceDining, petraTerraceDiningSmall, 1291, 800),
+};
+
+const oneiro = {
+  bathroom: withSmall(oneiroBathroom, oneiroBathroomSmall, 1600, 800),
+  bedroomGardenView: withSmall(oneiroBedroomGardenView, oneiroBedroomGardenViewSmall, 1600, 800),
+  bedroomStoneWall: withSmall(oneiroBedroomStoneWall, oneiroBedroomStoneWallSmall, 1600, 800),
+  coverPoolDusk: withSmall(oneiroCoverPoolDusk, oneiroCoverPoolDuskSmall, 1600, 800),
+  diningRoom: withSmall(oneiroDiningRoom, oneiroDiningRoomSmall, 1600, 800),
+  hangingChairs: withSmall(oneiroHangingChairs, oneiroHangingChairsSmall, 1600, 800),
+  livingRoomSeaView: withSmall(oneiroLivingRoomSeaView, oneiroLivingRoomSeaViewSmall, 1600, 800),
+  livingRoomStoneWall: withSmall(oneiroLivingRoomStoneWall, oneiroLivingRoomStoneWallSmall, 1600, 800),
+  outdoorLounge: withSmall(oneiroOutdoorLounge, oneiroOutdoorLoungeSmall, 1600, 800),
+  shadedLoungeSeaView: withSmall(oneiroShadedLoungeSeaView, oneiroShadedLoungeSeaViewSmall, 1600, 800),
+  villaFromAbove: withSmall(oneiroVillaFromAbove, oneiroVillaFromAboveSmall, 1000, 600),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-oneiro",
+    name: "Villa Oneiro",
+    area: "Ano Mera",
+    bedrooms: 6,
+    bathrooms: 6,
+    wcs: 1,
+    guests: 12,
+    summary:
+      "A six-bedroom villa near Ano Mera with a heated private pool, two heated jacuzzi balconies and panoramic views of the island and the sea. Sleeps 12.",
+    description: [
+      "Set in the quiet countryside near Ano Mera, 1.8 km from Agia Anna beach, Villa Oneiro looks out over the hills to the sea, with clean lines, natural stone and wood, and large glass doors that fill every room with light.",
+      "Outside, a heated pool with a sun deck and lawn sits in front of shaded lounges under a traditional reed pergola, with hanging chairs, an outdoor kitchenette and bar with BBQ, and dining for eight. Inside, a sunken living room with a stone wall opens straight onto the pool, and six en-suite bedrooms sleep twelve, two of them upstairs with balconies holding their own heated jacuzzi.",
+    ],
+    amenities: [
+      "Heated private pool",
+      "2 heated jacuzzis (5 seats each)",
+      "Sea and island views",
+      "Shaded lounges and hanging chairs",
+      "Outdoor kitchenette and bar with BBQ",
+      "Outdoor dining for 8",
+      "Outdoor showers",
+      "Air conditioning",
+      "TV in every room and Wi-Fi",
+      "Fully equipped kitchen",
+      "Daily maid service",
+      "Alarm system",
+      "Private parking",
+    ],
+    photos: [
+      oneiro.coverPoolDusk,
+      oneiro.shadedLoungeSeaView,
+      oneiro.hangingChairs,
+      oneiro.outdoorLounge,
+      oneiro.livingRoomSeaView,
+      oneiro.livingRoomStoneWall,
+      oneiro.diningRoom,
+      oneiro.bedroomGardenView,
+      oneiro.bedroomStoneWall,
+      oneiro.bathroom,
+    ],
+    featurePhoto: oneiro.villaFromAbove,
+    gallery: [
+      { title: "Terraces and the pool", photos: [oneiro.shadedLoungeSeaView, oneiro.hangingChairs, oneiro.outdoorLounge] },
+      { title: "Living and dining", photos: [oneiro.livingRoomSeaView, oneiro.livingRoomStoneWall, oneiro.diningRoom] },
+      { title: "Bedrooms", photos: [oneiro.bedroomGardenView, oneiro.bedroomStoneWall, oneiro.bathroom] },
+    ],
+  },
+  {
+    slug: "villa-petra",
+    name: "Villa Petra",
+    area: "Kanalia",
+    bedrooms: 6,
+    bathrooms: 6,
+    guests: 15,
+    summary:
+      "A six-bedroom villa 150 m from the beach in Kanalia, with a private pool, four heated jacuzzis, a massage room and sea, town and sunset views. Sleeps 15.",
+    description: [
+      "Just 150 m from the beach in Kanalia, Villa Petra looks over the bay to the lights of Mykonos Town, with a private pool, a sunset lounge for aperitifs under painted skies and every bedroom opening onto its own sea-view terrace.",
+      "The main house holds an open-plan living room with a fireplace, a designer kitchen and three en-suite bedrooms, while three detached suites, each with a private entrance, a lounge, a kitchenette and its own heated jacuzzi, give couples and friends their own space. A dining terrace sheltered from the wind seats sixteen beside a BBQ and wood-fired pizza oven, and a spa room with a massage table completes the stay.",
+    ],
+    amenities: [
+      "150 m from the beach",
+      "Private pool",
+      "4 heated jacuzzis",
+      "Sea, town and sunset view",
+      "Sunset lounge and 10 loungers",
+      "Outdoor dining for 16",
+      "BBQ and wood-fired pizza oven",
+      "Spa room with massage table",
+      "Three detached suites with private entrances",
+      "Living room with fireplace",
+      "Central air conditioning and smart home",
+      "Daily housekeeping",
+      "Security guard at night, alarm and CCTV",
+      "Power generator",
+    ],
+    photos: [
+      petra.coverPool,
+      petra.poolSunset,
+      petra.sunbedsSeaView,
+      petra.poolTerrace,
+      petra.jacuzziSeaView,
+      petra.suiteJacuzzi,
+      petra.terraceDining,
+      petra.outdoorDining,
+      petra.kitchen,
+      petra.livingRoom,
+      petra.bedroomOne,
+      petra.bedroomTwo,
+    ],
+    featurePhoto: petra.poolFromAbove,
+    gallery: [
+      { title: "The pool and the view", photos: [petra.poolSunset, petra.sunbedsSeaView, petra.poolTerrace] },
+      { title: "Jacuzzis and terraces", photos: [petra.jacuzziSeaView, petra.suiteJacuzzi, petra.terraceDining] },
+      { title: "Dining, kitchen and living", photos: [petra.outdoorDining, petra.kitchen, petra.livingRoom] },
+      { title: "Bedrooms", photos: [petra.bedroomOne, petra.bedroomTwo] },
+    ],
+  },
+  {
+    slug: "villa-avra",
+    name: "Villa Avra",
+    area: "Tourlos",
+    bedrooms: 6,
+    bathrooms: 7,
+    wcs: 1,
+    guests: 12,
+    summary:
+      "A brand-new six-bedroom villa in Tourlos with a 20-metre heated infinity pool, sea and sunset views, a sea-view gym and two private guest houses. Sleeps 12.",
+    description: [
+      "Brand new and designed by a team specialising in luxury homes, Villa Avra sits on the hillside of Tourlos with wide views over the sea and the sunset, 1.3 km from the new port and a few minutes from Mykonos Town and Agios Stefanos beach.",
+      "Life outside centres on a 20-metre infinity pool, with loungers, several lounge areas, an outdoor kitchenette with BBQ, a dining table for twelve and an outdoor home theatre. Inside, an open-plan kitchen and living room, a home theatre, a wine room and a sea-view gym join four suites, while two attached guest houses with their own entrances give extra privacy. Twelve guests in all.",
+    ],
+    amenities: [
+      "Sea and sunset view",
+      "20 m heated infinity pool (heating on request)",
+      "Outdoor home theatre",
+      "Outdoor kitchenette and BBQ",
+      "Outdoor dining for 12",
+      "Fully equipped gym with sea view",
+      "Wine room",
+      "Two guest houses with private entrances",
+      "Smart TVs, sound system and Wi-Fi",
+      "Air conditioning",
+      "Daily maid service",
+      "Alarm, CCTV and power generator",
+      "Private parking",
+    ],
+    photos: [
+      avra.coverInfinityPool,
+      avra.poolTerrace,
+      avra.poolDusk,
+      avra.poolNight,
+      avra.outdoorDining,
+      avra.shadedLounge,
+      avra.kitchen,
+      avra.wineRoom,
+      avra.suiteOne,
+      avra.suiteTwo,
+      avra.suiteSeaView,
+    ],
+    featurePhoto: avra.poolGarden,
+    gallery: [
+      { title: "The pool", photos: [avra.poolTerrace, avra.poolDusk, avra.poolNight] },
+      { title: "Outdoor living", photos: [avra.outdoorDining, avra.shadedLounge] },
+      { title: "Kitchen and wine room", photos: [avra.kitchen, avra.wineRoom] },
+      { title: "Suites", photos: [avra.suiteOne, avra.suiteTwo, avra.suiteSeaView] },
+    ],
+  },
   {
     slug: "villa-akti",
     name: "Villa Akti",
@@ -498,6 +770,10 @@ const allVillas: Villa[] = [
       { title: "Outdoor living", photos: [akti.firepitLounge, akti.pergolaTerrace] },
       { title: "Living and dining", photos: [akti.diningRoom, akti.interior] },
       { title: "Bedrooms", photos: [akti.bedroomOne, akti.bedroomTwo, akti.bedroomSeaView] },
+    ],
+    events: [
+      "With an infinity pool at its heart, terraces over three levels and its own private dock, Villa Akti is made for celebrations by the sea, from a birthday or anniversary to a wedding proposal or a party under the stars. Your guests can even arrive by boat, with transfers straight to the dock.",
+      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
     ],
   },
   {
@@ -549,6 +825,10 @@ const allVillas: Villa[] = [
       { title: "Terraces and dining", photos: [kyma.outdoorDining, kyma.diningTable, kyma.shadedLounge] },
       { title: "Living and kitchen", photos: [kyma.livingRoom, kyma.kitchen] },
       { title: "Bedrooms", photos: [kyma.bedroomOne, kyma.bedroomTwo, kyma.bathroom] },
+    ],
+    events: [
+      "With wide terraces, a pool bar, a sound system and a dining table for twenty, Villa Kyma is a natural setting for a private party by the infinity pool, from a sunset celebration with the whole group to a full night with a DJ.",
+      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
     ],
   },
   {
@@ -650,10 +930,6 @@ const allVillas: Villa[] = [
       { title: "Living and dining", photos: [elia.livingRoom, elia.diningKitchen] },
       { title: "Suites", photos: [elia.suiteSeaView, elia.suiteOne, elia.bathroom] },
     ],
-    events: [
-      "With 315 m² of sunlit terraces around a striking infinity pool, Villa Elia is an elegant setting for celebrations, from a private party by the pool to a wedding reception or a family gathering under the Mykonos sky.",
-      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
-    ],
   },
   {
     slug: "villa-selini",
@@ -703,6 +979,10 @@ const allVillas: Villa[] = [
       { title: "Terraces and the bar", photos: [selini.stoneDiningTerrace, selini.outdoorBar, selini.terraceNight] },
       { title: "Living and dining", photos: [selini.livingRoom, selini.diningRoom] },
       { title: "Bedrooms", photos: [selini.bedroomOne, selini.bedroomTwo, selini.bathroom] },
+    ],
+    events: [
+      "With its free-form pool, outdoor jacuzzi, outdoor bar and wide terraces facing the sunset, Villa Selini has the space for a real celebration, from a sunset party with the whole group to a full night with a DJ under the Mykonos sky.",
+      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
     ],
   },
   {
@@ -802,10 +1082,6 @@ const allVillas: Villa[] = [
       { title: "Bars and the club", photos: [thalassa.nightPools, thalassa.poolBar, thalassa.clubNight] },
       { title: "Living and dining", photos: [thalassa.loungeSea, thalassa.diningNight] },
       { title: "Suites and wellness", photos: [thalassa.gym, thalassa.bedroomOne, thalassa.bedroomTwo] },
-    ],
-    events: [
-      "Villa Thalassa was made for celebrations. With a private seafront club, five bars and terraces that open straight onto the sea, it can host anything from a birthday dinner for your group to a full night party.",
-      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
     ],
   },
   {
@@ -995,6 +1271,9 @@ const VILLA_ORDER = [
   "villa-galini",
   "villa-kyma",
   "villa-akti",
+  "villa-avra",
+  "villa-petra",
+  "villa-oneiro",
 ];
 
 const position = (villa: Villa) => {
