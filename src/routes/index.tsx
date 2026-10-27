@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "Mykonos transfers, Mykonos airport transfer, JMK transfer, Mykonos port transfer, Mykonos chauffeur, private driver Mykonos, luxury van Mykonos, VIP transfer Mykonos",
+          "Mykonos transfers, Mykonos airport transfer, JMK transfer, Mykonos port transfer, Mykonos chauffeur, private driver Mykonos, luxury van Mykonos, luxury transfer Mykonos, luxury van transfer Mykonos, VIP transfer Mykonos",
       },
       {
         property: "og:site_name",
@@ -90,14 +90,14 @@ const services = [
     description:
       "Seamless arrivals and departures from Mykonos Airport (JMK). Meet-and-greet, luggage assistance, and direct transfers to your hotel or villa.",
     image: airportTransfer,
-    to: "/services",
+    to: "/mykonos-airport-transfers",
   },
   {
     title: "Port Transfers",
     description:
       "Reliable ferry and yacht connections from Mykonos New Port. Timely pickups and drop-offs, even when schedules change.",
     image: portTransfer,
-    to: "/services",
+    to: "/mykonos-port-transfers",
   },
 ];
 
