@@ -58,8 +58,8 @@ const navItems: NavItem[] = [
     ],
   },
   { to: "/villas", label: "Villas" },
-  { to: "/about", label: "About" },
-  // The Blog is linked from the footer.
+  { to: "/mykonos-airport-transfers", label: "Airport Transfers" },
+  // About and Blog are linked from the footer.
   { to: "/contact", label: "Contact" },
 ];
 
@@ -102,7 +102,7 @@ export function Header() {
         </Link>
 
         {/* The full menu needs laptop width; smaller screens get the button below. */}
-        <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
+        <nav className="hidden items-center gap-4 lg:flex xl:gap-8">
           {navItems.map((item) =>
             item.children ? (
               <DropdownMenu key={item.to}>
@@ -129,7 +129,7 @@ export function Header() {
               <Link
                 key={item.to}
                 to={item.to}
-                className={`text-sm font-medium tracking-wide transition-colors hover:text-navy-accent ${
+                className={`whitespace-nowrap text-sm font-medium tracking-wide transition-colors hover:text-navy-accent ${
                   isActive(item.to) ? "text-navy" : "text-muted-foreground"
                 }`}
               >

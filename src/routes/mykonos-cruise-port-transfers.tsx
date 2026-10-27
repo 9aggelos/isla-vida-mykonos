@@ -5,7 +5,7 @@ import { srcSetFor } from "../lib/responsiveImages";
 import portVehicle from "../assets/cruise-ship-mykonos-sunset.webp";
 
 const title = "Mykonos Cruise Port Transfers & Shore Tours | Isla Vida";
-const description = "Private Mykonos cruise port transfers and shore tours: a pre-booked alternative to port taxis. Your driver meets you at the port and gets you back to your ship on time.";
+const description = "Private Mykonos cruise port transfers from €36 and shore tours. Your driver meets you at the port and gets you back to your ship on time. No taxi queue.";
 const whatsapp = "https://wa.me/306948041931";
 const reviews = "https://www.google.com/search?q=ISLA+VIDA+MYKONOS+-+Private+Transfers+%26+Chauffeur+Services#lrd=0x0:0x130f5a1a2fbe9f23,1";
 
@@ -58,15 +58,16 @@ const reasons = [
   ["Local drivers.", "Our drivers were born and raised on Mykonos and know the quiet roads, the best viewpoints and where to eat."],
   ["Comfortable vehicles.", "Air conditioning, complimentary WiFi, space for bags and child seats on request."],
   ["Every guest welcome.", "We are proudly LGBTQ+ friendly and offer every couple, family and group the same discreet service."],
-  ["Rated 5.0 on Google.", "See what 67 guests have said about travelling with us."],
+  ["Rated 5.0 on Google.", "See what 74 guests have said about travelling with us."],
 ];
 const questions = [
   ["Where does my ship dock in Mykonos?", "Most large ships dock at the New Port in Tourlos, a short drive from Mykonos Town. Some ships anchor offshore and bring guests by tender boat to the Old Port in town. We meet you at either one."],
   ["Where will I find my driver?", "At the New Port, your driver waits outside the passport control gate with a sign showing your name. If you come ashore at the Old Port, we confirm the meeting point when you book. We send you the driver's name, photo and phone number before you arrive."],
   ["What if my ship arrives late?", "We follow your ship's arrival and move your pickup to match, at no extra cost."],
   ["Will I be back in time for my ship?", "Yes. We plan every tour to return you to the port well before your all-aboard time."],
+  ["How much is a cruise port transfer?", "Our private transfers start from €36 per vehicle. The final price depends on the distance and the number of guests, and we confirm it in writing before you travel. Shore tours are priced on request."],
   ["Is the price per person or per vehicle?", "Per vehicle. The price you are quoted covers your whole party."],
-  ["How many people can travel together?", "Up to 4 in our premium SUV and up to 7 in our premium van. Larger groups travel in several vehicles together."],
+  ["How many people can travel together?", "Up to 4 in our premium SUV, up to 8 in a Mercedes Vito or V-Class, and up to 20 in our Mercedes Sprinter. Larger groups travel in several vehicles together."],
   ["Can we change the route during the tour?", "Yes. The tour is private, so you can add a stop, stay longer somewhere or skip a place."],
   ["Do you have child seats?", "Yes, on request. Tell us the children's ages when you book."],
   ["How do I pay?", "Cash, payment link or card."],
@@ -87,7 +88,7 @@ function CruisePortPage() {
             <Button asChild size="lg" variant="secondary"><a href={whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle />Book with us</a></Button>
             <Button asChild size="lg" variant="secondary"><a href="#shore-tours">See shore tours<ArrowRight /></a></Button>
           </div>
-          <a href={reviews} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex items-start gap-2 text-sm text-primary-foreground/90 underline-offset-4 hover:underline"><Star className="mt-0.5 h-4 w-4 shrink-0" />Rated 5.0 on Google from 67 reviews. Available for every ship, every day of the season.</a>
+          <a href={reviews} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex items-start gap-2 text-sm text-primary-foreground/90 underline-offset-4 hover:underline"><Star className="mt-0.5 h-4 w-4 shrink-0" />Rated 5.0 on Google from 74 reviews. Available for every ship, every day of the season.</a>
         </div>
       </section>
 
@@ -103,7 +104,7 @@ function CruisePortPage() {
       <section className="section-padding border-y border-border bg-secondary">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Cruise port transfers</h2>
-          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">A private ride from your ship straight to where you want to spend the day: Mykonos Town, a beach, a beach club or a restaurant. Book one way or with a return at a time you choose, and we plan the drive back around your all-aboard time. Send us your ship and date for a fixed price per vehicle.</p>
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">A private ride from your ship straight to where you want to spend the day: Mykonos Town, a beach, a beach club or a restaurant. Book one way or with a return at a time you choose, and we plan the drive back around your all-aboard time. Transfers start from €36 per vehicle; send us your ship and date for your fixed price.</p>
           <div id="shore-tours" className="mt-14 scroll-mt-28">
             <h2 className="font-display text-3xl font-bold sm:text-4xl">Private shore tours</h2>
             <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">See the island with a local driver instead of a coach group. Every tour is private to your party, and the stops are arranged with your driver around your preferences.</p>
@@ -114,7 +115,7 @@ function CruisePortPage() {
               </table>
             </div>
             <dl className="mt-8 space-y-6 sm:hidden">{tours.map(([name, time, stops, price]) => <div key={name} className="border-t border-border pt-5"><dt className="font-display text-2xl font-semibold">{name}</dt><dd className="mt-2 font-medium">{time} · {price}</dd><dd className="mt-3 leading-relaxed text-muted-foreground">{stops}</dd></div>)}</dl>
-            <p className="mt-6 leading-relaxed text-muted-foreground">Prices are per vehicle. Our premium SUV seats up to 4 guests and our premium van up to 7. For larger groups we arrange several vehicles that travel together.</p>
+            <p className="mt-6 leading-relaxed text-muted-foreground">Prices are per vehicle. Our premium SUV seats up to 4 guests, the Mercedes Vito and V-Class up to 8, and the Mercedes Sprinter up to 20. For even larger groups we arrange several vehicles that travel together.</p>
           </div>
         </div>
       </section>

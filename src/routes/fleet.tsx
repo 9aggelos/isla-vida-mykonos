@@ -6,26 +6,26 @@ import { Shield, Wifi, Snowflake, Luggage, Baby, Music } from "lucide-react";
 export const Route = createFileRoute("/fleet")({
   head: () => ({
     meta: [
-      { title: "Luxury Fleet in Mykonos: Premium SUV & Van | Isla Vida" },
+      { title: "Mykonos Fleet: Mercedes V-Class, Sprinter & SUV | Isla Vida" },
       {
         name: "description",
         content:
-          "Our Mykonos fleet: premium SUV for 1–4 passengers and luxury van for up to 7. Leather interiors, climate control, WiFi and child seats on request.",
+          "Our Mykonos fleet: a premium SUV for up to 4, Mercedes Vito and V-Class for up to 8, and a Mercedes Sprinter for groups of up to 20. Transfers from €36.",
       },
       {
         name: "keywords",
         content:
-          "Mykonos luxury van, Mykonos premium SUV, Mercedes transfer Mykonos, chauffeur fleet Mykonos",
+          "Mykonos luxury van, Mykonos premium SUV, Mercedes V-Class Mykonos, Mercedes Sprinter Mykonos, Mercedes transfer Mykonos",
       },
       {
         property: "og:site_name",
         content: "Isla Vida Mykonos",
       },
-      { property: "og:title", content: "Luxury Fleet in Mykonos: Premium SUV & Van | Isla Vida" },
+      { property: "og:title", content: "Mykonos Fleet: Mercedes V-Class, Sprinter & SUV | Isla Vida" },
       {
         property: "og:description",
         content:
-          "Premium SUV (1–4 pax) and luxury Van (up to 7 pax) for private transfers across Mykonos.",
+          "Premium SUV (up to 4), Mercedes Vito and V-Class (up to 8) and Mercedes Sprinter (up to 20) for private transfers across Mykonos.",
       },
       { property: "og:url", content: "https://www.islavidajmk.com/fleet" },
       { property: "og:type", content: "website" },
@@ -46,8 +46,14 @@ const vehicles = [
     features: ["Leather interior", "Climate control", "Premium sound system", "Charging ports"],
   },
   {
-    name: "Premium Van",
-    capacity: "Up to 7 passengers",
+    name: "Mercedes Vito",
+    capacity: "Up to 8 passengers",
+    ideal: "Families and groups of friends who want space for everyone and their luggage",
+    features: ["Spacious interior", "Large luggage capacity", "Climate control", "Charging ports"],
+  },
+  {
+    name: "Mercedes V-Class",
+    capacity: "Up to 8 passengers",
     ideal:
       "Families, groups, or travelers with lots of luggage who want extra space without sacrificing style",
     features: [
@@ -56,6 +62,12 @@ const vehicles = [
       "Individual climate control",
       "Premium sound system & charging ports",
     ],
+  },
+  {
+    name: "Mercedes Sprinter",
+    capacity: "Up to 20 passengers",
+    ideal: "Large groups, weddings, events and corporate trips travelling together",
+    features: ["Seats up to 20 guests", "Large luggage space", "Climate control", "One vehicle for the whole group"],
   },
 ];
 
@@ -72,8 +84,8 @@ function FleetPage() {
   return (
     <div className="flex flex-col">
       <PageHero
-        title="A fleet built for comfort"
-        subtitle="Immaculate vehicles, professional drivers, and premium amenities for every journey across Mykonos."
+        title="Our Mercedes fleet in Mykonos"
+        subtitle="A premium SUV, Mercedes Vito and V-Class vans and a Mercedes Sprinter, with professional local drivers for every transfer across Mykonos."
         image={fleetImage}
         imageClassName="object-[60%_50%]"
         cta={{ to: "/contact", label: "Reserve your vehicle" }}
@@ -91,6 +103,13 @@ function FleetPage() {
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
               All vehicles are maintained to the highest standards, fully licensed, and equipped for
               the Mykonos climate and roads.
+            </p>
+            <p className="mx-auto mt-6 inline-block rounded-md bg-secondary px-5 py-3 font-display text-2xl font-semibold text-foreground">
+              Transfers from €36 per vehicle
+            </p>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
+              The final price depends on the distance and the number of guests, and is confirmed in
+              writing before you travel.
             </p>
           </div>
 
