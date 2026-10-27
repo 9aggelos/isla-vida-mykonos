@@ -90,7 +90,7 @@ const services = [
     description:
       "Seamless arrivals and departures from Mykonos Airport (JMK). Meet-and-greet, luggage assistance, and direct transfers to your hotel or villa.",
     image: airportTransfer,
-    to: "/services",
+    to: "/mykonos-airport-transfers",
   },
   {
     title: "Port Transfers",
