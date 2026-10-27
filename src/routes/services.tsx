@@ -27,7 +27,7 @@ import {
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Mykonos Transfer Services: Airport, Port, VIP & Groups | Isla Vida" },
+      { title: "Mykonos Transfer Services: Airport, Port & VIP | Isla Vida" },
       {
         name: "description",
         content:
@@ -36,13 +36,13 @@ export const Route = createFileRoute("/services")({
       {
         name: "keywords",
         content:
-          "Mykonos taxi, Mykonos taxi service, taxi Mykonos airport, Mykonos airport transfer, JMK airport taxi, Mykonos port transfer, VIP transfer Mykonos, helicopter transfer Mykonos, villa transfer Mykonos, group transport Mykonos",
+          "Mykonos taxi, Mykonos taxi service, taxi Mykonos airport, Mykonos airport transfer, JMK airport taxi, Mykonos port transfer, VIP transfer Mykonos, helicopter transfer Mykonos, villa transfer Mykonos, group transport Mykonos, luxury transfer Mykonos, luxury van transfer Mykonos",
       },
       {
         property: "og:site_name",
         content: "Isla Vida Mykonos",
       },
-      { property: "og:title", content: "Mykonos Transfer Services: Airport, Port, VIP & Groups | Isla Vida" },
+      { property: "og:title", content: "Mykonos Transfer Services: Airport, Port & VIP | Isla Vida" },
       {
         property: "og:description",
         content:
@@ -98,6 +98,7 @@ const services: Service[] = [
       "Luggage assistance",
       "Direct door-to-door service",
     ],
+    link: { to: "/mykonos-airport-transfers", label: "Airport routes, times and prices" },
   },
   {
     id: "port-transfers",
@@ -112,6 +113,7 @@ const services: Service[] = [
       "Direct transfers to hotels",
       "Group coordination",
     ],
+    link: { to: "/mykonos-port-transfers", label: "Port routes, times and prices" },
   },
   {
     id: "chauffeur-services",
@@ -222,7 +224,7 @@ function ServicesPage() {
   return (
     <div className="flex flex-col">
       <PageHero
-        title="Premium services tailored to you"
+        title="Mykonos transfers and premium services"
         subtitle="From airport arrivals to private villas and yacht days, every service with Isla Vida is designed for comfort, discretion, and reliability."
         image={servicesHero}
         cta={{ to: "/contact", label: "Request a quote" }}

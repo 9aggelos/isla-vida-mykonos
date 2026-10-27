@@ -30,6 +30,16 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/mykonos-airport-transfers" className="hover:text-white transition-colors">
+                  Airport Transfers
+                </Link>
+              </li>
+              <li>
+                <Link to="/mykonos-port-transfers" className="hover:text-white transition-colors">
+                  Port Transfers
+                </Link>
+              </li>
+              <li>
                 <Link
                   to="/mykonos-cruise-port-transfers"
                   className="hover:text-white transition-colors"

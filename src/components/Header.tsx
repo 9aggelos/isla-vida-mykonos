@@ -17,6 +17,8 @@ interface NavLink {
 interface NavItem extends NavLink {
   /** Pages shown in a dropdown under this item. The first one is the item itself. */
   children?: NavLink[];
+  /** The item is only a heading for its dropdown, with no page of its own. */
+  menuOnly?: boolean;
   /**
    * Pages that belong to this item without crowding the menu. They appear as a
    * slim bar under the header, only while the visitor is on one of them.
@@ -58,8 +60,16 @@ const navItems: NavItem[] = [
     ],
   },
   { to: "/villas", label: "Villas" },
-  { to: "/about", label: "About" },
-  // The Blog is linked from the footer.
+  {
+    to: "/mykonos-airport-transfers",
+    label: "Mykonos Transfers",
+    menuOnly: true,
+    children: [
+      { to: "/mykonos-airport-transfers", label: "Airport Transfers" },
+      { to: "/mykonos-port-transfers", label: "Port Transfers" },
+    ],
+  },
+  // About and Blog are linked from the footer.
   { to: "/contact", label: "Contact" },
 ];
 
@@ -92,7 +102,7 @@ export function Header() {
             className="h-10 w-auto drop-shadow-sm"
           />
           <div className="flex flex-col">
-            <span className="font-display text-3xl font-semibold tracking-[0.25em] text-navy">
+            <span className="font-display text-3xl font-semibold tracking-[0.18em] text-navy xl:tracking-[0.25em]">
               ISLA VIDA
             </span>
             <span className="hidden text-xs font-medium uppercase tracking-widest text-muted-foreground sm:inline">
@@ -102,14 +112,14 @@ export function Header() {
         </Link>
 
         {/* The full menu needs laptop width; smaller screens get the button below. */}
-        <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
+        <nav className="hidden items-center gap-3 lg:flex xl:gap-8">
           {navItems.map((item) =>
             item.children ? (
               <DropdownMenu key={item.to}>
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
-                    className={`h-auto gap-1 px-0 font-medium tracking-wide hover:bg-transparent hover:text-navy-accent ${
+                    className={`h-auto gap-1 whitespace-nowrap px-0 font-medium tracking-wide hover:bg-transparent hover:text-navy-accent ${
                       isGroupActive(item) ? "text-navy" : "text-muted-foreground"
                     }`}
                   >
@@ -129,7 +139,7 @@ export function Header() {
               <Link
                 key={item.to}
                 to={item.to}
-                className={`text-sm font-medium tracking-wide transition-colors hover:text-navy-accent ${
+                className={`whitespace-nowrap text-sm font-medium tracking-wide transition-colors hover:text-navy-accent ${
                   isActive(item.to) ? "text-navy" : "text-muted-foreground"
                 }`}
               >
@@ -164,19 +174,30 @@ export function Header() {
           <nav className="flex flex-col gap-4">
             {navItems.map((item) => (
               <div key={item.to} className="flex flex-col gap-3">
-                <Link
-                  to={item.to}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium ${
-                    isGroupActive(item) ? "text-navy" : "text-muted-foreground"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-                {/* The first child repeats the item above, so it is skipped here. */}
+                {item.menuOnly ? (
+                  <span
+                    className={`text-base font-medium ${
+                      isGroupActive(item) ? "text-navy" : "text-muted-foreground"
+                    }`}
+                  >
+                    {item.label}
+                  </span>
+                ) : (
+                  <Link
+                    to={item.to}
+                    onClick={() => setIsOpen(false)}
+                    className={`text-base font-medium ${
+                      isGroupActive(item) ? "text-navy" : "text-muted-foreground"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+                {/* The first child usually repeats the item above, so it is skipped,
+                    unless the item is only a heading. */}
                 {item.children && (
                   <div className="flex flex-col gap-3 border-l border-border pl-4">
-                    {item.children.slice(1).map((child) => (
+                    {item.children.slice(item.menuOnly ? 0 : 1).map((child) => (
                       <Link
                         key={child.to}
                         to={child.to}
