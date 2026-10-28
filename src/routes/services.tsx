@@ -27,7 +27,7 @@ import {
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Mykonos Transfer Services: Airport, Port & VIP | Isla Vida" },
+      { title: "Mykonos Chauffeur & VIP Services | Isla Vida" },
       {
         name: "description",
         content:
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/services")({
         property: "og:site_name",
         content: "Isla Vida Mykonos",
       },
-      { property: "og:title", content: "Mykonos Transfer Services: Airport, Port & VIP | Isla Vida" },
+      { property: "og:title", content: "Mykonos Chauffeur & VIP Services | Isla Vida" },
       {
         property: "og:description",
         content:

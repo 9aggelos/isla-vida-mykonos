@@ -12,7 +12,7 @@ import { ArrowRight, Clock, Shield, Star, Users } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Luxury Private Transfers & Concierge in Mykonos | Isla Vida" },
+      { title: "Mykonos Transfers: Airport, Port, VIP & Groups | Isla Vida" },
       {
         name: "description",
         content:
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Luxury Private Transfers & Concierge in Mykonos | Isla Vida",
+        content: "Mykonos Transfers: Airport, Port, VIP & Groups | Isla Vida",
       },
       {
         property: "og:description",
@@ -127,7 +127,7 @@ function Index() {
               Discover Mykonos in timeless elegance and style
             </p>
             <h1 className="font-display text-5xl font-bold leading-[1.1] text-white sm:text-6xl lg:text-7xl">
-              Luxury Private Transfers & Concierge Services
+              Luxury Mykonos Transfers & Concierge Services
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/80 sm:text-xl">
               Isla Vida Mykonos offers premium private transfers, airport and port services, curated
