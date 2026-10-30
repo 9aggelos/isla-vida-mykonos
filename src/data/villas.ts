@@ -447,6 +447,96 @@ import aeliaTerraceUmbrellaSmall from "../assets/villas/aelia/terrace-umbrella-8
 import aeliaVillaFromAbove from "../assets/villas/aelia/villa-from-above.webp";
 import aeliaVillaFromAboveSmall from "../assets/villas/aelia/villa-from-above-600.webp";
 
+// Villa Esperos (Kanalia).
+import esperosCoverPergolaSunset from "../assets/villas/esperos/cover-pergola-sunset.webp";
+import esperosCoverPergolaSunsetSmall from "../assets/villas/esperos/cover-pergola-sunset-800.webp";
+import esperosHeatedPool from "../assets/villas/esperos/heated-pool.webp";
+import esperosHeatedPoolSmall from "../assets/villas/esperos/heated-pool-800.webp";
+import esperosPoolSeaView from "../assets/villas/esperos/pool-sea-view.webp";
+import esperosPoolSeaViewSmall from "../assets/villas/esperos/pool-sea-view-800.webp";
+import esperosOutdoorDining from "../assets/villas/esperos/outdoor-dining.webp";
+import esperosOutdoorDiningSmall from "../assets/villas/esperos/outdoor-dining-800.webp";
+import esperosPergolaLounge from "../assets/villas/esperos/pergola-lounge.webp";
+import esperosPergolaLoungeSmall from "../assets/villas/esperos/pergola-lounge-800.webp";
+import esperosPrivateBeach from "../assets/villas/esperos/private-beach.webp";
+import esperosPrivateBeachSmall from "../assets/villas/esperos/private-beach-800.webp";
+import esperosLivingRoom from "../assets/villas/esperos/living-room.webp";
+import esperosLivingRoomSmall from "../assets/villas/esperos/living-room-800.webp";
+import esperosKitchen from "../assets/villas/esperos/kitchen.webp";
+import esperosKitchenSmall from "../assets/villas/esperos/kitchen-800.webp";
+import esperosMasterBedroom from "../assets/villas/esperos/master-bedroom.webp";
+import esperosMasterBedroomSmall from "../assets/villas/esperos/master-bedroom-800.webp";
+import esperosBedroomSeaView from "../assets/villas/esperos/bedroom-sea-view.webp";
+import esperosBedroomSeaViewSmall from "../assets/villas/esperos/bedroom-sea-view-800.webp";
+import esperosBathroom from "../assets/villas/esperos/bathroom.webp";
+import esperosBathroomSmall from "../assets/villas/esperos/bathroom-800.webp";
+import esperosGym from "../assets/villas/esperos/gym.webp";
+import esperosGymSmall from "../assets/villas/esperos/gym-800.webp";
+import esperosPoolNight from "../assets/villas/esperos/pool-night.webp";
+import esperosPoolNightSmall from "../assets/villas/esperos/pool-night-800.webp";
+import esperosJacuzziSunset from "../assets/villas/esperos/jacuzzi-sunset.webp";
+import esperosJacuzziSunsetSmall from "../assets/villas/esperos/jacuzzi-sunset-600.webp";
+
+// Villa Asteri (Mykonos Town).
+import asteriCoverPool from "../assets/villas/asteri/cover-pool.webp";
+import asteriCoverPoolSmall from "../assets/villas/asteri/cover-pool-800.webp";
+import asteriPoolGarden from "../assets/villas/asteri/pool-garden.webp";
+import asteriPoolGardenSmall from "../assets/villas/asteri/pool-garden-800.webp";
+import asteriPoolSunbeds from "../assets/villas/asteri/pool-sunbeds.webp";
+import asteriPoolSunbedsSmall from "../assets/villas/asteri/pool-sunbeds-800.webp";
+import asteriTerraceSeaView from "../assets/villas/asteri/terrace-sea-view.webp";
+import asteriTerraceSeaViewSmall from "../assets/villas/asteri/terrace-sea-view-800.webp";
+import asteriPergolaLounge from "../assets/villas/asteri/pergola-lounge.webp";
+import asteriPergolaLoungeSmall from "../assets/villas/asteri/pergola-lounge-800.webp";
+import asteriOutdoorDining from "../assets/villas/asteri/outdoor-dining.webp";
+import asteriOutdoorDiningSmall from "../assets/villas/asteri/outdoor-dining-800.webp";
+import asteriLivingRoom from "../assets/villas/asteri/living-room.webp";
+import asteriLivingRoomSmall from "../assets/villas/asteri/living-room-800.webp";
+import asteriDiningRoom from "../assets/villas/asteri/dining-room.webp";
+import asteriDiningRoomSmall from "../assets/villas/asteri/dining-room-800.webp";
+import asteriKitchen from "../assets/villas/asteri/kitchen.webp";
+import asteriKitchenSmall from "../assets/villas/asteri/kitchen-800.webp";
+import asteriMasterBedroom from "../assets/villas/asteri/master-bedroom.webp";
+import asteriMasterBedroomSmall from "../assets/villas/asteri/master-bedroom-800.webp";
+import asteriBedroomTwo from "../assets/villas/asteri/bedroom-two.webp";
+import asteriBedroomTwoSmall from "../assets/villas/asteri/bedroom-two-800.webp";
+import asteriBedroomThree from "../assets/villas/asteri/bedroom-three.webp";
+import asteriBedroomThreeSmall from "../assets/villas/asteri/bedroom-three-800.webp";
+import asteriBathroom from "../assets/villas/asteri/bathroom.webp";
+import asteriBathroomSmall from "../assets/villas/asteri/bathroom-800.webp";
+import asteriPoolDusk from "../assets/villas/asteri/pool-dusk.webp";
+import asteriPoolDuskSmall from "../assets/villas/asteri/pool-dusk-800.webp";
+import asteriTerraceDusk from "../assets/villas/asteri/terrace-dusk.webp";
+import asteriTerraceDuskSmall from "../assets/villas/asteri/terrace-dusk-600.webp";
+
+// Villa Irini (Kalo Livadi).
+import iriniCoverInfinityPool from "../assets/villas/irini/cover-infinity-pool.webp";
+import iriniCoverInfinityPoolSmall from "../assets/villas/irini/cover-infinity-pool-800.webp";
+import iriniPoolBayView from "../assets/villas/irini/pool-bay-view.webp";
+import iriniPoolBayViewSmall from "../assets/villas/irini/pool-bay-view-800.webp";
+import iriniPoolUmbrellas from "../assets/villas/irini/pool-umbrellas.webp";
+import iriniPoolUmbrellasSmall from "../assets/villas/irini/pool-umbrellas-800.webp";
+import iriniPoolAndVilla from "../assets/villas/irini/pool-and-villa.webp";
+import iriniPoolAndVillaSmall from "../assets/villas/irini/pool-and-villa-800.webp";
+import iriniPoolsideLounge from "../assets/villas/irini/poolside-lounge.webp";
+import iriniPoolsideLoungeSmall from "../assets/villas/irini/poolside-lounge-800.webp";
+import iriniLivingRoom from "../assets/villas/irini/living-room.webp";
+import iriniLivingRoomSmall from "../assets/villas/irini/living-room-800.webp";
+import iriniLivingSeaView from "../assets/villas/irini/living-sea-view.webp";
+import iriniLivingSeaViewSmall from "../assets/villas/irini/living-sea-view-800.webp";
+import iriniDiningKitchen from "../assets/villas/irini/dining-kitchen.webp";
+import iriniDiningKitchenSmall from "../assets/villas/irini/dining-kitchen-800.webp";
+import iriniMasterBedroom from "../assets/villas/irini/master-bedroom.webp";
+import iriniMasterBedroomSmall from "../assets/villas/irini/master-bedroom-800.webp";
+import iriniBedroomTwo from "../assets/villas/irini/bedroom-two.webp";
+import iriniBedroomTwoSmall from "../assets/villas/irini/bedroom-two-800.webp";
+import iriniBathroom from "../assets/villas/irini/bathroom.webp";
+import iriniBathroomSmall from "../assets/villas/irini/bathroom-800.webp";
+import iriniPoolDusk from "../assets/villas/irini/pool-dusk.webp";
+import iriniPoolDuskSmall from "../assets/villas/irini/pool-dusk-800.webp";
+import iriniPoolFromAbove from "../assets/villas/irini/pool-from-above.webp";
+import iriniPoolFromAboveSmall from "../assets/villas/irini/pool-from-above-600.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -743,7 +833,209 @@ const aelia = {
   villaFromAbove: withSmall(aeliaVillaFromAbove, aeliaVillaFromAboveSmall, 802, 600),
 };
 
+const esperos = {
+  coverPergolaSunset: withSmall(esperosCoverPergolaSunset, esperosCoverPergolaSunsetSmall, 1600, 800),
+  heatedPool: withSmall(esperosHeatedPool, esperosHeatedPoolSmall, 1600, 800),
+  poolSeaView: withSmall(esperosPoolSeaView, esperosPoolSeaViewSmall, 1600, 800),
+  outdoorDining: withSmall(esperosOutdoorDining, esperosOutdoorDiningSmall, 1600, 800),
+  pergolaLounge: withSmall(esperosPergolaLounge, esperosPergolaLoungeSmall, 1600, 800),
+  privateBeach: withSmall(esperosPrivateBeach, esperosPrivateBeachSmall, 1600, 800),
+  livingRoom: withSmall(esperosLivingRoom, esperosLivingRoomSmall, 1228, 800),
+  kitchen: withSmall(esperosKitchen, esperosKitchenSmall, 1600, 800),
+  masterBedroom: withSmall(esperosMasterBedroom, esperosMasterBedroomSmall, 1600, 800),
+  bedroomSeaView: withSmall(esperosBedroomSeaView, esperosBedroomSeaViewSmall, 1600, 800),
+  bathroom: withSmall(esperosBathroom, esperosBathroomSmall, 1600, 800),
+  gym: withSmall(esperosGym, esperosGymSmall, 1600, 800),
+  poolNight: withSmall(esperosPoolNight, esperosPoolNightSmall, 1600, 800),
+  jacuzziSunset: withSmall(esperosJacuzziSunset, esperosJacuzziSunsetSmall, 1000, 600),
+};
+
+const asteri = {
+  coverPool: withSmall(asteriCoverPool, asteriCoverPoolSmall, 1600, 800),
+  poolGarden: withSmall(asteriPoolGarden, asteriPoolGardenSmall, 1600, 800),
+  poolSunbeds: withSmall(asteriPoolSunbeds, asteriPoolSunbedsSmall, 1600, 800),
+  terraceSeaView: withSmall(asteriTerraceSeaView, asteriTerraceSeaViewSmall, 1600, 800),
+  pergolaLounge: withSmall(asteriPergolaLounge, asteriPergolaLoungeSmall, 1600, 800),
+  outdoorDining: withSmall(asteriOutdoorDining, asteriOutdoorDiningSmall, 1600, 800),
+  livingRoom: withSmall(asteriLivingRoom, asteriLivingRoomSmall, 1600, 800),
+  diningRoom: withSmall(asteriDiningRoom, asteriDiningRoomSmall, 1600, 800),
+  kitchen: withSmall(asteriKitchen, asteriKitchenSmall, 1600, 800),
+  masterBedroom: withSmall(asteriMasterBedroom, asteriMasterBedroomSmall, 1600, 800),
+  bedroomTwo: withSmall(asteriBedroomTwo, asteriBedroomTwoSmall, 1600, 800),
+  bedroomThree: withSmall(asteriBedroomThree, asteriBedroomThreeSmall, 1600, 800),
+  bathroom: withSmall(asteriBathroom, asteriBathroomSmall, 1600, 800),
+  poolDusk: withSmall(asteriPoolDusk, asteriPoolDuskSmall, 1600, 800),
+  terraceDusk: withSmall(asteriTerraceDusk, asteriTerraceDuskSmall, 1000, 600),
+};
+
+const irini = {
+  coverInfinityPool: withSmall(iriniCoverInfinityPool, iriniCoverInfinityPoolSmall, 1600, 800),
+  poolBayView: withSmall(iriniPoolBayView, iriniPoolBayViewSmall, 1536, 800),
+  poolUmbrellas: withSmall(iriniPoolUmbrellas, iriniPoolUmbrellasSmall, 1536, 800),
+  poolAndVilla: withSmall(iriniPoolAndVilla, iriniPoolAndVillaSmall, 1536, 800),
+  poolsideLounge: withSmall(iriniPoolsideLounge, iriniPoolsideLoungeSmall, 1600, 800),
+  livingRoom: withSmall(iriniLivingRoom, iriniLivingRoomSmall, 1600, 800),
+  livingSeaView: withSmall(iriniLivingSeaView, iriniLivingSeaViewSmall, 1600, 800),
+  diningKitchen: withSmall(iriniDiningKitchen, iriniDiningKitchenSmall, 1600, 800),
+  masterBedroom: withSmall(iriniMasterBedroom, iriniMasterBedroomSmall, 1600, 800),
+  bedroomTwo: withSmall(iriniBedroomTwo, iriniBedroomTwoSmall, 1568, 800),
+  bathroom: withSmall(iriniBathroom, iriniBathroomSmall, 1552, 800),
+  poolDusk: withSmall(iriniPoolDusk, iriniPoolDuskSmall, 1536, 800),
+  poolFromAbove: withSmall(iriniPoolFromAbove, iriniPoolFromAboveSmall, 1000, 600),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-esperos",
+    name: "Villa Esperos",
+    area: "Kanalia",
+    bedrooms: 4,
+    bathrooms: 6,
+    guests: 8,
+    summary:
+      "A 2023 clifftop villa in Kanalia with its own small private beach, an 80 m² marble pool, a jacuzzi and sunset views over Delos and Tinos. Sleeps 8.",
+    description: [
+      "Set on a southwest-facing cliff in Kanalia, Villa Esperos was completed in 2023 and looks out over the Aegean to Delos, Rhenia and Tinos. Below the villa, steps lead down to its own small private beach, a rare thing in Mykonos, while Mykonos Town is just under 5 km away.",
+      "Whitewashed walls, natural stone and wooden pergolas frame wide terraces made for long lunches and slow sunsets. The 80 m² marble pool sits right at the edge of the view, with a jacuzzi, sunbeds, an outdoor kitchen with BBQ and a dining table under the pergola. Inside are four en-suite bedrooms with king-size beds, a bright living room and kitchen, a TV room, a gym and a hammam.",
+    ],
+    amenities: [
+      "Small private beach",
+      "80 m² marble pool (heating on request)",
+      "Heated jacuzzi",
+      "Sunset views over Delos and Tinos",
+      "Outdoor kitchen with BBQ",
+      "Outdoor dining under the pergola",
+      "Gym and hammam",
+      "TV room",
+      "Four en-suite bedrooms with king-size beds",
+      "Air conditioning and Wi-Fi",
+      "Daily light cleaning",
+      "Private parking for 5 cars",
+    ],
+    photos: [
+      esperos.coverPergolaSunset,
+      esperos.poolSeaView,
+      esperos.heatedPool,
+      esperos.poolNight,
+      esperos.privateBeach,
+      esperos.outdoorDining,
+      esperos.pergolaLounge,
+      esperos.livingRoom,
+      esperos.kitchen,
+      esperos.masterBedroom,
+      esperos.bedroomSeaView,
+      esperos.bathroom,
+      esperos.gym,
+    ],
+    featurePhoto: esperos.jacuzziSunset,
+    gallery: [
+      { title: "The pool and the private beach", photos: [esperos.poolSeaView, esperos.heatedPool, esperos.poolNight, esperos.privateBeach] },
+      { title: "Terraces", photos: [esperos.outdoorDining, esperos.pergolaLounge] },
+      { title: "Living and kitchen", photos: [esperos.livingRoom, esperos.kitchen] },
+      { title: "Bedrooms, bathroom and gym", photos: [esperos.masterBedroom, esperos.bedroomSeaView, esperos.bathroom, esperos.gym] },
+    ],
+  },
+  {
+    slug: "villa-asteri",
+    name: "Villa Asteri",
+    area: "Mykonos Town",
+    bedrooms: 4,
+    bathrooms: 4,
+    guests: 8,
+    summary:
+      "A Cycladic villa with a bohemian touch, a short walk from the centre of Mykonos Town, with a private pool, gardens and sunset views over the town. Sleeps 8.",
+    description: [
+      "Villa Asteri sits in a quiet, traditional neighbourhood just above Mykonos Town, a short walk from its restaurants, bars and nightlife, yet calm enough for slow days by the pool. From above, it looks out over the sea, the town and some memorable sunsets.",
+      "The 36 m² pool is on its own level at the front of the villa, surrounded by gardens, sunbeds and shady lounge areas. A wind-protected terrace under the pergola has an outdoor dining table and a BBQ. Inside, a bright living room, dining room and kitchen are dressed with bohemian, ethnic details. There are four en-suite bedrooms: two in the main house and one in each of two private guest houses.",
+    ],
+    amenities: [
+      "Walking distance to Mykonos Town",
+      "Private pool (36 m²)",
+      "Sea, town and sunset views",
+      "Wind-protected outdoor dining with BBQ",
+      "Gardens, sunbeds and shaded lounges",
+      "Two private guest houses",
+      "Fully equipped kitchen",
+      "Smart 4K TVs",
+      "Air conditioning and Wi-Fi",
+      "Apivita bath products, bathrobes and slippers",
+      "Daily light cleaning",
+      "Private parking for 2 cars",
+    ],
+    photos: [
+      asteri.coverPool,
+      asteri.poolGarden,
+      asteri.poolSunbeds,
+      asteri.terraceSeaView,
+      asteri.poolDusk,
+      asteri.pergolaLounge,
+      asteri.outdoorDining,
+      asteri.livingRoom,
+      asteri.diningRoom,
+      asteri.kitchen,
+      asteri.masterBedroom,
+      asteri.bedroomTwo,
+      asteri.bedroomThree,
+      asteri.bathroom,
+    ],
+    featurePhoto: asteri.terraceDusk,
+    gallery: [
+      { title: "The pool and gardens", photos: [asteri.poolGarden, asteri.poolSunbeds, asteri.terraceSeaView, asteri.poolDusk] },
+      { title: "Terraces", photos: [asteri.pergolaLounge, asteri.outdoorDining] },
+      { title: "Living and kitchen", photos: [asteri.livingRoom, asteri.diningRoom, asteri.kitchen] },
+      { title: "Bedrooms", photos: [asteri.masterBedroom, asteri.bedroomTwo, asteri.bedroomThree, asteri.bathroom] },
+    ],
+  },
+  {
+    slug: "villa-irini",
+    name: "Villa Irini",
+    area: "Kalo Livadi",
+    bedrooms: 3,
+    bathrooms: 3,
+    wcs: 1,
+    guests: 6,
+    summary:
+      "A contemporary three-suite villa above Kalo Livadi bay, with a 100 m² infinity pool and panoramic sea views, a short walk from the beach. Sleeps 6.",
+    description: [
+      "Villa Irini looks out over Kalo Livadi, one of the most beautiful bays in Mykonos, with turquoise water and golden sand. The beach and the well-known Solymar beach bar and restaurant are a 6 to 7 minute walk away.",
+      "Designed in warm earth tones and natural materials, the villa opens onto a 100 m² infinity pool with sunbeds, umbrellas, an outdoor shower and a wind-protected lounge. Inside, the living room, dining area and kitchen open fully to the view. Three spacious suites, each with its own en-suite bathroom finished in premium materials, make it ideal for couples or a family.",
+    ],
+    amenities: [
+      "100 m² infinity pool",
+      "Panoramic views of Kalo Livadi bay",
+      "Short walk to Kalo Livadi beach",
+      "Wind-protected outdoor lounge",
+      "BBQ and outdoor shower",
+      "Three en-suite bedrooms",
+      "Fully equipped kitchen",
+      "Air conditioning and ceiling fans",
+      "Molton Brown bath products, bathrobes and slippers",
+      "Dyson hair dryer in every room",
+      "Wi-Fi",
+      "Daily light cleaning",
+      "Private parking",
+    ],
+    photos: [
+      irini.coverInfinityPool,
+      irini.poolBayView,
+      irini.poolUmbrellas,
+      irini.poolAndVilla,
+      irini.poolsideLounge,
+      irini.poolDusk,
+      irini.livingRoom,
+      irini.livingSeaView,
+      irini.diningKitchen,
+      irini.masterBedroom,
+      irini.bedroomTwo,
+      irini.bathroom,
+    ],
+    featurePhoto: irini.poolFromAbove,
+    gallery: [
+      { title: "The infinity pool", photos: [irini.poolBayView, irini.poolUmbrellas, irini.poolAndVilla, irini.poolsideLounge, irini.poolDusk] },
+      { title: "Living and kitchen", photos: [irini.livingRoom, irini.livingSeaView, irini.diningKitchen] },
+      { title: "Suites", photos: [irini.masterBedroom, irini.bedroomTwo, irini.bathroom] },
+    ],
+  },
   {
     slug: "villa-aelia",
     name: "Villa Aelia",
@@ -1644,6 +1936,9 @@ const VILLA_ORDER = [
   "villa-kyanos",
   "villa-fos",
   "villa-aelia",
+  "villa-esperos",
+  "villa-asteri",
+  "villa-irini",
 ];
 
 const position = (villa: Villa) => {
