@@ -697,6 +697,40 @@ import lithosTennisCourtSmall from "../assets/villas/lithos/tennis-court-800.web
 import lithosChapel from "../assets/villas/lithos/chapel.webp";
 import lithosChapelSmall from "../assets/villas/lithos/chapel-600.webp";
 
+// Villa Delfini (Ornos).
+import delfiniCoverInfinityPool from "../assets/villas/delfini/cover-infinity-pool.webp";
+import delfiniCoverInfinityPoolSmall from "../assets/villas/delfini/cover-infinity-pool-800.webp";
+import delfiniPoolOrnosBay from "../assets/villas/delfini/pool-ornos-bay.webp";
+import delfiniPoolOrnosBaySmall from "../assets/villas/delfini/pool-ornos-bay-800.webp";
+import delfiniPoolAndVilla from "../assets/villas/delfini/pool-and-villa.webp";
+import delfiniPoolAndVillaSmall from "../assets/villas/delfini/pool-and-villa-800.webp";
+import delfiniPoolTerrace from "../assets/villas/delfini/pool-terrace.webp";
+import delfiniPoolTerraceSmall from "../assets/villas/delfini/pool-terrace-800.webp";
+import delfiniPoolSunset from "../assets/villas/delfini/pool-sunset.webp";
+import delfiniPoolSunsetSmall from "../assets/villas/delfini/pool-sunset-800.webp";
+import delfiniPoolDusk from "../assets/villas/delfini/pool-dusk.webp";
+import delfiniPoolDuskSmall from "../assets/villas/delfini/pool-dusk-800.webp";
+import delfiniPergolaLounge from "../assets/villas/delfini/pergola-lounge.webp";
+import delfiniPergolaLoungeSmall from "../assets/villas/delfini/pergola-lounge-800.webp";
+import delfiniPergolaDining from "../assets/villas/delfini/pergola-dining.webp";
+import delfiniPergolaDiningSmall from "../assets/villas/delfini/pergola-dining-800.webp";
+import delfiniBalconySeaView from "../assets/villas/delfini/balcony-sea-view.webp";
+import delfiniBalconySeaViewSmall from "../assets/villas/delfini/balcony-sea-view-800.webp";
+import delfiniLivingRoom from "../assets/villas/delfini/living-room.webp";
+import delfiniLivingRoomSmall from "../assets/villas/delfini/living-room-800.webp";
+import delfiniKitchen from "../assets/villas/delfini/kitchen.webp";
+import delfiniKitchenSmall from "../assets/villas/delfini/kitchen-800.webp";
+import delfiniMasterBedroom from "../assets/villas/delfini/master-bedroom.webp";
+import delfiniMasterBedroomSmall from "../assets/villas/delfini/master-bedroom-800.webp";
+import delfiniBedroomTwo from "../assets/villas/delfini/bedroom-two.webp";
+import delfiniBedroomTwoSmall from "../assets/villas/delfini/bedroom-two-800.webp";
+import delfiniBedroomThree from "../assets/villas/delfini/bedroom-three.webp";
+import delfiniBedroomThreeSmall from "../assets/villas/delfini/bedroom-three-800.webp";
+import delfiniBathroom from "../assets/villas/delfini/bathroom.webp";
+import delfiniBathroomSmall from "../assets/villas/delfini/bathroom-800.webp";
+import delfiniSunsetLoungers from "../assets/villas/delfini/sunset-loungers.webp";
+import delfiniSunsetLoungersSmall from "../assets/villas/delfini/sunset-loungers-600.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -1134,7 +1168,81 @@ const lithos = {
   chapel: withSmall(lithosChapel, lithosChapelSmall, 1000, 600),
 };
 
+const delfini = {
+  coverInfinityPool: withSmall(delfiniCoverInfinityPool, delfiniCoverInfinityPoolSmall, 1600, 800),
+  poolOrnosBay: withSmall(delfiniPoolOrnosBay, delfiniPoolOrnosBaySmall, 1600, 800),
+  poolAndVilla: withSmall(delfiniPoolAndVilla, delfiniPoolAndVillaSmall, 1600, 800),
+  poolTerrace: withSmall(delfiniPoolTerrace, delfiniPoolTerraceSmall, 1600, 800),
+  poolSunset: withSmall(delfiniPoolSunset, delfiniPoolSunsetSmall, 1600, 800),
+  poolDusk: withSmall(delfiniPoolDusk, delfiniPoolDuskSmall, 1600, 800),
+  pergolaLounge: withSmall(delfiniPergolaLounge, delfiniPergolaLoungeSmall, 1600, 800),
+  pergolaDining: withSmall(delfiniPergolaDining, delfiniPergolaDiningSmall, 1600, 800),
+  balconySeaView: withSmall(delfiniBalconySeaView, delfiniBalconySeaViewSmall, 1600, 800),
+  livingRoom: withSmall(delfiniLivingRoom, delfiniLivingRoomSmall, 1600, 800),
+  kitchen: withSmall(delfiniKitchen, delfiniKitchenSmall, 1600, 800),
+  masterBedroom: withSmall(delfiniMasterBedroom, delfiniMasterBedroomSmall, 1600, 800),
+  bedroomTwo: withSmall(delfiniBedroomTwo, delfiniBedroomTwoSmall, 1600, 800),
+  bedroomThree: withSmall(delfiniBedroomThree, delfiniBedroomThreeSmall, 1600, 800),
+  bathroom: withSmall(delfiniBathroom, delfiniBathroomSmall, 1600, 800),
+  sunsetLoungers: withSmall(delfiniSunsetLoungers, delfiniSunsetLoungersSmall, 1000, 600),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-delfini",
+    name: "Villa Delfini",
+    area: "Ornos",
+    bedrooms: 4,
+    bathrooms: 5,
+    wcs: 1,
+    guests: 9,
+    summary:
+      "A four-bedroom villa inside a gated five-star resort above Ornos Bay, with an infinity pool, a large pergola and a short walk to Ornos beach. Sleeps 9.",
+    description: [
+      "Villa Delfini sits inside a gated five-star resort in Ornos, with 24-hour security and wide views over Ornos Bay. The beach, its restaurants and bars are a short walk away, and Mykonos Town is about 3 km away.",
+      "Outside, a 50 m² infinity pool with sunbeds runs along the terrace, beside a large pergola with an outdoor dining table, a bar, a chic lounge and table tennis. Inside are an open-plan living room and kitchen, four double en-suite bedrooms, including a super-king master and a guest suite with its own entrance, plus an extra en-suite room for an assistant or nanny.",
+      "Guests can also use the resort's private beach, spa, gym, tennis court and restaurants on request, at an extra cost.",
+    ],
+    amenities: [
+      "Gated resort with 24-hour security",
+      "Infinity pool (50 m², heating on request)",
+      "Views over Ornos Bay",
+      "Short walk to Ornos beach",
+      "Large pergola with outdoor dining and bar",
+      "Outdoor lounge and table tennis",
+      "Extra room for an assistant or nanny",
+      "Open-plan kitchen with espresso machine",
+      "Smart TVs and Bluetooth sound system",
+      "Air conditioning and Wi-Fi",
+      "Daily light cleaning",
+      "Resort beach, spa and gym on request",
+      "Private parking for 3 cars",
+    ],
+    photos: [
+      delfini.coverInfinityPool,
+      delfini.poolOrnosBay,
+      delfini.poolAndVilla,
+      delfini.poolTerrace,
+      delfini.poolSunset,
+      delfini.poolDusk,
+      delfini.pergolaLounge,
+      delfini.pergolaDining,
+      delfini.balconySeaView,
+      delfini.livingRoom,
+      delfini.kitchen,
+      delfini.masterBedroom,
+      delfini.bedroomTwo,
+      delfini.bedroomThree,
+      delfini.bathroom,
+    ],
+    featurePhoto: delfini.sunsetLoungers,
+    gallery: [
+      { title: "The infinity pool", photos: [delfini.poolOrnosBay, delfini.poolAndVilla, delfini.poolTerrace, delfini.poolSunset, delfini.poolDusk] },
+      { title: "Terraces", photos: [delfini.pergolaLounge, delfini.pergolaDining, delfini.balconySeaView] },
+      { title: "Living and kitchen", photos: [delfini.livingRoom, delfini.kitchen] },
+      { title: "Bedrooms", photos: [delfini.masterBedroom, delfini.bedroomTwo, delfini.bedroomThree, delfini.bathroom] },
+    ],
+  },
   {
     slug: "villa-ktima",
     name: "Villa Ktima",
@@ -2454,6 +2562,7 @@ const VILLA_ORDER = [
   "villa-ourania",
   "villa-ktima",
   "villa-lithos",
+  "villa-delfini",
 ];
 
 const position = (villa: Villa) => {
