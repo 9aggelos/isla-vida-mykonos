@@ -1290,6 +1290,10 @@ const allVillas: Villa[] = [
       { title: "Living and kitchen", photos: [erato.livingRoom, erato.diningKitchen] },
       { title: "Bedrooms", photos: [erato.masterBedroom, erato.bedroomTwo, erato.bedroomStoneWall, erato.bedroomPoolWindow] },
     ],
+    events: [
+      "With its infinity pool, jacuzzi, outdoor bar and a terrace looking over Psarou, Paros and Naxos, Villa Erato is ideal for an intimate celebration, from a birthday or anniversary to a sunset party with friends.",
+      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
+    ],
   },
   {
     slug: "villa-delfini",
@@ -1397,6 +1401,10 @@ const allVillas: Villa[] = [
       { title: "The houses and suites", photos: [ktima.whiteHouse, ktima.livingRoom, ktima.suiteSeaView, ktima.suiteTwo] },
       { title: "Wellness", photos: [ktima.spaRoom] },
     ],
+    events: [
+      "With a 250 m² pool, two pool bars, wide lawns, a chapel and even a helipad, Villa Ktima is one of the largest private event settings in Mykonos, from a birthday or a party by the pool to a wedding with dinner under the stars.",
+      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
+    ],
   },
   {
     slug: "villa-lithos",
@@ -1451,6 +1459,10 @@ const allVillas: Villa[] = [
       { title: "Living and dining", photos: [lithos.livingRoom, lithos.kitchen, lithos.diningArch] },
       { title: "Bedrooms", photos: [lithos.masterBedroom, lithos.bedroomSeaView, lithos.bathroom] },
       { title: "Spa, gym and tennis", photos: [lithos.spaMassage, lithos.gym, lithos.tennisCourt] },
+    ],
+    events: [
+      "With its heated infinity pool, sound system throughout, outdoor dining and its own chapel, Villa Lithos is a striking setting for private parties and ceremonies, from a sunset celebration to a wedding in the chapel.",
+      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
     ],
   },
   {
@@ -1552,6 +1564,10 @@ const allVillas: Villa[] = [
       { title: "Terraces", photos: [pelagos.pergolaLounge, pelagos.outdoorDining, pelagos.pergolaDusk] },
       { title: "Living and kitchen", photos: [pelagos.livingRoom, pelagos.diningRoom, pelagos.kitchenStaircase] },
       { title: "Bedrooms", photos: [pelagos.masterBedroom, pelagos.bedroomBalcony, pelagos.bedroomTwo, pelagos.bathroom] },
+    ],
+    events: [
+      "With an infinity pool facing Super Paradise bay, terraces on three levels and shelter from the north winds, Villa Pelagos is made for a celebration with a view, from a sunset party with friends to a full night with a DJ, just above one of the island's most famous party beaches.",
+      "We organise the whole event for you: a professional DJ with sound and lighting, a bar team and cocktails, a private chef or catering, decoration, security and transfers for your guests.",
     ],
   },
   {
@@ -2642,31 +2658,31 @@ const allVillas: Villa[] = [
  */
 const VILLA_ORDER = [
   "villa-elia",
-  "villa-selini",
-  "villa-ammos",
-  "villa-thalassa",
-  "villa-orizon",
-  "villa-ilios",
-  "villa-galini",
-  "villa-kyma",
+  "villa-ktima",
   "villa-akti",
+  "villa-selini",
+  "villa-esperos",
+  "villa-ammos",
+  "villa-lithos",
+  "villa-thalassa",
+  "villa-delfini",
+  "villa-orizon",
+  "villa-pelagos",
+  "villa-ilios",
+  "villa-ourania",
+  "villa-galini",
+  "villa-erato",
+  "villa-kyma",
+  "villa-asteri",
   "villa-avra",
+  "villa-irini",
   "villa-petra",
+  "villa-aigli",
   "villa-oneiro",
   "villa-thea",
   "villa-kyanos",
   "villa-fos",
   "villa-aelia",
-  "villa-esperos",
-  "villa-asteri",
-  "villa-irini",
-  "villa-aigli",
-  "villa-pelagos",
-  "villa-ourania",
-  "villa-ktima",
-  "villa-lithos",
-  "villa-delfini",
-  "villa-erato",
 ];
 
 const position = (villa: Villa) => {
