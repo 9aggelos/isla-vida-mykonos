@@ -629,6 +629,74 @@ import ouraniaBathroomSmall from "../assets/villas/ourania/bathroom-800.webp";
 import ouraniaVillaAboveBay from "../assets/villas/ourania/villa-above-bay.webp";
 import ouraniaVillaAboveBaySmall from "../assets/villas/ourania/villa-above-bay-600.webp";
 
+// Villa Ktima (Kalafatis).
+import ktimaCoverPoolVilla from "../assets/villas/ktima/cover-pool-villa.webp";
+import ktimaCoverPoolVillaSmall from "../assets/villas/ktima/cover-pool-villa-800.webp";
+import ktimaPoolSeaView from "../assets/villas/ktima/pool-sea-view.webp";
+import ktimaPoolSeaViewSmall from "../assets/villas/ktima/pool-sea-view-800.webp";
+import ktimaPoolLoungers from "../assets/villas/ktima/pool-loungers.webp";
+import ktimaPoolLoungersSmall from "../assets/villas/ktima/pool-loungers-800.webp";
+import ktimaEstateLawn from "../assets/villas/ktima/estate-lawn.webp";
+import ktimaEstateLawnSmall from "../assets/villas/ktima/estate-lawn-800.webp";
+import ktimaJacuzzi from "../assets/villas/ktima/jacuzzi.webp";
+import ktimaJacuzziSmall from "../assets/villas/ktima/jacuzzi-800.webp";
+import ktimaPoolBar from "../assets/villas/ktima/pool-bar.webp";
+import ktimaPoolBarSmall from "../assets/villas/ktima/pool-bar-800.webp";
+import ktimaPergolaLounge from "../assets/villas/ktima/pergola-lounge.webp";
+import ktimaPergolaLoungeSmall from "../assets/villas/ktima/pergola-lounge-800.webp";
+import ktimaDiningHall from "../assets/villas/ktima/dining-hall.webp";
+import ktimaDiningHallSmall from "../assets/villas/ktima/dining-hall-800.webp";
+import ktimaWhiteHouse from "../assets/villas/ktima/white-house.webp";
+import ktimaWhiteHouseSmall from "../assets/villas/ktima/white-house-800.webp";
+import ktimaLivingRoom from "../assets/villas/ktima/living-room.webp";
+import ktimaLivingRoomSmall from "../assets/villas/ktima/living-room-800.webp";
+import ktimaSuiteSeaView from "../assets/villas/ktima/suite-sea-view.webp";
+import ktimaSuiteSeaViewSmall from "../assets/villas/ktima/suite-sea-view-800.webp";
+import ktimaSuiteTwo from "../assets/villas/ktima/suite-two.webp";
+import ktimaSuiteTwoSmall from "../assets/villas/ktima/suite-two-800.webp";
+import ktimaSpaRoom from "../assets/villas/ktima/spa-room.webp";
+import ktimaSpaRoomSmall from "../assets/villas/ktima/spa-room-800.webp";
+import ktimaPoolNight from "../assets/villas/ktima/pool-night.webp";
+import ktimaPoolNightSmall from "../assets/villas/ktima/pool-night-800.webp";
+import ktimaChapel from "../assets/villas/ktima/chapel.webp";
+import ktimaChapelSmall from "../assets/villas/ktima/chapel-600.webp";
+
+// Villa Lithos (Pirgi).
+import lithosCoverInfinityPool from "../assets/villas/lithos/cover-infinity-pool.webp";
+import lithosCoverInfinityPoolSmall from "../assets/villas/lithos/cover-infinity-pool-800.webp";
+import lithosPoolTerrace from "../assets/villas/lithos/pool-terrace.webp";
+import lithosPoolTerraceSmall from "../assets/villas/lithos/pool-terrace-800.webp";
+import lithosPoolPavilion from "../assets/villas/lithos/pool-pavilion.webp";
+import lithosPoolPavilionSmall from "../assets/villas/lithos/pool-pavilion-800.webp";
+import lithosLoungeSeaView from "../assets/villas/lithos/lounge-sea-view.webp";
+import lithosLoungeSeaViewSmall from "../assets/villas/lithos/lounge-sea-view-800.webp";
+import lithosPergolaLounge from "../assets/villas/lithos/pergola-lounge.webp";
+import lithosPergolaLoungeSmall from "../assets/villas/lithos/pergola-lounge-800.webp";
+import lithosPrivatePool from "../assets/villas/lithos/private-pool.webp";
+import lithosPrivatePoolSmall from "../assets/villas/lithos/private-pool-800.webp";
+import lithosGardenPools from "../assets/villas/lithos/garden-pools.webp";
+import lithosGardenPoolsSmall from "../assets/villas/lithos/garden-pools-800.webp";
+import lithosLivingRoom from "../assets/villas/lithos/living-room.webp";
+import lithosLivingRoomSmall from "../assets/villas/lithos/living-room-800.webp";
+import lithosKitchen from "../assets/villas/lithos/kitchen.webp";
+import lithosKitchenSmall from "../assets/villas/lithos/kitchen-800.webp";
+import lithosDiningArch from "../assets/villas/lithos/dining-arch.webp";
+import lithosDiningArchSmall from "../assets/villas/lithos/dining-arch-800.webp";
+import lithosMasterBedroom from "../assets/villas/lithos/master-bedroom.webp";
+import lithosMasterBedroomSmall from "../assets/villas/lithos/master-bedroom-800.webp";
+import lithosBedroomSeaView from "../assets/villas/lithos/bedroom-sea-view.webp";
+import lithosBedroomSeaViewSmall from "../assets/villas/lithos/bedroom-sea-view-800.webp";
+import lithosBathroom from "../assets/villas/lithos/bathroom.webp";
+import lithosBathroomSmall from "../assets/villas/lithos/bathroom-800.webp";
+import lithosSpaMassage from "../assets/villas/lithos/spa-massage.webp";
+import lithosSpaMassageSmall from "../assets/villas/lithos/spa-massage-800.webp";
+import lithosGym from "../assets/villas/lithos/gym.webp";
+import lithosGymSmall from "../assets/villas/lithos/gym-800.webp";
+import lithosTennisCourt from "../assets/villas/lithos/tennis-court.webp";
+import lithosTennisCourtSmall from "../assets/villas/lithos/tennis-court-800.webp";
+import lithosChapel from "../assets/villas/lithos/chapel.webp";
+import lithosChapelSmall from "../assets/villas/lithos/chapel-600.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -1028,7 +1096,152 @@ const ourania = {
   villaAboveBay: withSmall(ouraniaVillaAboveBay, ouraniaVillaAboveBaySmall, 1000, 600),
 };
 
+const ktima = {
+  coverPoolVilla: withSmall(ktimaCoverPoolVilla, ktimaCoverPoolVillaSmall, 1600, 800),
+  poolSeaView: withSmall(ktimaPoolSeaView, ktimaPoolSeaViewSmall, 1600, 800),
+  poolLoungers: withSmall(ktimaPoolLoungers, ktimaPoolLoungersSmall, 1600, 800),
+  estateLawn: withSmall(ktimaEstateLawn, ktimaEstateLawnSmall, 1600, 800),
+  jacuzzi: withSmall(ktimaJacuzzi, ktimaJacuzziSmall, 1600, 800),
+  poolBar: withSmall(ktimaPoolBar, ktimaPoolBarSmall, 1411, 800),
+  pergolaLounge: withSmall(ktimaPergolaLounge, ktimaPergolaLoungeSmall, 1411, 800),
+  diningHall: withSmall(ktimaDiningHall, ktimaDiningHallSmall, 1395, 800),
+  whiteHouse: withSmall(ktimaWhiteHouse, ktimaWhiteHouseSmall, 1600, 800),
+  livingRoom: withSmall(ktimaLivingRoom, ktimaLivingRoomSmall, 1412, 800),
+  suiteSeaView: withSmall(ktimaSuiteSeaView, ktimaSuiteSeaViewSmall, 1600, 800),
+  suiteTwo: withSmall(ktimaSuiteTwo, ktimaSuiteTwoSmall, 1600, 800),
+  spaRoom: withSmall(ktimaSpaRoom, ktimaSpaRoomSmall, 1121, 800),
+  poolNight: withSmall(ktimaPoolNight, ktimaPoolNightSmall, 1600, 800),
+  chapel: withSmall(ktimaChapel, ktimaChapelSmall, 1000, 600),
+};
+
+const lithos = {
+  coverInfinityPool: withSmall(lithosCoverInfinityPool, lithosCoverInfinityPoolSmall, 1600, 800),
+  poolTerrace: withSmall(lithosPoolTerrace, lithosPoolTerraceSmall, 1600, 800),
+  poolPavilion: withSmall(lithosPoolPavilion, lithosPoolPavilionSmall, 1600, 800),
+  loungeSeaView: withSmall(lithosLoungeSeaView, lithosLoungeSeaViewSmall, 1600, 800),
+  pergolaLounge: withSmall(lithosPergolaLounge, lithosPergolaLoungeSmall, 1600, 800),
+  privatePool: withSmall(lithosPrivatePool, lithosPrivatePoolSmall, 1600, 800),
+  gardenPools: withSmall(lithosGardenPools, lithosGardenPoolsSmall, 1600, 800),
+  livingRoom: withSmall(lithosLivingRoom, lithosLivingRoomSmall, 1600, 800),
+  kitchen: withSmall(lithosKitchen, lithosKitchenSmall, 1210, 800),
+  diningArch: withSmall(lithosDiningArch, lithosDiningArchSmall, 1178, 800),
+  masterBedroom: withSmall(lithosMasterBedroom, lithosMasterBedroomSmall, 1600, 800),
+  bedroomSeaView: withSmall(lithosBedroomSeaView, lithosBedroomSeaViewSmall, 1600, 800),
+  bathroom: withSmall(lithosBathroom, lithosBathroomSmall, 1600, 800),
+  spaMassage: withSmall(lithosSpaMassage, lithosSpaMassageSmall, 1600, 800),
+  gym: withSmall(lithosGym, lithosGymSmall, 1326, 800),
+  tennisCourt: withSmall(lithosTennisCourt, lithosTennisCourtSmall, 1322, 800),
+  chapel: withSmall(lithosChapel, lithosChapelSmall, 1000, 600),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-ktima",
+    name: "Villa Ktima",
+    area: "Kalafatis",
+    bedrooms: 9,
+    bathrooms: 11,
+    guests: 18,
+    summary:
+      "A private estate in Kalafatis with two houses, a 250 m² heated infinity pool, three heated jacuzzis, a spa, a chapel and an in-house team. Sleeps 18.",
+    description: [
+      "Set among the quiet fields of Kalafatis, a 10-minute walk from the beach and about 6 km from Mykonos Town, Villa Ktima is a full private estate: a Mediterranean garden, open views to the sea and an impressive 250 m² lake-shaped heated infinity pool at its heart.",
+      "Nine double rooms are shared between two houses. The White House has four suites, including a honeymoon suite with its own terrace and heated jacuzzi, and the Stone House has two suites and three bedrooms, with its own kitchen, living room and BBQ veranda. Around them are two pool bars, sheltered dining areas, a wine cellar, a spa room, a gym, yoga and massage spaces, a chapel and even a helipad.",
+      "Days start with a signature breakfast, and an in-house team looks after daily housekeeping, turndown and night security. Private chefs, a sommelier, spa treatments, yacht and helicopter trips can all be arranged.",
+    ],
+    amenities: [
+      "250 m² heated infinity pool",
+      "Three heated jacuzzis",
+      "Two houses with nine double rooms",
+      "Two pool bars",
+      "Sheltered dining areas and two BBQ spots",
+      "Wine cellar",
+      "Spa room, gym, yoga and massage spaces",
+      "Chapel and helipad",
+      "Daily breakfast and welcome hamper",
+      "Daily maid and turndown service",
+      "Night security",
+      "Parking for 20 cars",
+    ],
+    photos: [
+      ktima.coverPoolVilla,
+      ktima.poolSeaView,
+      ktima.poolLoungers,
+      ktima.estateLawn,
+      ktima.jacuzzi,
+      ktima.poolNight,
+      ktima.poolBar,
+      ktima.pergolaLounge,
+      ktima.diningHall,
+      ktima.whiteHouse,
+      ktima.livingRoom,
+      ktima.suiteSeaView,
+      ktima.suiteTwo,
+      ktima.spaRoom,
+    ],
+    featurePhoto: ktima.chapel,
+    gallery: [
+      { title: "The pool and gardens", photos: [ktima.poolSeaView, ktima.poolLoungers, ktima.estateLawn, ktima.jacuzzi, ktima.poolNight] },
+      { title: "Bars, lounges and dining", photos: [ktima.poolBar, ktima.pergolaLounge, ktima.diningHall] },
+      { title: "The houses and suites", photos: [ktima.whiteHouse, ktima.livingRoom, ktima.suiteSeaView, ktima.suiteTwo] },
+      { title: "Wellness", photos: [ktima.spaRoom] },
+    ],
+  },
+  {
+    slug: "villa-lithos",
+    name: "Villa Lithos",
+    area: "Pirgi",
+    bedrooms: 8,
+    bathrooms: 8,
+    guests: 16,
+    summary:
+      "A brand-new 2026 estate in Pirgi with a heated infinity pool, private bedroom pools, a spa, a gym, a tennis court and a chapel. Sleeps 16.",
+    description: [
+      "Brand new for 2026, Villa Lithos sits on 6.5 acres in Pirgi with uninterrupted views of the Aegean, just 5 km from Mykonos Town and 3.5 km from the airport. Natural rocks and local plants run through the gardens, blending the villa into the landscape.",
+      "A three-floor main house and two guest houses offer 805 m² of space, with eight king-size bedrooms, each with its own marble bathroom and many with private entrances. Some bedrooms have their own heated pools, in addition to the main heated infinity pool. Inside, the interiors feature Baxter, Riva and Fantini pieces alongside handmade Mykonian ceramics.",
+      "There is a private spa with sauna and massage room, a gym, a professional tennis court, an outdoor BBQ with indoor and outdoor dining, a SONOS sound system throughout and a chapel for private ceremonies. A private chef serves breakfast daily, with a butler eight hours a day, daily housekeeping and night security included.",
+    ],
+    amenities: [
+      "Heated infinity pool with sea views",
+      "Private heated pools for some bedrooms",
+      "Eight king-size bedrooms with marble bathrooms",
+      "Private spa with sauna and massage room",
+      "Gym and tennis court",
+      "Chapel for ceremonies",
+      "Outdoor BBQ with indoor and outdoor dining",
+      "SONOS sound system throughout",
+      "Daily breakfast by a private chef",
+      "Butler service (8 hours a day)",
+      "Daily housekeeping and night security",
+      "Private parking and EV charger",
+    ],
+    photos: [
+      lithos.coverInfinityPool,
+      lithos.poolTerrace,
+      lithos.poolPavilion,
+      lithos.loungeSeaView,
+      lithos.pergolaLounge,
+      lithos.privatePool,
+      lithos.gardenPools,
+      lithos.livingRoom,
+      lithos.kitchen,
+      lithos.diningArch,
+      lithos.masterBedroom,
+      lithos.bedroomSeaView,
+      lithos.bathroom,
+      lithos.spaMassage,
+      lithos.gym,
+      lithos.tennisCourt,
+    ],
+    featurePhoto: lithos.chapel,
+    gallery: [
+      { title: "The pools", photos: [lithos.poolTerrace, lithos.poolPavilion, lithos.privatePool, lithos.gardenPools] },
+      { title: "Terraces", photos: [lithos.loungeSeaView, lithos.pergolaLounge] },
+      { title: "Living and dining", photos: [lithos.livingRoom, lithos.kitchen, lithos.diningArch] },
+      { title: "Bedrooms", photos: [lithos.masterBedroom, lithos.bedroomSeaView, lithos.bathroom] },
+      { title: "Spa, gym and tennis", photos: [lithos.spaMassage, lithos.gym, lithos.tennisCourt] },
+    ],
+  },
   {
     slug: "villa-aigli",
     name: "Villa Aigli",
@@ -2239,6 +2452,8 @@ const VILLA_ORDER = [
   "villa-aigli",
   "villa-pelagos",
   "villa-ourania",
+  "villa-ktima",
+  "villa-lithos",
 ];
 
 const position = (villa: Villa) => {
