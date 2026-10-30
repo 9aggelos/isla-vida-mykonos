@@ -537,6 +537,98 @@ import iriniPoolDuskSmall from "../assets/villas/irini/pool-dusk-800.webp";
 import iriniPoolFromAbove from "../assets/villas/irini/pool-from-above.webp";
 import iriniPoolFromAboveSmall from "../assets/villas/irini/pool-from-above-600.webp";
 
+// Villa Aigli (Kalafatis).
+import aigliCoverPoolDusk from "../assets/villas/aigli/cover-pool-dusk.webp";
+import aigliCoverPoolDuskSmall from "../assets/villas/aigli/cover-pool-dusk-800.webp";
+import aigliPoolSeaView from "../assets/villas/aigli/pool-sea-view.webp";
+import aigliPoolSeaViewSmall from "../assets/villas/aigli/pool-sea-view-800.webp";
+import aigliPoolFromTerrace from "../assets/villas/aigli/pool-from-terrace.webp";
+import aigliPoolFromTerraceSmall from "../assets/villas/aigli/pool-from-terrace-800.webp";
+import aigliVillaGarden from "../assets/villas/aigli/villa-garden.webp";
+import aigliVillaGardenSmall from "../assets/villas/aigli/villa-garden-800.webp";
+import aigliOutdoorDining from "../assets/villas/aigli/outdoor-dining.webp";
+import aigliOutdoorDiningSmall from "../assets/villas/aigli/outdoor-dining-800.webp";
+import aigliTerraceSeaView from "../assets/villas/aigli/terrace-sea-view.webp";
+import aigliTerraceSeaViewSmall from "../assets/villas/aigli/terrace-sea-view-800.webp";
+import aigliLivingRoom from "../assets/villas/aigli/living-room.webp";
+import aigliLivingRoomSmall from "../assets/villas/aigli/living-room-800.webp";
+import aigliDiningLiving from "../assets/villas/aigli/dining-living.webp";
+import aigliDiningLivingSmall from "../assets/villas/aigli/dining-living-800.webp";
+import aigliKitchen from "../assets/villas/aigli/kitchen.webp";
+import aigliKitchenSmall from "../assets/villas/aigli/kitchen-800.webp";
+import aigliMasterBedroom from "../assets/villas/aigli/master-bedroom.webp";
+import aigliMasterBedroomSmall from "../assets/villas/aigli/master-bedroom-800.webp";
+import aigliBedroomTwo from "../assets/villas/aigli/bedroom-two.webp";
+import aigliBedroomTwoSmall from "../assets/villas/aigli/bedroom-two-800.webp";
+import aigliTwinBedroom from "../assets/villas/aigli/twin-bedroom.webp";
+import aigliTwinBedroomSmall from "../assets/villas/aigli/twin-bedroom-800.webp";
+import aigliVillaFromAbove from "../assets/villas/aigli/villa-from-above.webp";
+import aigliVillaFromAboveSmall from "../assets/villas/aigli/villa-from-above-600.webp";
+
+// Villa Pelagos (Super Paradise).
+import pelagosCoverInfinityPool from "../assets/villas/pelagos/cover-infinity-pool.webp";
+import pelagosCoverInfinityPoolSmall from "../assets/villas/pelagos/cover-infinity-pool-800.webp";
+import pelagosPoolSunbeds from "../assets/villas/pelagos/pool-sunbeds.webp";
+import pelagosPoolSunbedsSmall from "../assets/villas/pelagos/pool-sunbeds-800.webp";
+import pelagosPoolSunset from "../assets/villas/pelagos/pool-sunset.webp";
+import pelagosPoolSunsetSmall from "../assets/villas/pelagos/pool-sunset-800.webp";
+import pelagosPoolDusk from "../assets/villas/pelagos/pool-dusk.webp";
+import pelagosPoolDuskSmall from "../assets/villas/pelagos/pool-dusk-800.webp";
+import pelagosPergolaLounge from "../assets/villas/pelagos/pergola-lounge.webp";
+import pelagosPergolaLoungeSmall from "../assets/villas/pelagos/pergola-lounge-800.webp";
+import pelagosOutdoorDining from "../assets/villas/pelagos/outdoor-dining.webp";
+import pelagosOutdoorDiningSmall from "../assets/villas/pelagos/outdoor-dining-800.webp";
+import pelagosPergolaDusk from "../assets/villas/pelagos/pergola-dusk.webp";
+import pelagosPergolaDuskSmall from "../assets/villas/pelagos/pergola-dusk-800.webp";
+import pelagosLivingRoom from "../assets/villas/pelagos/living-room.webp";
+import pelagosLivingRoomSmall from "../assets/villas/pelagos/living-room-800.webp";
+import pelagosDiningRoom from "../assets/villas/pelagos/dining-room.webp";
+import pelagosDiningRoomSmall from "../assets/villas/pelagos/dining-room-800.webp";
+import pelagosKitchenStaircase from "../assets/villas/pelagos/kitchen-staircase.webp";
+import pelagosKitchenStaircaseSmall from "../assets/villas/pelagos/kitchen-staircase-800.webp";
+import pelagosMasterBedroom from "../assets/villas/pelagos/master-bedroom.webp";
+import pelagosMasterBedroomSmall from "../assets/villas/pelagos/master-bedroom-800.webp";
+import pelagosBedroomBalcony from "../assets/villas/pelagos/bedroom-balcony.webp";
+import pelagosBedroomBalconySmall from "../assets/villas/pelagos/bedroom-balcony-800.webp";
+import pelagosBedroomTwo from "../assets/villas/pelagos/bedroom-two.webp";
+import pelagosBedroomTwoSmall from "../assets/villas/pelagos/bedroom-two-800.webp";
+import pelagosBathroom from "../assets/villas/pelagos/bathroom.webp";
+import pelagosBathroomSmall from "../assets/villas/pelagos/bathroom-800.webp";
+import pelagosTerraceSeaView from "../assets/villas/pelagos/terrace-sea-view.webp";
+import pelagosTerraceSeaViewSmall from "../assets/villas/pelagos/terrace-sea-view-600.webp";
+
+// Villa Ourania (Agios Lazaros).
+import ouraniaCoverPoolSea from "../assets/villas/ourania/cover-pool-sea.webp";
+import ouraniaCoverPoolSeaSmall from "../assets/villas/ourania/cover-pool-sea-800.webp";
+import ouraniaPoolSpaView from "../assets/villas/ourania/pool-spa-view.webp";
+import ouraniaPoolSpaViewSmall from "../assets/villas/ourania/pool-spa-view-800.webp";
+import ouraniaPoolPergola from "../assets/villas/ourania/pool-pergola.webp";
+import ouraniaPoolPergolaSmall from "../assets/villas/ourania/pool-pergola-800.webp";
+import ouraniaPoolDusk from "../assets/villas/ourania/pool-dusk.webp";
+import ouraniaPoolDuskSmall from "../assets/villas/ourania/pool-dusk-800.webp";
+import ouraniaArchLounge from "../assets/villas/ourania/arch-lounge.webp";
+import ouraniaArchLoungeSmall from "../assets/villas/ourania/arch-lounge-800.webp";
+import ouraniaPergolaLounge from "../assets/villas/ourania/pergola-lounge.webp";
+import ouraniaPergolaLoungeSmall from "../assets/villas/ourania/pergola-lounge-800.webp";
+import ouraniaOutdoorDining from "../assets/villas/ourania/outdoor-dining.webp";
+import ouraniaOutdoorDiningSmall from "../assets/villas/ourania/outdoor-dining-800.webp";
+import ouraniaPergolaNight from "../assets/villas/ourania/pergola-night.webp";
+import ouraniaPergolaNightSmall from "../assets/villas/ourania/pergola-night-800.webp";
+import ouraniaLivingRoom from "../assets/villas/ourania/living-room.webp";
+import ouraniaLivingRoomSmall from "../assets/villas/ourania/living-room-800.webp";
+import ouraniaLoungeFireplace from "../assets/villas/ourania/lounge-fireplace.webp";
+import ouraniaLoungeFireplaceSmall from "../assets/villas/ourania/lounge-fireplace-800.webp";
+import ouraniaBedroomSeaView from "../assets/villas/ourania/bedroom-sea-view.webp";
+import ouraniaBedroomSeaViewSmall from "../assets/villas/ourania/bedroom-sea-view-800.webp";
+import ouraniaBedroomTwo from "../assets/villas/ourania/bedroom-two.webp";
+import ouraniaBedroomTwoSmall from "../assets/villas/ourania/bedroom-two-800.webp";
+import ouraniaBedroomThree from "../assets/villas/ourania/bedroom-three.webp";
+import ouraniaBedroomThreeSmall from "../assets/villas/ourania/bedroom-three-800.webp";
+import ouraniaBathroom from "../assets/villas/ourania/bathroom.webp";
+import ouraniaBathroomSmall from "../assets/villas/ourania/bathroom-800.webp";
+import ouraniaVillaAboveBay from "../assets/villas/ourania/villa-above-bay.webp";
+import ouraniaVillaAboveBaySmall from "../assets/villas/ourania/villa-above-bay-600.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -884,7 +976,212 @@ const irini = {
   poolFromAbove: withSmall(iriniPoolFromAbove, iriniPoolFromAboveSmall, 1000, 600),
 };
 
+const aigli = {
+  coverPoolDusk: withSmall(aigliCoverPoolDusk, aigliCoverPoolDuskSmall, 1600, 800),
+  poolSeaView: withSmall(aigliPoolSeaView, aigliPoolSeaViewSmall, 1600, 800),
+  poolFromTerrace: withSmall(aigliPoolFromTerrace, aigliPoolFromTerraceSmall, 1600, 800),
+  villaGarden: withSmall(aigliVillaGarden, aigliVillaGardenSmall, 1600, 800),
+  outdoorDining: withSmall(aigliOutdoorDining, aigliOutdoorDiningSmall, 1600, 800),
+  terraceSeaView: withSmall(aigliTerraceSeaView, aigliTerraceSeaViewSmall, 1600, 800),
+  livingRoom: withSmall(aigliLivingRoom, aigliLivingRoomSmall, 1600, 800),
+  diningLiving: withSmall(aigliDiningLiving, aigliDiningLivingSmall, 1412, 800),
+  kitchen: withSmall(aigliKitchen, aigliKitchenSmall, 1600, 800),
+  masterBedroom: withSmall(aigliMasterBedroom, aigliMasterBedroomSmall, 1600, 800),
+  bedroomTwo: withSmall(aigliBedroomTwo, aigliBedroomTwoSmall, 1600, 800),
+  twinBedroom: withSmall(aigliTwinBedroom, aigliTwinBedroomSmall, 1600, 800),
+  villaFromAbove: withSmall(aigliVillaFromAbove, aigliVillaFromAboveSmall, 1000, 600),
+};
+
+const pelagos = {
+  coverInfinityPool: withSmall(pelagosCoverInfinityPool, pelagosCoverInfinityPoolSmall, 1600, 800),
+  poolSunbeds: withSmall(pelagosPoolSunbeds, pelagosPoolSunbedsSmall, 1600, 800),
+  poolSunset: withSmall(pelagosPoolSunset, pelagosPoolSunsetSmall, 1600, 800),
+  poolDusk: withSmall(pelagosPoolDusk, pelagosPoolDuskSmall, 1600, 800),
+  pergolaLounge: withSmall(pelagosPergolaLounge, pelagosPergolaLoungeSmall, 1600, 800),
+  outdoorDining: withSmall(pelagosOutdoorDining, pelagosOutdoorDiningSmall, 1600, 800),
+  pergolaDusk: withSmall(pelagosPergolaDusk, pelagosPergolaDuskSmall, 1600, 800),
+  livingRoom: withSmall(pelagosLivingRoom, pelagosLivingRoomSmall, 1600, 800),
+  diningRoom: withSmall(pelagosDiningRoom, pelagosDiningRoomSmall, 1600, 800),
+  kitchenStaircase: withSmall(pelagosKitchenStaircase, pelagosKitchenStaircaseSmall, 1600, 800),
+  masterBedroom: withSmall(pelagosMasterBedroom, pelagosMasterBedroomSmall, 1600, 800),
+  bedroomBalcony: withSmall(pelagosBedroomBalcony, pelagosBedroomBalconySmall, 1600, 800),
+  bedroomTwo: withSmall(pelagosBedroomTwo, pelagosBedroomTwoSmall, 952, 800),
+  bathroom: withSmall(pelagosBathroom, pelagosBathroomSmall, 1600, 800),
+  terraceSeaView: withSmall(pelagosTerraceSeaView, pelagosTerraceSeaViewSmall, 1000, 600),
+};
+
+const ourania = {
+  coverPoolSea: withSmall(ouraniaCoverPoolSea, ouraniaCoverPoolSeaSmall, 1600, 800),
+  poolSpaView: withSmall(ouraniaPoolSpaView, ouraniaPoolSpaViewSmall, 1600, 800),
+  poolPergola: withSmall(ouraniaPoolPergola, ouraniaPoolPergolaSmall, 1600, 800),
+  poolDusk: withSmall(ouraniaPoolDusk, ouraniaPoolDuskSmall, 1600, 800),
+  archLounge: withSmall(ouraniaArchLounge, ouraniaArchLoungeSmall, 1600, 800),
+  pergolaLounge: withSmall(ouraniaPergolaLounge, ouraniaPergolaLoungeSmall, 1600, 800),
+  outdoorDining: withSmall(ouraniaOutdoorDining, ouraniaOutdoorDiningSmall, 1600, 800),
+  pergolaNight: withSmall(ouraniaPergolaNight, ouraniaPergolaNightSmall, 1600, 800),
+  livingRoom: withSmall(ouraniaLivingRoom, ouraniaLivingRoomSmall, 1600, 800),
+  loungeFireplace: withSmall(ouraniaLoungeFireplace, ouraniaLoungeFireplaceSmall, 1600, 800),
+  bedroomSeaView: withSmall(ouraniaBedroomSeaView, ouraniaBedroomSeaViewSmall, 1600, 800),
+  bedroomTwo: withSmall(ouraniaBedroomTwo, ouraniaBedroomTwoSmall, 1600, 800),
+  bedroomThree: withSmall(ouraniaBedroomThree, ouraniaBedroomThreeSmall, 1600, 800),
+  bathroom: withSmall(ouraniaBathroom, ouraniaBathroomSmall, 1600, 800),
+  villaAboveBay: withSmall(ouraniaVillaAboveBay, ouraniaVillaAboveBaySmall, 1000, 600),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-aigli",
+    name: "Villa Aigli",
+    area: "Kalafatis",
+    bedrooms: 3,
+    bathrooms: 3,
+    guests: 6,
+    summary:
+      "A bright Cycladic villa near Kalafatis beach with a private pool with hydromassage, a wind-protected dining terrace and Aegean views. Sleeps 6.",
+    description: [
+      "Villa Aigli sits in Kalafatis, on the south-east tip of Mykonos, close to the beaches of Kalafatis, Agia Anna and Kalo Livadi and about 6 km from Mykonos Town. It shares a 4,700 m² plot with one neighbouring villa, yet each has its own privacy and entrance.",
+      "Cycladic architecture meets clean, minimal interiors. The 42 m² private pool with hydromassage is surrounded by gardens, sunbeds and outdoor showers, while a stone pergola shelters a wind-protected dining area and bar. Inside, the living and dining room looks out to sea, with two queen-size bedrooms and a twin room. An extra single room with its own entrance is available for staff on request.",
+    ],
+    amenities: [
+      "Private pool (42 m²) with hydromassage",
+      "Aegean sea views",
+      "Wind-protected outdoor dining and bar",
+      "Shaded pergola lounge",
+      "Sunbeds and outdoor showers",
+      "Fully equipped kitchen",
+      "Smart 4K TVs",
+      "Air conditioning and Wi-Fi",
+      "Bathrobes and slippers",
+      "Alarm and security cameras",
+      "Daily light cleaning",
+      "Private parking for 4 cars",
+    ],
+    photos: [
+      aigli.coverPoolDusk,
+      aigli.poolSeaView,
+      aigli.poolFromTerrace,
+      aigli.villaGarden,
+      aigli.outdoorDining,
+      aigli.terraceSeaView,
+      aigli.livingRoom,
+      aigli.diningLiving,
+      aigli.kitchen,
+      aigli.masterBedroom,
+      aigli.bedroomTwo,
+      aigli.twinBedroom,
+    ],
+    featurePhoto: aigli.villaFromAbove,
+    gallery: [
+      { title: "The pool and gardens", photos: [aigli.poolSeaView, aigli.poolFromTerrace, aigli.villaGarden] },
+      { title: "Terraces", photos: [aigli.outdoorDining, aigli.terraceSeaView] },
+      { title: "Living and kitchen", photos: [aigli.livingRoom, aigli.diningLiving, aigli.kitchen] },
+      { title: "Bedrooms", photos: [aigli.masterBedroom, aigli.bedroomTwo, aigli.twinBedroom] },
+    ],
+  },
+  {
+    slug: "villa-pelagos",
+    name: "Villa Pelagos",
+    area: "Super Paradise",
+    bedrooms: 6,
+    bathrooms: 6,
+    wcs: 1,
+    guests: 11,
+    summary:
+      "A new six-bedroom villa just 150 m from Super Paradise beach, with an infinity pool, terraces on three levels and panoramic views of the bay. Sleeps 11.",
+    description: [
+      "Villa Pelagos looks straight out over the famous Super Paradise bay, only 150 metres from the beach and its well-known beach bars and restaurants. The villa is sheltered from the north winds, so its terraces stay calm on breezy days.",
+      "Newly built in a Cycladic style with a modern edge, the house opens from its open-plan living room and kitchen onto sea-view terraces and an infinity pool, with lounge and dining areas spread over three levels. On the first floor are four king-size bedrooms and a single room, and the second floor holds the master bedroom with its own terrace and views. Every bedroom has its own bathroom.",
+    ],
+    amenities: [
+      "150 m from Super Paradise beach",
+      "Infinity pool with sea view",
+      "Panoramic views of Super Paradise bay",
+      "Wind-protected outdoor lounge and dining",
+      "Terraces on three levels",
+      "Master suite with private terrace",
+      "Open-plan kitchen with espresso machine",
+      "Smart 4K TVs",
+      "Air conditioning and Wi-Fi",
+      "Washing machine and dryer",
+      "Daily light cleaning",
+      "Private parking for 5 cars",
+    ],
+    photos: [
+      pelagos.coverInfinityPool,
+      pelagos.poolSunbeds,
+      pelagos.poolSunset,
+      pelagos.poolDusk,
+      pelagos.pergolaLounge,
+      pelagos.outdoorDining,
+      pelagos.pergolaDusk,
+      pelagos.livingRoom,
+      pelagos.diningRoom,
+      pelagos.kitchenStaircase,
+      pelagos.masterBedroom,
+      pelagos.bedroomBalcony,
+      pelagos.bedroomTwo,
+      pelagos.bathroom,
+    ],
+    featurePhoto: pelagos.terraceSeaView,
+    gallery: [
+      { title: "The infinity pool", photos: [pelagos.poolSunbeds, pelagos.poolSunset, pelagos.poolDusk] },
+      { title: "Terraces", photos: [pelagos.pergolaLounge, pelagos.outdoorDining, pelagos.pergolaDusk] },
+      { title: "Living and kitchen", photos: [pelagos.livingRoom, pelagos.diningRoom, pelagos.kitchenStaircase] },
+      { title: "Bedrooms", photos: [pelagos.masterBedroom, pelagos.bedroomBalcony, pelagos.bedroomTwo, pelagos.bathroom] },
+    ],
+  },
+  {
+    slug: "villa-ourania",
+    name: "Villa Ourania",
+    area: "Agios Lazaros",
+    bedrooms: 7,
+    bathrooms: 7,
+    wcs: 1,
+    guests: 14,
+    summary:
+      "A seven-bedroom Cycladic villa above Psarou, with a private pool, a sea-view spa pool and shaded terraces, 10 minutes from Psarou beach. Sleeps 14.",
+    description: [
+      "Villa Ourania sits in Agios Lazaros, one of the most sought-after areas of Mykonos, overlooking Psarou bay and the Aegean. Mykonos Town is about 4 km away, and Psarou, Platis Gialos, Ornos and Paraga are all close by.",
+      "The 350 m² villa is spread over a two-level main house and two independent guest houses, with seven en-suite double bedrooms in all. At the back, an 11 x 6 m pool with sunbeds is a private spot to sunbathe, while at the front a spa pool with hydromassage looks out over Psarou. Shaded pergolas hold several lounge and dining areas, a BBQ and a wind-protected outdoor table, and inside there is a living room with a fireplace, a dining area and a fully equipped kitchen.",
+    ],
+    amenities: [
+      "Private pool (11 x 6 m)",
+      "Spa pool with hydromassage and sea view",
+      "Views over Psarou bay",
+      "Two independent guest houses",
+      "Shaded pergolas with lounges and dining",
+      "Outdoor BBQ",
+      "Living room with fireplace",
+      "Fully equipped kitchen",
+      "Sound system and smart TVs",
+      "Air conditioning and Wi-Fi",
+      "Daily light cleaning",
+      "Private parking for 3 cars",
+    ],
+    photos: [
+      ourania.coverPoolSea,
+      ourania.poolSpaView,
+      ourania.poolPergola,
+      ourania.poolDusk,
+      ourania.archLounge,
+      ourania.pergolaLounge,
+      ourania.outdoorDining,
+      ourania.pergolaNight,
+      ourania.livingRoom,
+      ourania.loungeFireplace,
+      ourania.bedroomSeaView,
+      ourania.bedroomTwo,
+      ourania.bedroomThree,
+      ourania.bathroom,
+    ],
+    featurePhoto: ourania.villaAboveBay,
+    gallery: [
+      { title: "The pools", photos: [ourania.poolSpaView, ourania.poolPergola, ourania.poolDusk] },
+      { title: "Terraces", photos: [ourania.archLounge, ourania.pergolaLounge, ourania.outdoorDining, ourania.pergolaNight] },
+      { title: "Living", photos: [ourania.livingRoom, ourania.loungeFireplace] },
+      { title: "Bedrooms", photos: [ourania.bedroomSeaView, ourania.bedroomTwo, ourania.bedroomThree, ourania.bathroom] },
+    ],
+  },
   {
     slug: "villa-esperos",
     name: "Villa Esperos",
@@ -1939,6 +2236,9 @@ const VILLA_ORDER = [
   "villa-esperos",
   "villa-asteri",
   "villa-irini",
+  "villa-aigli",
+  "villa-pelagos",
+  "villa-ourania",
 ];
 
 const position = (villa: Villa) => {
