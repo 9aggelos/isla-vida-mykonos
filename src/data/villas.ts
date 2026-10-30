@@ -731,6 +731,38 @@ import delfiniBathroomSmall from "../assets/villas/delfini/bathroom-800.webp";
 import delfiniSunsetLoungers from "../assets/villas/delfini/sunset-loungers.webp";
 import delfiniSunsetLoungersSmall from "../assets/villas/delfini/sunset-loungers-600.webp";
 
+// Villa Erato (Agios Lazaros).
+import eratoCoverInfinityPool from "../assets/villas/erato/cover-infinity-pool.webp";
+import eratoCoverInfinityPoolSmall from "../assets/villas/erato/cover-infinity-pool-800.webp";
+import eratoPoolTerrace from "../assets/villas/erato/pool-terrace.webp";
+import eratoPoolTerraceSmall from "../assets/villas/erato/pool-terrace-800.webp";
+import eratoTerracePalm from "../assets/villas/erato/terrace-palm.webp";
+import eratoTerracePalmSmall from "../assets/villas/erato/terrace-palm-800.webp";
+import eratoJacuzziSeaView from "../assets/villas/erato/jacuzzi-sea-view.webp";
+import eratoJacuzziSeaViewSmall from "../assets/villas/erato/jacuzzi-sea-view-800.webp";
+import eratoLoungeUmbrella from "../assets/villas/erato/lounge-umbrella.webp";
+import eratoLoungeUmbrellaSmall from "../assets/villas/erato/lounge-umbrella-800.webp";
+import eratoOutdoorLounge from "../assets/villas/erato/outdoor-lounge.webp";
+import eratoOutdoorLoungeSmall from "../assets/villas/erato/outdoor-lounge-800.webp";
+import eratoPoolDusk from "../assets/villas/erato/pool-dusk.webp";
+import eratoPoolDuskSmall from "../assets/villas/erato/pool-dusk-800.webp";
+import eratoTerraceDusk from "../assets/villas/erato/terrace-dusk.webp";
+import eratoTerraceDuskSmall from "../assets/villas/erato/terrace-dusk-800.webp";
+import eratoLivingRoom from "../assets/villas/erato/living-room.webp";
+import eratoLivingRoomSmall from "../assets/villas/erato/living-room-800.webp";
+import eratoDiningKitchen from "../assets/villas/erato/dining-kitchen.webp";
+import eratoDiningKitchenSmall from "../assets/villas/erato/dining-kitchen-800.webp";
+import eratoMasterBedroom from "../assets/villas/erato/master-bedroom.webp";
+import eratoMasterBedroomSmall from "../assets/villas/erato/master-bedroom-800.webp";
+import eratoBedroomTwo from "../assets/villas/erato/bedroom-two.webp";
+import eratoBedroomTwoSmall from "../assets/villas/erato/bedroom-two-800.webp";
+import eratoBedroomStoneWall from "../assets/villas/erato/bedroom-stone-wall.webp";
+import eratoBedroomStoneWallSmall from "../assets/villas/erato/bedroom-stone-wall-800.webp";
+import eratoBedroomPoolWindow from "../assets/villas/erato/bedroom-pool-window.webp";
+import eratoBedroomPoolWindowSmall from "../assets/villas/erato/bedroom-pool-window-800.webp";
+import eratoSeaViewTerrace from "../assets/villas/erato/sea-view-terrace.webp";
+import eratoSeaViewTerraceSmall from "../assets/villas/erato/sea-view-terrace-600.webp";
+
 export interface Villa {
   /** Used in the page address: /villas/<slug>. Lowercase letters, numbers and dashes only. */
   slug: string;
@@ -1187,7 +1219,78 @@ const delfini = {
   sunsetLoungers: withSmall(delfiniSunsetLoungers, delfiniSunsetLoungersSmall, 1000, 600),
 };
 
+const erato = {
+  coverInfinityPool: withSmall(eratoCoverInfinityPool, eratoCoverInfinityPoolSmall, 1600, 800),
+  poolTerrace: withSmall(eratoPoolTerrace, eratoPoolTerraceSmall, 1600, 800),
+  terracePalm: withSmall(eratoTerracePalm, eratoTerracePalmSmall, 1600, 800),
+  jacuzziSeaView: withSmall(eratoJacuzziSeaView, eratoJacuzziSeaViewSmall, 1022, 800),
+  loungeUmbrella: withSmall(eratoLoungeUmbrella, eratoLoungeUmbrellaSmall, 1600, 800),
+  outdoorLounge: withSmall(eratoOutdoorLounge, eratoOutdoorLoungeSmall, 1600, 800),
+  poolDusk: withSmall(eratoPoolDusk, eratoPoolDuskSmall, 1600, 800),
+  terraceDusk: withSmall(eratoTerraceDusk, eratoTerraceDuskSmall, 1600, 800),
+  livingRoom: withSmall(eratoLivingRoom, eratoLivingRoomSmall, 1600, 800),
+  diningKitchen: withSmall(eratoDiningKitchen, eratoDiningKitchenSmall, 931, 800),
+  masterBedroom: withSmall(eratoMasterBedroom, eratoMasterBedroomSmall, 1600, 800),
+  bedroomTwo: withSmall(eratoBedroomTwo, eratoBedroomTwoSmall, 1600, 800),
+  bedroomStoneWall: withSmall(eratoBedroomStoneWall, eratoBedroomStoneWallSmall, 1600, 800),
+  bedroomPoolWindow: withSmall(eratoBedroomPoolWindow, eratoBedroomPoolWindowSmall, 1600, 800),
+  seaViewTerrace: withSmall(eratoSeaViewTerrace, eratoSeaViewTerraceSmall, 1000, 600),
+};
+
 const allVillas: Villa[] = [
+  {
+    slug: "villa-erato",
+    name: "Villa Erato",
+    area: "Agios Lazaros",
+    bedrooms: 4,
+    bathrooms: 4,
+    wcs: 1,
+    guests: 8,
+    summary:
+      "A newly renovated four-bedroom villa in Agios Lazaros with an infinity pool, a jacuzzi and sweeping views over Psarou, Paraga and the islands of Paros and Naxos. Sleeps 8.",
+    description: [
+      "High on the hill of Agios Lazaros, Villa Erato has one of the most spectacular views in Mykonos, over the beaches of Psarou and Paraga and across the sea to Paros and Naxos. Mykonos Town is about 4 km away, and Psarou beach is a short drive.",
+      "The terrace has everything for long days outside: a 30 m² infinity pool, an outdoor jacuzzi, sun loungers, a bar, a barbecue corner and a wind-protected lounge and dining area under the pergola. The villa has just been fully renovated in a modern Mykonian style, with a living room, dining area and open-plan kitchen that open straight onto the pool. Four independent en-suite bedrooms each have their own character, including one on the lower level with a window looking into the pool.",
+    ],
+    amenities: [
+      "Infinity pool (30 m²)",
+      "Outdoor jacuzzi",
+      "Views over Psarou, Paraga, Paros and Naxos",
+      "Outdoor bar and BBQ corner",
+      "Wind-protected lounge and dining area",
+      "Four en-suite bedrooms",
+      "Bedroom with a window into the pool",
+      "Open-plan kitchen and wine fridge",
+      "Smart 4K TVs",
+      "Air conditioning and Wi-Fi",
+      "Bathrobes and slippers",
+      "Daily light cleaning",
+      "Private parking for 2 cars",
+    ],
+    photos: [
+      erato.coverInfinityPool,
+      erato.poolTerrace,
+      erato.terracePalm,
+      erato.jacuzziSeaView,
+      erato.loungeUmbrella,
+      erato.outdoorLounge,
+      erato.poolDusk,
+      erato.terraceDusk,
+      erato.livingRoom,
+      erato.diningKitchen,
+      erato.masterBedroom,
+      erato.bedroomTwo,
+      erato.bedroomStoneWall,
+      erato.bedroomPoolWindow,
+    ],
+    featurePhoto: erato.seaViewTerrace,
+    gallery: [
+      { title: "The pool and jacuzzi", photos: [erato.poolTerrace, erato.terracePalm, erato.jacuzziSeaView, erato.poolDusk] },
+      { title: "Terraces", photos: [erato.loungeUmbrella, erato.outdoorLounge, erato.terraceDusk] },
+      { title: "Living and kitchen", photos: [erato.livingRoom, erato.diningKitchen] },
+      { title: "Bedrooms", photos: [erato.masterBedroom, erato.bedroomTwo, erato.bedroomStoneWall, erato.bedroomPoolWindow] },
+    ],
+  },
   {
     slug: "villa-delfini",
     name: "Villa Delfini",
@@ -2563,6 +2666,7 @@ const VILLA_ORDER = [
   "villa-ktima",
   "villa-lithos",
   "villa-delfini",
+  "villa-erato",
 ];
 
 const position = (villa: Villa) => {
