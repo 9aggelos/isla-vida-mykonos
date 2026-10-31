@@ -16,13 +16,14 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!loaderData) return {};
     const { post } = loaderData;
     const url = `${BASE_URL}/blog/${post.slug}`;
-    const title = post.title.length > 52 ? post.title : `${post.title} | Isla Vida`;
+    const image = post.image?.startsWith("/") ? `${BASE_URL}${post.image}` : post.image;
+    const title = post.seoTitle ?? (post.title.length > 52 ? post.title : `${post.title} | Isla Vida`);
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       headline: post.title,
       description: post.description,
-      ...(post.image ? { image: [post.image] } : {}),
+      ...(image ? { image: [image] } : {}),
       ...(post.date ? { datePublished: post.date, dateModified: post.date } : {}),
       mainEntityOfPage: url,
       author: { "@type": "Organization", name: "Isla Vida Mykonos", url: BASE_URL },
@@ -37,7 +38,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:description", content: post.description },
         { property: "og:url", content: url },
         { property: "og:type", content: "article" },
-        ...(post.image ? [{ property: "og:image", content: post.image }] : []),
+        ...(image ? [{ property: "og:image", content: image }] : []),
         ...(post.date ? [{ property: "article:published_time", content: post.date }] : []),
         { name: "twitter:card", content: "summary_large_image" },
       ],

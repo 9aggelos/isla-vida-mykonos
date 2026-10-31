@@ -10,6 +10,8 @@ export const SORO_FEED_URL = "https://app.trysoro.com/api/rss/d73e56bf-858e-4f4c
 export interface BlogPost {
   slug: string;
   title: string;
+  /** Optional shorter title for Google (under 60 characters). */
+  seoTitle?: string;
   description: string;
   html: string;
   image?: string;
@@ -31,8 +33,19 @@ export function feedUrl(): string {
   return (fromEnv || SORO_FEED_URL || "").trim();
 }
 
-/** Loads all articles (server only). Cached for a few minutes. */
+/** All articles: our own posts (src/data/posts.ts) plus Soro's feed, newest first. */
 export async function loadPosts(): Promise<{ configured: boolean; posts: BlogPost[] }> {
+  const { ownPosts } = await import("../data/posts");
+  const feed = await loadFeedPosts();
+  const slugs = new Set(ownPosts.map((p) => p.slug));
+  const posts = [...ownPosts, ...feed.posts.filter((p) => !slugs.has(p.slug))].sort((a, b) =>
+    (b.date ?? "").localeCompare(a.date ?? ""),
+  );
+  return { configured: feed.configured || ownPosts.length > 0, posts };
+}
+
+/** Loads the Soro feed (server only). Cached for a few minutes. */
+async function loadFeedPosts(): Promise<{ configured: boolean; posts: BlogPost[] }> {
   const url = feedUrl();
   if (!url) return { configured: false, posts: [] };
   if (cache && Date.now() - cache.at < CACHE_MINUTES * 60_000) {
