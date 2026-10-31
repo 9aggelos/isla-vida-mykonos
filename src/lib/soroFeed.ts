@@ -6,7 +6,7 @@
  * between the quotes below, OR add it in Vercel as the environment variable
  * SORO_FEED_URL. While it is empty, /blog keeps showing the old Soro widget.
  */
-export const SORO_FEED_URL = "";
+export const SORO_FEED_URL = "https://app.trysoro.com/api/rss/d73e56bf-858e-4f4c-b15f-77f40b92bab5";
 
 export interface BlogPost {
   slug: string;
@@ -44,7 +44,10 @@ export async function loadPosts(): Promise<{ configured: boolean; posts: BlogPos
     const timer = setTimeout(() => controller.abort(), 8000);
     const res = await fetch(url, {
       signal: controller.signal,
-      headers: { Accept: "application/rss+xml, application/xml, text/xml, */*" },
+      headers: {
+        Accept: "application/rss+xml, application/xml, text/xml, */*",
+        "User-Agent": "Mozilla/5.0 (compatible; IslaVidaBlog/1.0; +https://www.islavidajmk.com)",
+      },
     });
     clearTimeout(timer);
     if (!res.ok) throw new Error(`Feed responded ${res.status}`);
