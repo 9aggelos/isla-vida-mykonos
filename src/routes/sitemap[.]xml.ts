@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { villas } from "../data/villas";
+import { loadPosts } from "../lib/soroFeed";
 
 const BASE_URL = "https://www.islavidajmk.com";
 
@@ -15,6 +16,7 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
+        const { posts } = await loadPosts();
         const entries: SitemapEntry[] = [
           { path: "", changefreq: "weekly", priority: "1.0" },
           { path: "/services", changefreq: "weekly", priority: "0.8" },
@@ -41,6 +43,14 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/fleet", changefreq: "weekly", priority: "0.7" },
           { path: "/about", changefreq: "monthly", priority: "0.7" },
           { path: "/blog", changefreq: "weekly", priority: "0.7" },
+          ...posts.map(
+            (post): SitemapEntry => ({
+              path: `/blog/${post.slug}`,
+              lastmod: post.date ? post.date.slice(0, 10) : undefined,
+              changefreq: "monthly",
+              priority: "0.6",
+            }),
+          ),
           { path: "/contact", changefreq: "monthly", priority: "0.8" },
         ];
 
