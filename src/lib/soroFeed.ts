@@ -1,10 +1,9 @@
 /**
  * Blog articles from the Soro RSS feed.
  *
- * HOW TO SWITCH ON THE NEW BLOG
- * Paste the RSS feed URL from Soro (Settings -> Other Platform -> RSS Feed)
+ * To change the feed, paste the RSS feed URL from Soro (Settings -> Other Platform -> RSS Feed)
  * between the quotes below, OR add it in Vercel as the environment variable
- * SORO_FEED_URL. While it is empty, /blog keeps showing the old Soro widget.
+ * SORO_FEED_URL.
  */
 export const SORO_FEED_URL = "https://app.trysoro.com/api/rss/d73e56bf-858e-4f4c-b15f-77f40b92bab5";
 

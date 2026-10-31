@@ -1,5 +1,4 @@
 import { createFileRoute, redirect } from "@tanstack/react-router";
-import { useEffect, useRef } from "react";
 import { getBlogList } from "../../lib/blog";
 import { BlogPostCard } from "../../components/BlogPostCard";
 
@@ -49,9 +48,7 @@ function BlogPage() {
           Travel tips, Mykonos guides, and updates from the island's private transfer & chauffeur team.
         </p>
 
-        {!configured ? (
-          <SoroWidget />
-        ) : posts.length === 0 ? (
+        {!configured || posts.length === 0 ? (
           <p className="mt-10 text-muted-foreground">New articles are on their way. Please check back soon.</p>
         ) : (
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -63,39 +60,4 @@ function BlogPage() {
       </div>
     </div>
   );
-}
-
-/** The old Soro widget, shown only until the RSS feed URL is set. */
-function SoroWidget() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const inject = () => {
-      if (!containerRef.current) return;
-      const script = document.createElement("script");
-      script.src = "https://app.trysoro.com/api/embed/80663ee7-416f-42ea-919d-80bf23aa9701";
-      script.defer = true;
-      script.id = "soro-blog-embed";
-      containerRef.current.appendChild(script);
-    };
-
-    if (document.readyState === "complete") {
-      const id = window.setTimeout(inject, 0);
-      return () => {
-        window.clearTimeout(id);
-        container.innerHTML = "";
-      };
-    }
-
-    window.addEventListener("load", inject, { once: true });
-    return () => {
-      window.removeEventListener("load", inject);
-      container.innerHTML = "";
-    };
-  }, []);
-
-  return <div id="soro-blog" ref={containerRef} className="mt-10 min-h-[400px]" aria-live="polite" />;
 }
