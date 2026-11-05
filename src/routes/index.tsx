@@ -6,8 +6,15 @@ import chauffeurService from "../assets/helicopter-mykonos.webp";
 import islandTours from "../assets/mykonos-pool-view.webp";
 import yacht from "../assets/yacht.avif";
 import { ServiceCard } from "../components/ServiceCard";
-import { srcSetFor } from "../lib/responsiveImages";
+import heroWindmills from "../assets/hero-windmills.webp";
+import heroWindmills1280 from "../assets/small/hero-windmills-1280.webp";
+import heroWindmills960 from "../assets/small/hero-windmills-960.webp";
+import heroPoolMobile from "../assets/hero-pool-mobile.webp";
+import heroPoolMobile600 from "../assets/small/hero-pool-mobile-600.webp";
 import { ArrowRight, Clock, Shield, Star, Users } from "lucide-react";
+
+const heroDesktopSrcSet = `${heroWindmills960} 960w, ${heroWindmills1280} 1280w, ${heroWindmills} 1920w`;
+const heroMobileSrcSet = `${heroPoolMobile600} 600w, ${heroPoolMobile} 880w`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -45,9 +52,19 @@ export const Route = createFileRoute("/")({
       {
         rel: "preload",
         as: "image",
-        href: heroVan,
-        imageSrcSet: srcSetFor(heroVan),
+        href: heroPoolMobile,
+        imageSrcSet: heroMobileSrcSet,
         imageSizes: "100vw",
+        media: "(max-width: 767px)",
+        type: "image/webp",
+      },
+      {
+        rel: "preload",
+        as: "image",
+        href: heroWindmills,
+        imageSrcSet: heroDesktopSrcSet,
+        imageSizes: "100vw",
+        media: "(min-width: 768px)",
         type: "image/webp",
       },
     ],
@@ -105,48 +122,61 @@ function Index() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-navy">
         <div className="absolute inset-0">
-          <img
-            src={heroVan}
-            srcSet={srcSetFor(heroVan)}
-            sizes="100vw"
-            alt="Luxury private transfer in Mykonos"
-            width={1920}
-            height={1080}
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40" />
+          <picture>
+            <source media="(max-width: 767px)" srcSet={heroMobileSrcSet} sizes="100vw" type="image/webp" />
+            <img
+              src={heroWindmills}
+              srcSet={heroDesktopSrcSet}
+              sizes="100vw"
+              alt="The Mykonos windmills at golden hour"
+              width={1920}
+              height={1200}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="h-full w-full object-cover object-[60%_center] md:object-[70%_center]"
+            />
+          </picture>
+          {/* Darker on the left (desktop) or bottom (phone) so the text always reads clearly */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(9,27,52,0.85)] via-[rgba(9,27,52,0.45)] to-[rgba(9,27,52,0.25)] md:bg-gradient-to-r md:from-[rgba(9,27,52,0.70)] md:via-[rgba(9,27,52,0.42)] md:to-transparent" />
         </div>
-        <div className="relative mx-auto grid min-h-[70vh] max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-          <div className="max-w-2xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
-              Discover Mykonos in timeless elegance and style
+        <div className="relative mx-auto flex min-h-[calc(100svh-4rem)] max-w-7xl items-end px-5 pb-12 pt-28 sm:px-6 md:min-h-[78vh] md:items-center md:py-28 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="mb-5 flex items-center gap-3 text-sm font-medium text-white sm:text-base">
+              <span aria-hidden="true" className="block h-0.5 w-9 bg-[#F3C677]" />
+              Private transfers and concierge, 24/7
             </p>
-            <h1 className="font-display text-5xl font-bold leading-[1.1] text-white sm:text-6xl lg:text-7xl">
+            <h1 className="font-display text-[2.75rem] font-semibold leading-[1] tracking-tight text-white [text-shadow:0_2px_30px_rgba(9,27,52,0.35)] sm:text-6xl lg:text-7xl xl:text-[5rem]">
               Luxury Mykonos Transfers & Concierge Services
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-white/80 sm:text-xl">
-              Isla Vida Mykonos offers premium private transfers, airport and port services, curated
-              lifestyle services and luxury experiences across the island — 24/7.
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white sm:text-xl">
+              Luxury Mykonos transfers from the airport, the port or your villa, with concierge, yachts and
+              experiences arranged by one local team.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-white/90"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F3C677] px-8 py-4 text-base font-semibold text-navy transition-colors hover:bg-[#f7d697]"
               >
                 Book your transfer
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 rounded-md border border-white/40 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                className="hidden items-center justify-center gap-2 rounded-full border-[1.5px] border-white/80 px-8 py-4 text-base font-medium text-white transition-colors hover:bg-white/10 sm:inline-flex"
               >
                 Explore services
               </Link>
+              <a
+                href="https://wa.me/306948041931"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-[1.5px] border-white/80 px-8 py-4 text-base font-medium text-white transition-colors hover:bg-white/10 sm:hidden"
+              >
+                Message us on WhatsApp
+              </a>
             </div>
           </div>
         </div>
