@@ -140,7 +140,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "@type": ["LocalBusiness", "TravelAgency"],
               "@id": `${SITE_URL}/#business`,
               name: "Isla Vida Mykonos",
-              alternateName: ["Isla Vida", "Isla Vida JMK"],
+              alternateName: ["Isla Vida", "Isla Vida JMK", "Isla Vida Mykonos Transfers & Concierge"],
               slogan: "Luxury Mykonos Transfers & Concierge Services",
               description:
                 "Isla Vida Mykonos is a locally based private transfer, chauffeur and concierge company on Mykonos, Greece. It provides private airport (JMK), port and cruise port transfers from €36 per vehicle in Mercedes vehicles for up to 20 guests, a chauffeur by the hour, island tours, luxury villa rentals, yacht and helicopter charters, and beach club, restaurant and VIP table reservations, 24/7.",
@@ -155,7 +155,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                 addressRegion: "South Aegean",
                 addressCountry: "GR",
               },
-              geo: { "@type": "GeoCoordinates", latitude: 37.4467, longitude: 25.3289 },
+              geo: { "@type": "GeoCoordinates", latitude: 37.4398072, longitude: 25.3501356 },
+              hasMap: "https://maps.google.com/?cid=1373307275586565091",
               areaServed: [
                 { "@type": "Place", name: "Mykonos, Greece" },
                 { "@type": "Airport", name: "Mykonos Airport (JMK)", iataCode: "JMK" },
@@ -207,7 +208,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                   itemOffered: { "@type": "Service", name, description, url: `${SITE_URL}${path}` },
                 })),
               },
-              sameAs: ["https://www.instagram.com/islavida_mykonos/"],
+              sameAs: ["https://www.instagram.com/islavida_mykonos/", "https://maps.google.com/?cid=1373307275586565091"],
             },
           ],
         }),
