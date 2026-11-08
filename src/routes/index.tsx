@@ -157,7 +157,7 @@ function Index() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <Link
-                to="/contact"
+                to="/book"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F3C677] px-8 py-4 text-base font-semibold text-navy transition-colors hover:bg-[#f7d697]"
               >
                 Book your transfer
