@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import contactImage from "../assets/hero-van.webp";
-import { Phone, Mail, MapPin, Instagram, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Clock } from "lucide-react";
+import { TransferBookingForm } from "../components/TransferBookingForm";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -24,7 +25,6 @@ export const Route = createFileRoute("/contact")({
       },
       { property: "og:url", content: "https://www.islavidajmk.com/contact" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "canonical", href: "https://www.islavidajmk.com/contact" },
@@ -46,36 +46,14 @@ function ContactPage() {
       <section className="section-padding bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
-            {/* Setmore booking */}
-            <div className="rounded-lg border border-border bg-card p-8 shadow-sm">
-              <h2 className="font-display text-3xl font-bold text-card-foreground">
-                Book your transfer
-              </h2>
-              <p className="mt-2 text-muted-foreground">
-                Reserve your ride online in minutes — pick a date and time that suits you and
-                confirm instantly.
-              </p>
-              <a
-                href="https://islavida.setmore.com/islavida"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-light"
-              >
-                <Send className="h-4 w-4" />
-                Book on Setmore
-              </a>
-              <div className="mt-6 overflow-hidden rounded-md border border-border">
-                <iframe
-                  src="https://islavida.setmore.com/islavida"
-                  title="Book Isla Vida Mykonos on Setmore"
-                  className="h-[600px] w-full"
-                  loading="lazy"
-                />
-              </div>
+            {/* Transfer request form */}
+            <div id="book" className="scroll-mt-24">
+              <h2 className="mb-6 font-display text-3xl font-bold text-foreground">Book your transfer</h2>
+              <TransferBookingForm />
             </div>
 
             {/* Contact info */}
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col lg:sticky lg:top-28 lg:self-start">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-navy-accent">
                 Contact
               </p>
