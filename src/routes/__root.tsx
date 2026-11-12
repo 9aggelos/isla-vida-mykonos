@@ -152,6 +152,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Mykonos",
+                postalCode: "846 00",
                 addressRegion: "South Aegean",
                 addressCountry: "GR",
               },

@@ -110,7 +110,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 shrink-0" />
-                <span>Mykonos, Cyclades, Greece</span>
+                <span>Mykonos 846 00, Greece</span>
               </li>
               <li className="flex items-center gap-2">
                 <Instagram className="h-4 w-4" />
