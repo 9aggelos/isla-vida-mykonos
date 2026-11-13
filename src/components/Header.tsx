@@ -34,7 +34,7 @@ const navItems: NavItem[] = [
     label: "Services",
     section: [
       { to: "/services", label: "All Services" },
-      { to: "/mykonos-cruise-port-transfers", label: "Cruise Port Transfers" },
+      { to: "/mykonos-cruise-port-transfers", label: "Cruise Port Transfers & Shore Tours" },
       { to: "/fleet", label: "Our Fleet" },
     ],
   },
@@ -67,6 +67,7 @@ const navItems: NavItem[] = [
     children: [
       { to: "/mykonos-airport-transfers", label: "Airport Transfers" },
       { to: "/mykonos-port-transfers", label: "Port Transfers" },
+      { to: "/mykonos-cruise-port-transfers", label: "Cruise Port Transfers & Shore Tours" },
     ],
   },
   // About and Blog are linked from the footer.
